@@ -1,48 +1,47 @@
 import os
+import collections 
+import collections.abc
 from pptx import Presentation
 from pptx.util import Inches
 from PIL import Image
-from transformers import AutoTokenizer, AutoModelForSeq2Vec
+from transformers import AutoTokenizer, AutoModel
 from transformers import pipeline
 import torch
 import numpy as np
+from pptx.shapes.picture import Picture
 
 # Initialize the tokenizer and model for sentence embeddings
-tokenizer = AutoTokenizer.from_pretrained("sentence-transformers/paraphrase-MiniLM-L6-v2")
-model = AutoModelForSeq2Vec.from_pretrained("sentence-transformers/paraphrase-MiniLM-L6-v2")
+tokenizer = AutoTokenizer.from_pretrained("t5-small", model_max_length=512)
+model = AutoModel.from_pretrained("sentence-transformers/paraphrase-MiniLM-L6-v2")
 
 # Initialize the summarization pipeline
 summarizer = pipeline("summarization", model="t5-small")
 
 # Function to compute text similarity using sentence embeddings
 def similarity(text1, text2):
-    # Tokenize the input texts using the pre-trained tokenizer. The tokenizer converts
-    # the input texts into a format that can be fed into the pre-trained model.
-    # `return_tensors="pt"` specifies that the returned tensors should be PyTorch tensors.
-    # `padding=True` ensures that both input tensors have the same length by adding padding tokens.
-    # `truncation=True` truncates the input text if it exceeds the model's maximum input length.
-    inputs1 = tokenizer(text1, return_tensors="pt", padding=True, truncation=True)
-    inputs2 = tokenizer(text2, return_tensors="pt", padding=True, truncation=True)
+    inputs = tokenizer([text1, text2], return_tensors="pt", padding=True, truncation=True)
 
-    # Compute the sentence embeddings for both input texts using the pre-trained model.
-    # `with torch.no_grad():` disables gradient calculation to save memory and speed up computation.
-    # `model(**inputs1)` feeds the tokenized inputs into the model and computes the embeddings.
-    # `.last_hidden_state` retrieves the last hidden state from the model's output.
-    # `.mean(dim=1)` calculates the mean of the embeddings along dimension 1 (tokens) to obtain a single embedding vector per input text.
-    # `.numpy()` converts the PyTorch tensor to a NumPy array.
+    # Filter out unknown tokens
+    filtered_input_ids = [
+        inputs["input_ids"][i, inputs["input_ids"][i] < model.config.vocab_size] for i in range(inputs["input_ids"].shape[0])
+    ]
+
+    # Find the maximum length after filtering
+    max_length = max([len(ids) for ids in filtered_input_ids])
+
+    # Pad the filtered input tensors to the same length
+    padded_input_ids = torch.stack([torch.cat((ids, torch.zeros(max_length - len(ids), dtype=torch.long))) for ids in filtered_input_ids])
+
+    inputs["input_ids"] = padded_input_ids
+
     with torch.no_grad():
-        embeddings1 = model(**inputs1).last_hidden_state.mean(dim=1).numpy()
-        embeddings2 = model(**inputs2).last_hidden_state.mean(dim=1).numpy()
+        embeddings = model(**inputs).last_hidden_state.mean(dim=1).numpy()
 
-    # Calculate the cosine similarity between the two embeddings.
-    # `np.inner(embeddings1, embeddings2)` computes the inner product of the two embedding vectors.
-    # `np.linalg.norm(embeddings1)` and `np.linalg.norm(embeddings2)` compute the L2 norms (Euclidean lengths) of the embedding vectors.
-    # Dividing the inner product by the product of the norms gives the cosine similarity score.
-    similarity_score = np.inner(embeddings1, embeddings2) / (
-        np.linalg.norm(embeddings1) * np.linalg.norm(embeddings2)
+    similarity_score = np.inner(embeddings[0], embeddings[1]) / (
+        np.linalg.norm(embeddings[0]) * np.linalg.norm(embeddings[1])
     )
-    # Return the cosine similarity score as a scalar value (the [0][0] element of the resulting array).
-    return similarity_score[0][0]
+    return similarity_score
+
 
 # Function to merge and summarize two slides
 def merge_and_summarize_slides(slide1, slide2):
@@ -107,7 +106,8 @@ def extract_content(pptx_file):
     prs = Presentation(pptx_file)
     # Initialize an empty list to store the extracted content.
     content = []
-
+    #TODO: Need to ignore audio images and save images to an attachment folder and only retain their name
+    #TODO: Are we extracting notes?
     # Iterate through the slides in the presentation using their index and value.
     for slide_num, slide in enumerate(prs.slides):
         # Initialize a dictionary to store the text and images for each slide.
@@ -120,7 +120,7 @@ def extract_content(pptx_file):
                 slide_content["text"] += shape.text
 
             # Check if the shape has an image.
-            if shape.has_image:
+            if isinstance(shape, Picture):
                 # Store the image object in the variable 'image'.
                 image = shape.image
                 # Create an image file path using the slide number, shape name, and image file extension.
@@ -176,8 +176,11 @@ def main():
         # If there's only one PPTX file processed, set the final content to its processed content.
         final_content = processed_contents[0]
 
+    print(final_content)
     # TODO: Add code here to create links in obsidian format
     # TODO: Add code here to create Markdown files for Obsidian using final_content
 
-if name == "main":
+if __name__ == "__main__":
+    #TODO: Need to clean out the leftovers of the previous attempt before we start and make sure they all go into a sub folder
     main()
+    print("Done")
