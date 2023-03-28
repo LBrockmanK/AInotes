@@ -1,4 +1,5 @@
 import os
+import shutil
 import collections 
 import collections.abc
 from pptx import Presentation
@@ -100,14 +101,28 @@ def process_slides(content, similarity_threshold):
     # Return the processed and merged content list.
     return merged_content
 
+# Reset output directory
+def clear_directory(directory):
+    for filename in os.listdir(directory):
+        file_path = os.path.join(directory, filename)
+        try:
+            if os.path.isfile(file_path) or os.path.islink(file_path):
+                os.unlink(file_path)
+            elif os.path.isdir(file_path):
+                shutil.rmtree(file_path)
+        except Exception as e:
+            print(f"Failed to delete {file_path}. Reason: {e}")
+
 # Function to extract text and images from a PPTX file
-def extract_content(pptx_file):
+def extract_content(pptx_file, output_dir):
     # Read the PPTX file using the python-pptx library and store it in the variable 'prs'.
     prs = Presentation(pptx_file)
     # Initialize an empty list to store the extracted content.
     content = []
-    #TODO: Need to ignore audio images and save images to an attachment folder and only retain their name
-    #TODO: Are we extracting notes?
+
+    # Create the output directory and Figures subdirectory if they don't exist.
+    os.makedirs(os.path.join(output_dir, "Figures"), exist_ok=True)
+
     # Iterate through the slides in the presentation using their index and value.
     for slide_num, slide in enumerate(prs.slides):
         # Initialize a dictionary to store the text and images for each slide.
@@ -121,15 +136,19 @@ def extract_content(pptx_file):
 
             # Check if the shape has an image.
             if isinstance(shape, Picture):
-                # Store the image object in the variable 'image'.
-                image = shape.image
-                # Create an image file path using the slide number, shape name, and image file extension.
-                image_path = f"slide_{slide_num}_image_{shape.name}.{image.ext}"
-                # Write the image binary data (blob) to a new image file with the created file path.
-                with open(image_path, "wb") as image_file:
-                    image_file.write(image.blob)
-                # Append the image file path to the slide_content dictionary.
-                slide_content["images"].append(image_path)
+                # Filter out audio images by checking if "Audio" is in the shape name.
+                if "Audio" not in shape.name:
+                    # Store the image object in the variable 'image'.
+                    image = shape.image
+                    # Create an image file path using the slide number, shape name, and image file extension.
+                    image_path = f"slide_{slide_num}_image_{shape.name}.{image.ext}"
+                    # Create the full image path, including the output directory and Figures subdirectory.
+                    full_image_path = os.path.join(output_dir, "Figures", image_path)
+                    # Write the image binary data (blob) to a new image file with the created file path.
+                    with open(full_image_path, "wb") as image_file:
+                        image_file.write(image.blob)
+                    # Append the image file path to the slide_content dictionary.
+                    slide_content["images"].append(image_path)
 
         # Append the slide_content dictionary to the content list.
         content.append(slide_content)
@@ -140,6 +159,12 @@ def extract_content(pptx_file):
 def main():
     # Set the input directory path where the PPTX files are stored.
     input_directory = "Inputs"
+    output_dir = "Outputs"
+
+    # Clear the contents of the directory before extracting content.
+    clear_directory(output_dir)
+    os.makedirs(output_dir, exist_ok=True)
+
     # Initialize an empty list to store the content extracted from each PPTX file.
     contents = []
 
@@ -151,7 +176,7 @@ def main():
                 # Create the full path of the PPTX file by joining the root directory and the file name.
                 pptx_path = os.path.join(root, file)
                 # Extract the content (text and images) from the PPTX file using the extract_content function.
-                content = extract_content(pptx_path)
+                content = extract_content(pptx_path,output_dir)
                 # Append the extracted content to the 'contents' list.
                 contents.append(content)
 
