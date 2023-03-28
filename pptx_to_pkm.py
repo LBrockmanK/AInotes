@@ -10,6 +10,7 @@ from transformers import pipeline
 import torch
 import numpy as np
 from pptx.shapes.picture import Picture
+import errno
 
 # Initialize the tokenizer and model for sentence embeddings
 tokenizer = AutoTokenizer.from_pretrained("t5-small", model_max_length=512)
@@ -121,7 +122,7 @@ def extract_content(pptx_file, output_dir):
     content = []
 
     # Create the output directory and Figures subdirectory if they don't exist.
-    os.makedirs(os.path.join(output_dir, "Figures"), exist_ok=True)
+    
 
     # Iterate through the slides in the presentation using their index and value.
     for slide_num, slide in enumerate(prs.slides):
@@ -142,8 +143,8 @@ def extract_content(pptx_file, output_dir):
                     image = shape.image
                     # Create an image file path using the slide number, shape name, and image file extension.
                     image_path = f"slide_{slide_num}_image_{shape.name}.{image.ext}"
-                    # Create the full image path, including the output directory and Figures subdirectory.
-                    full_image_path = os.path.join(output_dir, "Figures", image_path)
+                    # Create the full image path, including the output directory.
+                    full_image_path = os.path.join(output_dir, image_path)
                     # Write the image binary data (blob) to a new image file with the created file path.
                     with open(full_image_path, "wb") as image_file:
                         image_file.write(image.blob)
@@ -156,14 +157,39 @@ def extract_content(pptx_file, output_dir):
     # Return the content list containing text and images from the PPTX file.
     return content
 
+def check_directory_writable(directory):
+    try:
+        test_file = os.path.join(directory, "test_write.txt")
+        with open(test_file, "w") as file:
+            file.write("test")
+        os.remove(test_file)
+        return True
+    except IOError as e:
+        if e.errno == errno.EACCES:
+            return False
+        else:
+            raise
+
 def main():
     # Set the input directory path where the PPTX files are stored.
     input_directory = "Inputs"
-    output_dir = "Outputs"
+    base_output_dir = "pptx_to_obsidian"
+    os.makedirs(base_output_dir, exist_ok=True)
+    figures_output_dir = os.path.join(base_output_dir, "Figures")
+    os.makedirs(figures_output_dir, exist_ok=True)
+    clear_directory(figures_output_dir)
+    notes_output_dir = os.path.join(base_output_dir, "Notes")
+    os.makedirs(notes_output_dir, exist_ok=True)
 
-    # Clear the contents of the directory before extracting content.
-    clear_directory(output_dir)
-    os.makedirs(output_dir, exist_ok=True)
+    # Check if the figures_output_dir is writable
+    if not check_directory_writable(figures_output_dir):
+        print(f"Error: The directory '{figures_output_dir}' is not writable. Aborting.")
+        return
+
+    # Check if the notes_output_dir is writable
+    if not check_directory_writable(notes_output_dir):
+        print(f"Error: The directory '{notes_output_dir}' is not writable. Aborting.")
+        return
 
     # Initialize an empty list to store the content extracted from each PPTX file.
     contents = []
@@ -176,9 +202,10 @@ def main():
                 # Create the full path of the PPTX file by joining the root directory and the file name.
                 pptx_path = os.path.join(root, file)
                 # Extract the content (text and images) from the PPTX file using the extract_content function.
-                content = extract_content(pptx_path,output_dir)
+                content = extract_content(pptx_path, figures_output_dir)
                 # Append the extracted content to the 'contents' list.
                 contents.append(content)
+
 
     # Set a similarity threshold for merging slides.
     similarity_threshold = 0.8
