@@ -64,6 +64,14 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "c8225aa5fbd9fcc6",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
           }
         ]
       }
@@ -128,8 +136,17 @@
                 "file": "Homepage.md"
               }
             }
+          },
+          {
+            "id": "a0f3aa0fdd27cf44",
+            "type": "leaf",
+            "state": {
+              "type": "graph-analysis",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -138,6 +155,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "smart-random-note:Open Random Note from Search": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -148,11 +166,25 @@
   },
   "active": "67021e5e5dfe2d44",
   "lastOpenFiles": [
+    "Notes/Note_3.md",
+    "Notes/Note_4.md",
+    "Notes/Note_2.md",
+    "Notes/Note_1.md",
+    "Notes/Note_14.md",
+    "Notes/Note_18.md",
+    "Notes/Note_20.md",
+    "Notes/Note_21.md",
     "Figures/slide_20_image_Picture 2054.png",
+    "Notes/Note_22.md",
+    "Notes/First Order LogicSUSAN MCROY.md",
+    "Notes/Note_19.md",
+    "Notes/Note_6.md",
+    "Notes/Note_5.md",
+    "Notes/Note_33.md",
+    "Homepage.md",
     "Notes",
     "New folder",
     "Figures",
-    "Untitled",
-    "Homepage.md"
+    "Untitled"
   ]
 }

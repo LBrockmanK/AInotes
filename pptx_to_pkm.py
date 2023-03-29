@@ -120,10 +120,7 @@ def extract_content(pptx_file, output_dir):
     prs = Presentation(pptx_file)
     # Initialize an empty list to store the extracted content.
     content = []
-
-    # Create the output directory and Figures subdirectory if they don't exist.
     
-
     # Iterate through the slides in the presentation using their index and value.
     for slide_num, slide in enumerate(prs.slides):
         # Initialize a dictionary to store the text and images for each slide.
@@ -137,7 +134,7 @@ def extract_content(pptx_file, output_dir):
 
             # Check if the shape has an image.
             if isinstance(shape, Picture):
-                # Filter out audio images by checking if "Audio" is in the shape name.
+                # Filter out audio images by checking if "Audio" is not in the shape name.
                 if "Audio" not in shape.name:
                     # Store the image object in the variable 'image'.
                     image = shape.image
@@ -151,7 +148,17 @@ def extract_content(pptx_file, output_dir):
                     # Append the image file path to the slide_content dictionary.
                     slide_content["images"].append(image_path)
 
-        # Append the slide_content dictionary to the content list.
+        # Extract notes from the slide and combine with the slide text.
+        if slide.has_notes_slide:
+            notes_slide = slide.notes_slide
+            notes_text_frame = notes_slide.notes_text_frame
+            notes_text = notes_text_frame.text
+            # Add a newline between the slide text and notes if there is slide text.
+            if slide_content["text"]:
+                slide_content["text"] += "\n"
+            slide_content["text"] += notes_text
+
+        # Append the slide_content dictionary to the content list, even if there is no slide text.
         content.append(slide_content)
 
     # Return the content list containing text and images from the PPTX file.
@@ -169,6 +176,21 @@ def check_directory_writable(directory):
             return False
         else:
             raise
+
+def create_markdown_files(content, output_dir):
+    for slide_num, slide in enumerate(content):
+        body_text = slide["text"]
+
+        md_filename = f"Note_{slide_num + 1}.md"
+        md_filepath = os.path.join(output_dir, md_filename)
+
+        with open(md_filepath, "w", encoding="utf-8") as md_file:
+            md_file.write(body_text)
+
+            if slide["images"]:
+                md_file.write("\n\n")
+                for image in slide["images"]:
+                    md_file.write(f"![[{image}]]\n")
 
 def main():
     # Set the input directory path where the PPTX files are stored.
@@ -212,25 +234,30 @@ def main():
     # Initialize an empty list to store the processed content after merging similar slides.
     processed_contents = []
 
-    # Process and merge similar slides in each PPT using the process_slides function.
-    for content in contents:
-        processed_content = process_slides(content, similarity_threshold)
-        # Append the processed content to the 'processed_contents' list.
-        processed_contents.append(processed_content)
+    # TODO: Improve processing to make new slides
+    # # Process and merge similar slides in each PPT using the process_slides function.
+    # for content in contents:
+    #     processed_content = process_slides(content, similarity_threshold)
+    #     # Append the processed content to the 'processed_contents' list.
+    #     processed_contents.append(processed_content)
 
-    # Check if there is more than one PPTX file processed.
-    if len(processed_contents) > 1:
-        # Combine the processed content from all PPTX files into a single list.
-        combined_content = [slide for content in processed_contents for slide in content]
-        # Process and merge similar slides in the combined content list.
-        final_content = process_slides(combined_content, similarity_threshold)
-    else:
-        # If there's only one PPTX file processed, set the final content to its processed content.
-        final_content = processed_contents[0]
+    # # Check if there is more than one PPTX file processed.
+    # if len(processed_contents) > 1:
+    #     # Combine the processed content from all PPTX files into a single list.
+    #     combined_content = [slide for content in processed_contents for slide in content]
+    #     # Process and merge similar slides in the combined content list.
+    #     final_content = process_slides(combined_content, similarity_threshold)
+    # else:
+    #     # If there's only one PPTX file processed, set the final content to its processed content.
+    #     final_content = processed_contents[0]
 
-    print(final_content)
+    final_content = [slide for content in contents for slide in content]
+
     # TODO: Add code here to create links in obsidian format
-    # TODO: Add code here to create Markdown files for Obsidian using final_content
+    # Fill in note content processing here
+
+    # TODO: Add code here to create Markdown files for Obsidian using final_content (Do this first, just put in the text we have with images)
+    create_markdown_files(final_content, notes_output_dir)
 
 if __name__ == "__main__":
     #TODO: Need to clean out the leftovers of the previous attempt before we start and make sure they all go into a sub folder
