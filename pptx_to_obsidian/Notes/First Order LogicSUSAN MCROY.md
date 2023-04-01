@@ -1,2 +1,0 @@
-# First Order LogicSUSAN MCROY
-

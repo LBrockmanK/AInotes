@@ -120,21 +120,23 @@ def extract_content(pptx_file, output_dir):
     prs = Presentation(pptx_file)
     # Initialize an empty list to store the extracted content.
     content = []
-    
+    previous_subject = "UNKNOWN"
+
     # Iterate through the slides in the presentation using their index and value.
     for slide_num, slide in enumerate(prs.slides):
         # Initialize a dictionary to store the text and images for each slide.
-        slide_content = {"text": "", "images": []}
+        slide_content = {"subject": "", "text": "", "images": []}
+        text_boxes = []
 
         # Iterate through the shapes in each slide.
         for shape in slide.shapes:
-            # Check if the shape has a text frame and append its text to the slide_content dictionary.
+            # Check if the shape has a text frame and append its text to the text_boxes list.
             if shape.has_text_frame:
-                slide_content["text"] += shape.text
+                text_boxes.append(shape.text)
 
             # Check if the shape has an image.
             if isinstance(shape, Picture):
-                # Filter out audio images by checking if "Audio" is not in the shape name.
+                # Filter out audio images by checking if "Audio" is in the shape name.
                 if "Audio" not in shape.name:
                     # Store the image object in the variable 'image'.
                     image = shape.image
@@ -144,21 +146,21 @@ def extract_content(pptx_file, output_dir):
                     full_image_path = os.path.join(output_dir, image_path)
                     # Write the image binary data (blob) to a new image file with the created file path.
                     with open(full_image_path, "wb") as image_file:
-                        image_file.write(image.blob)
+                       image_file.write(image.blob)
                     # Append the image file path to the slide_content dictionary.
                     slide_content["images"].append(image_path)
 
-        # Extract notes from the slide and combine with the slide text.
-        if slide.has_notes_slide:
-            notes_slide = slide.notes_slide
-            notes_text_frame = notes_slide.notes_text_frame
-            notes_text = notes_text_frame.text
-            # Add a newline between the slide text and notes if there is slide text.
-            if slide_content["text"]:
-                slide_content["text"] += "\n"
-            slide_content["text"] += notes_text
+        # Assign the first text box as the subject, and join the rest of the text boxes with a newline.
+        if text_boxes:
+            slide_content["subject"] = text_boxes[0]
+            slide_content["text"] = "\n".join(text_boxes[1:])
+        else:
+            slide_content["subject"] = previous_subject
 
-        # Append the slide_content dictionary to the content list, even if there is no slide text.
+        # Update the previous_subject variable with the current slide's subject.
+        previous_subject = slide_content["subject"]
+
+        # Append the slide_content dictionary to the content list.
         content.append(slide_content)
 
     # Return the content list containing text and images from the PPTX file.
@@ -180,8 +182,11 @@ def check_directory_writable(directory):
 def create_markdown_files(content, output_dir):
     for slide_num, slide in enumerate(content):
         body_text = slide["text"]
+        subject_line = slide["subject"]
 
-        md_filename = f"Note_{slide_num + 1}.md"
+        # Replace invalid characters in the subject line for creating a file
+        valid_subject_line = "".join(c if c.isalnum() or c == ' ' else '_' for c in subject_line).rstrip()
+        md_filename = f"{valid_subject_line}.md"
         md_filepath = os.path.join(output_dir, md_filename)
 
         with open(md_filepath, "w", encoding="utf-8") as md_file:
@@ -255,7 +260,7 @@ def main():
 
     # TODO: Add code here to create links in obsidian format
     # Fill in note content processing here
-
+    # TODO: to ensure each note has at least one link, have a next / prev chain between them in a header
     # TODO: Add code here to create Markdown files for Obsidian using final_content (Do this first, just put in the text we have with images)
     create_markdown_files(final_content, notes_output_dir)
 

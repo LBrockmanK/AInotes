@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homepage.md",
+                "file": "Notes/Note_3.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Homepage.md",
+                "file": "Notes/Note_3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Homepage.md",
+                "file": "Notes/Note_3.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Homepage.md"
+                "file": "Notes/Note_3.md"
               }
             }
           },
@@ -166,22 +166,33 @@
   },
   "active": "67021e5e5dfe2d44",
   "lastOpenFiles": [
-    "Notes/Note_3.md",
-    "Notes/Note_4.md",
     "Notes/Note_2.md",
     "Notes/Note_1.md",
-    "Notes/Note_14.md",
-    "Notes/Note_18.md",
-    "Notes/Note_20.md",
-    "Notes/Note_21.md",
+    "Notes/Disadvantages of NL.md",
+    "Notes/Converting FOL to CNF.md",
+    "Notes/Deductive reasoning.md",
+    "Notes/Conjunctive Normal Form.md",
+    "Notes/Disadvantage of using NL.md",
+    "Notes/Complex Facts.md",
+    "Notes/Basic Facts.md",
+    "Notes/A KBS gives Cognitive Penetrability.md",
+    "Notes/ Syntax_ The Connectives.md",
+    "Notes/ Formulas.md",
+    "Notes/Next up_.md",
+    "Notes/Summary of Benefits of KBS.md",
+    "Notes/Where is the KR_.md",
+    "Notes/Which one is the KBS_.md",
+    "Notes/Other Forms of Reasoning.md",
+    "Notes/Logical Entailment.md",
+    "Notes/Why is reasoning necessary_.md",
+    "Notes/What is Reasoning_.md",
+    "Notes/Disadvantages of using NL.md",
+    "Notes/Representation Languages.md",
+    "Notes/What is a Representation_.md",
+    "Notes/What is Knowledge_ _2_.md",
+    "Notes/What is Knowledge_.md",
+    "Notes/Three fundamental questions.md",
     "Figures/slide_20_image_Picture 2054.png",
-    "Notes/Note_22.md",
-    "Notes/First Order LogicSUSAN MCROY.md",
-    "Notes/Note_19.md",
-    "Notes/Note_6.md",
-    "Notes/Note_5.md",
-    "Notes/Note_33.md",
-    "Homepage.md",
     "Notes",
     "New folder",
     "Figures",
