@@ -44,62 +44,48 @@ def similarity(text1, text2):
     )
     return similarity_score
 
-
-# Function to merge and summarize two slides
-def merge_and_summarize_slides(slide1, slide2):
-    # Combine the text content of both slides by concatenating them with a space in between.
-    combined_text = slide1["text"] + " " + slide2["text"]
-
-    # Summarize the combined text using the pre-trained summarization model.
-    # `summarizer(combined_text)` feeds the combined text to the summarization pipeline.
-    # `max_length=100` sets the maximum length of the generated summary (in tokens).
-    # `do_sample=False` ensures that the model generates the most likely summary
-    # rather than sampling from the probability distribution of possible summaries.
-    # The summarizer returns a list of dictionaries, with each dictionary containing the
-    # generated summary text under the key "summary_text".
-    # `[0]["summary_text"]` retrieves the summary text from the first dictionary in the list.
-    summary = summarizer(combined_text, max_length=100, do_sample=False)[0]["summary_text"]
-
-    # Create a new slide dictionary with the summarized text and merged image list.
-    # The merged image list is created by concatenating the image lists of both input slides.
-    merged_slide = {"text": summary, "images": slide1["images"] + slide2["images"]}
-
-    # Return the merged and summarized slide.
-    return merged_slide
+# Find likely links between subject
+def link_slides(content,similarity_threshold):
+    # We're going to want to take each title line, and search the text of other slides for similarities and link those back to the working slide
+    # Link every slide to its predecessor and follower
+    return content
 
 # Function to process and merge similar slides in a content list
-def process_slides(content, similarity_threshold):
-    # Initialize an empty list to store the merged content.
+def process_slides(content, similarity_threshold, length):
+    # Summarization and other operations
+    processed_content = []
+    for slide in content:
+        # Replace square braces (these are used by obsidian for linking so we don't want have them for other purposes)
+        slide["text"] = slide["text"].replace("[", "{").replace("]", "}")
+
+        # TODO: Maybe remove Susan's name
+
+        # Summarize the text in the slide
+        slide["text"] = summarizer(slide["text"], max_length=length, do_sample=False)[0]["summary_text"]
+
+        processed_content.append(slide)
+
+    return processed_content
+
+def merge_slides(content, similarity_threshold):
     merged_content = []
 
-    # Loop through the content list until it's empty.
+    # Merging similar slides
     while content:
-        # Pop the first slide from the content list and set it as the current slide.
         current_slide = content.pop(0)
-        # Initialize a flag to indicate if a similar slide has been found.
         found_similar_slide = False
 
-        # Iterate through the remaining slides in the content list using their index and value.
         for i, slide in enumerate(content):
-            # Calculate the similarity between the current slide and the slide from the content list.
-            # If the similarity score is greater than the specified threshold, the slides are considered similar.
-            if similarity(current_slide["text"], slide["text"]) > similarity_threshold:
-                # Merge and summarize the similar slides using the merge_and_summarize_slides function.
-                merged_slide = merge_and_summarize_slides(current_slide, slide)
-                # Append the merged slide to the merged_content list.
+            if similarity(current_slide["subject"], slide["subject"]) > similarity_threshold:
+                merged_slide = {"subject": current_slide["subject"],"text": current_slide["text"] + "\n" + slide["text"],"images": current_slide["images"] + slide["images"]}
                 merged_content.append(merged_slide)
-                # Remove the similar slide from the content list to avoid duplicate processing.
                 content.pop(i)
-                # Set the found_similar_slide flag to True to indicate that a similar slide has been found and processed.
                 found_similar_slide = True
-                # Break out of the loop since a similar slide has been found and there's no need to check the remaining slides.
                 break
 
-        # If no similar slide has been found, append the current slide to the merged_content list as-is.
         if not found_similar_slide:
             merged_content.append(current_slide)
 
-    # Return the processed and merged content list.
     return merged_content
 
 # Reset output directory
@@ -233,38 +219,21 @@ def main():
                 # Append the extracted content to the 'contents' list.
                 contents.append(content)
 
+    # Combine all slide decks into one
+    contents = [slide for slide_deck in contents for slide in slide_deck]
 
-    # Set a similarity threshold for merging slides.
-    similarity_threshold = 0.8
-    # Initialize an empty list to store the processed content after merging similar slides.
-    processed_contents = []
+    # # Merge slides based on subject similarity
+    # contents = merge_slides(contents, 0.8)
 
-    # TODO: Improve processing to make new slides
-    # # Process and merge similar slides in each PPT using the process_slides function.
-    # for content in contents:
-    #     processed_content = process_slides(content, similarity_threshold)
-    #     # Append the processed content to the 'processed_contents' list.
-    #     processed_contents.append(processed_content)
+    # # Summarize slide content
+    # contents = process_slides(contents, 0.8, 10000)
 
-    # # Check if there is more than one PPTX file processed.
-    # if len(processed_contents) > 1:
-    #     # Combine the processed content from all PPTX files into a single list.
-    #     combined_content = [slide for content in processed_contents for slide in content]
-    #     # Process and merge similar slides in the combined content list.
-    #     final_content = process_slides(combined_content, similarity_threshold)
-    # else:
-    #     # If there's only one PPTX file processed, set the final content to its processed content.
-    #     final_content = processed_contents[0]
+    # # Find likely links between subjects and other note contents
+    # contents = link_slides(contents,0.8)
 
-    final_content = [slide for content in contents for slide in content]
-
-    # TODO: Add code here to create links in obsidian format
-    # Fill in note content processing here
-    # TODO: to ensure each note has at least one link, have a next / prev chain between them in a header
-    # TODO: Add code here to create Markdown files for Obsidian using final_content (Do this first, just put in the text we have with images)
-    create_markdown_files(final_content, notes_output_dir)
+    # Save slide contents into markdown files
+    create_markdown_files(contents, notes_output_dir)
 
 if __name__ == "__main__":
-    #TODO: Need to clean out the leftovers of the previous attempt before we start and make sure they all go into a sub folder
     main()
     print("Done")

@@ -1,0 +1,1 @@
+Substitution  is said to unify p and q if SUBST(,p) = SUBST(,q)
