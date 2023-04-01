@@ -1,4 +1,4 @@
-american(x)  weapon(y)  sells (x,y,z)  hostile(z)  criminal(x)
+﻿american(x)  weapon(y)  sells (x,y,z)  hostile(z)  criminal(x)
 missile(x)  owns(Nono,x)  sells(West,x,Nono)
 missile(x)  weapon(x)
 enemy(x,America)  hostile(x)
@@ -11,3 +11,11 @@ american(x)  weapon(y)  sells (x,y,z)  hostile(z)  criminal(x)
 enemy(x,America)  hostile(x)
 missile(x)  weapon(x)
 And we also first need to negate our query:  criminal(West)
+
+
+Lets consider our crime example, but use resolution refutation.
+
+The black text shows the original form. The blue is what you get after converting to conjunctive normal form. Often these are horn (with only one positive literal) but they don’t have to be.
+
+To begin the actual proof, we negate the clause we hope to prove and then try to show how this leads to a contradiction.
+

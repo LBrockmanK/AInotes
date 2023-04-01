@@ -1,6 +1,30 @@
 {
   "recentFiles": [
     {
+      "basename": " Formulas",
+      "path": "Notes/ Formulas.md"
+    },
+    {
+      "basename": "Using Multiple Quantifiers _3_",
+      "path": "Notes/Using Multiple Quantifiers _3_.md"
+    },
+    {
+      "basename": "Using Quantifiers",
+      "path": "Notes/Using Quantifiers.md"
+    },
+    {
+      "basename": "Using Multiple Quantifiers _2_",
+      "path": "Notes/Using Multiple Quantifiers _2_.md"
+    },
+    {
+      "basename": "Using Multiple Quantifiers",
+      "path": "Notes/Using Multiple Quantifiers.md"
+    },
+    {
+      "basename": "Completed Refutation Example",
+      "path": "Notes/Completed Refutation Example.md"
+    },
+    {
       "basename": " Syntax_ The Connectives",
       "path": "Notes/ Syntax_ The Connectives.md"
     },
@@ -31,10 +55,6 @@
     {
       "basename": "Brief History of Reasoning",
       "path": "Notes/Brief History of Reasoning.md"
-    },
-    {
-      "basename": "Completed Refutation Example",
-      "path": "Notes/Completed Refutation Example.md"
     },
     {
       "basename": "Completeness of FOL Inference",
@@ -87,10 +107,6 @@
     {
       "basename": "Complex Facts",
       "path": "Notes/Complex Facts.md"
-    },
-    {
-      "basename": " Formulas",
-      "path": "Notes/ Formulas.md"
     },
     {
       "basename": "Note_4",

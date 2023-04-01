@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/ Syntax_ The Connectives.md",
+                "file": "Notes/ Formulas.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/ Syntax_ The Connectives.md",
+                "file": "Notes/ Formulas.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/ Syntax_ The Connectives.md",
+                "file": "Notes/ Formulas.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/ Syntax_ The Connectives.md"
+                "file": "Notes/ Formulas.md"
               }
             }
           },
@@ -166,6 +166,12 @@
   },
   "active": "67021e5e5dfe2d44",
   "lastOpenFiles": [
+    "Notes/Using Multiple Quantifiers _3_.md",
+    "Notes/Using Quantifiers.md",
+    "Notes/Using Multiple Quantifiers _2_.md",
+    "Notes/Using Multiple Quantifiers.md",
+    "Notes/Completed Refutation Example.md",
+    "Notes/ Syntax_ The Connectives.md",
     "Notes/ Universal Quantifiers_2_.md",
     "Notes/A KBS gives Cognitive Penetrability.md",
     "Notes/Abstract individuals.md",
@@ -173,13 +179,11 @@
     "Notes/Backward Chaining with GMP.md",
     "Notes/Basic Facts.md",
     "Notes/Brief History of Reasoning.md",
-    "Notes/Completed Refutation Example.md",
     "Notes/Completeness of FOL Inference.md",
     "Notes/Conjunctive Normal Form.md",
     "Notes/Assigning Truth.md",
     "Notes/An Example.md",
     "Notes/A working definition of KR.md",
-    "Notes/ Syntax_ The Connectives.md",
     "Notes/Note_2.md",
     "Notes/Note_1.md",
     "Notes/Disadvantages of NL.md",
@@ -188,10 +192,6 @@
     "Notes/Disadvantage of using NL.md",
     "Notes/Complex Facts.md",
     "Notes/ Formulas.md",
-    "Notes/Next up_.md",
-    "Notes/Summary of Benefits of KBS.md",
-    "Notes/Where is the KR_.md",
-    "Notes/Which one is the KBS_.md",
     "Figures/slide_20_image_Picture 2054.png",
     "Notes",
     "New folder",

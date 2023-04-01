@@ -136,6 +136,13 @@ def extract_content(pptx_file, output_dir):
                     # Append the image file path to the slide_content dictionary.
                     slide_content["images"].append(image_path)
 
+        # Add notes text to text_boxes
+        if slide.has_notes_slide:
+            notes_slide = slide.notes_slide
+            for shape in notes_slide.shapes:
+                if shape.has_text_frame:
+                    text_boxes.append(shape.text)
+
         # Assign the first text box as the subject, and join the rest of the text boxes with a newline.
         if text_boxes:
             slide_content["subject"] = text_boxes[0]
@@ -175,7 +182,7 @@ def create_markdown_files(content, output_dir):
         md_filename = f"{valid_subject_line}.md"
         md_filepath = os.path.join(output_dir, md_filename)
 
-        with open(md_filepath, "w", encoding="utf-8") as md_file:
+        with open(md_filepath, "w", encoding="utf-8-sig") as md_file:
             md_file.write(body_text)
 
             if slide["images"]:

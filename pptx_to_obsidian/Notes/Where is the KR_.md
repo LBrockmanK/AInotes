@@ -1,4 +1,4 @@
-Example 1:
+﻿Example 1:
 printColor(snow) :- !, write("It's white.").
 printColor(grass) :- !, write("It's green.").
 printColor(sky) :- !, write("It's yellow.").
@@ -12,3 +12,5 @@ color(sky,yellow).
 color(X,Y) :- madeof(X,Z), color(Z,Y).
 madeof(grass,vegetation).
 color(vegetation,green).
+
+The facts at the bottom comprise a small knowledge base.

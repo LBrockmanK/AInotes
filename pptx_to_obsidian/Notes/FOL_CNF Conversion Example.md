@@ -1,4 +1,4 @@
-4. Standardize variables apart
+﻿4. Standardize variables apart
 	x [y animal(y)  loves(x,y)]  [z loves(z,x)]
 
 5. Eliminate Existentials by skolemizing
@@ -9,3 +9,6 @@
 
 7&8. Distribute  over  , group conjunctions/disjunctions:
 	[animal(F(x))  loves(G(x),x)]  [loves(x,F(x))  loves(G(x),x)]
+
+
+Read the slide

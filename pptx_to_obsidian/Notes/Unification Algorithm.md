@@ -1,4 +1,4 @@
-
+﻿
 unify (P, Q, THETA) {
   if no differences then return THETA
   else {
@@ -17,3 +17,21 @@ unify (P, Q, THETA) {
   }
   else return FAILURE           // no unifier found
 }
+
+Here is a simplified version of the algorithm in your textbook.
+ (Read it)
+Notice that after we check that R is a variable, we immediately check whether R is in S. This involves scanning inside the terms of function to make sure that the variable doesn’t occur there. This is called the occurs check and can be expensive to implement.
+
+However, it is very important.
+Here is an example:
+
+Everyone that helps themselves is successful.		
+Helps(x,x)      => Successful(x)
+      Everyone helps their mother.				
+Helps(y, Mother(y))
+      unify without OC   {y/Mother(y)}				
+Successful(Mother(y))		
+Everyone's mother is successful!!!
+									
+or SUBST is infinite recursion
+ Mother(Mother(Mother(Mother(…
