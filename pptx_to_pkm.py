@@ -60,15 +60,15 @@ def process_slides(content, similarity_threshold, length):
     # Summarization and other operations
     processed_content = []
     for slide in content:
-        # Replace square braces (these are used by obsidian for linking so we don't want have them for other purposes)
-        slide["text"] = slide["text"].replace("[", "{").replace("]", "}")
-
         # TODO: Maybe remove Susan's name
 
         # TODO: Need to skip summary slides
 
         # Summarize the text in the slide
         slide["text"] = summarizer(slide["text"], max_length=length, do_sample=False)[0]["summary_text"]
+
+        # Add the source file name to the end of the text field
+        slide["text"] += f"\n\nSource: {slide['source']}"
 
         processed_content.append(slide)
 
@@ -100,14 +100,36 @@ def merge_slides(content, similarity_threshold):
         # Add the merged_slide to the merged_content list
         merged_content.append(merged_slide)
 
-    # Check if the final slide's subject is similar to "Summary"
-    if similarity(merged_content[-1]["subject"], "Summary") > similarity_threshold:
-        # Add a new line and "Content:" to the final slide's text field
-        merged_content[-1]["text"] += "\n\nContent:"
+        # Check if the final slide's subject is similar to "Summary"
+    summary_start = None
+    for i in range(len(merged_content) - 1, -1, -1):
+        if similarity(merged_content[i]["subject"], "Summary") > 0.5:
+            summary_start = i
+        else:
+            break
+
+    if summary_start is not None:
+        # Merge all summary slides found
+        summary_slide = merged_content[summary_start]
+        for slide in merged_content[summary_start + 1:]:
+            summary_slide["text"] += "\n" + slide["text"]
+            summary_slide["images"].extend(slide["images"])
+
+        # Add a new line and "Content:" to the merged summary slide's text field
+        summary_slide["text"] += "\n\nContent:"
 
         # Add a new line with the subject line enclosed in double square brackets for each object in
-        for slide in merged_content[:-1]:  # Exclude the last slide (summary slide)
-            merged_content[-1]["text"] += f"\n[[{slide['subject']}]]"
+        for slide in merged_content[:summary_start]:  # Exclude the summary slides
+            summary_slide["text"] += f"\n[[{slide['subject']}]]"
+
+        # Set the subject line for the combined summary slide
+        summary_slide["subject"] = "Summary of " + summary_slide["source"]
+
+        # Remove the merged summary slides from the merged_content list
+        merged_content = merged_content[:summary_start]
+
+        # Append the combined summary slide to the end of the merged_content list
+        merged_content.append(summary_slide)
 
     return merged_content
 
@@ -130,6 +152,7 @@ def extract_content(pptx_file, output_dir):
     # Initialize an empty list to store the extracted content.
     content = []
     previous_subject = "UNKNOWN"
+    source_name = os.path.splitext(os.path.basename(pptx_file))[0]
 
     # TODO: Maybe do a check for special characters or anything that could be indicative of weird formatting, if we detect it (or maybe a small amount)
     # of overall text, can we convert the whole slide to an image? Is that possible? At least we can be a check in summarizer to preserve equations and
@@ -138,7 +161,7 @@ def extract_content(pptx_file, output_dir):
     # Iterate through the slides in the presentation using their index and value.
     for slide_num, slide in enumerate(prs.slides):
         # Initialize a dictionary to store the text and images for each slide.
-        slide_content = {"subject": "", "text": "", "images": []}
+        slide_content = {"subject": "", "text": "", "images": [], "source": source_name}
         text_boxes = []
 
         # Iterate through the shapes in each slide.
@@ -172,7 +195,10 @@ def extract_content(pptx_file, output_dir):
 
         # Assign the first text box as the subject, and join the rest of the text boxes with a newline.
         if text_boxes:
-            slide_content["subject"] = text_boxes[0]
+            # Remove characters that make for bad file names
+            slide_content["subject"] = " ".join("".join(c if c.isalpha() or c.isspace() else " " for c in text_boxes[0]).strip().split())
+
+            # Combine separate text fields
             slide_content["text"] = "\n".join(text_boxes[1:])
         else:
             slide_content["subject"] = previous_subject
@@ -211,7 +237,7 @@ def create_markdown_files(content, output_dir):
         # Check if the file already exists and append an incrementing number to the file name
         counter = 1
         while os.path.exists(md_filepath):
-            md_filename = f"{valid_subject_line}_{counter}.md"
+            md_filename = f"{subject_line}_{counter}.md"
             md_filepath = os.path.join(output_dir, md_filename)
             counter += 1
 
@@ -258,7 +284,7 @@ def main():
                 # Extract the content (text and images) from the PPTX file using the extract_content function.
                 content = extract_content(pptx_path, figures_output_dir)
                 # Merge slides based on subject similarity
-                content = merge_slides(content, 0.6)
+                content = merge_slides(content, 0.7)
                 # TODO: We need to mark the summarry slides at the end and link them to all preceding slides and rename them based on slide deck name
                 # Append the extracted content to the 'contents' list.
                 contents.append(content)

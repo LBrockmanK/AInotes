@@ -1,4 +1,4 @@
-﻿Logical symbols:
+Logical symbols:
 Punctuation: (, )
 Variables:	x, y, x1…
 Connectives:Ù Ú Ø Þ Û = " $
@@ -31,19 +31,24 @@ Note that a sentence that has a variable that is not bound by a quantifier (know
 Content:
 [[First Order Logic]]
 [[Syntax]]
+[[Syntax of FOL Expressions]]
 [[Terms]]
-[[ Syntax: The Connectives]]
-[[Non-logical symbols]]
+[[Syntax The Connectives]]
+[[Non logical symbols]]
 [[Basic Facts]]
 [[Using Functions and Equality]]
-[[What can we do with this?]]
+[[What can we do with this]]
+[[Abstract individuals]]
 [[Example of Reification]]
 [[Representing Quantities]]
-[[FOL: Semantics]]
+[[FOL Semantics]]
+[[Semantics of Terms Denotations]]
 [[An Example]]
 [[Assigning Truth]]
 [[Models and Satisfaction]]
 [[Entailment]]
 [[Truth Tables]]
 [[Universal Quantifiers]]
+[[Using Multiple Quantifiers]]
+[[Negated Quantifiers]]
 [[Some Terminology]]

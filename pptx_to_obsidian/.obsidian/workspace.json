@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Summary.md",
+                "file": "Notes/Syntax of FOL Expressions.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Summary.md",
+                "file": "Notes/Syntax of FOL Expressions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Summary.md",
+                "file": "Notes/Syntax of FOL Expressions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Summary.md"
+                "file": "Notes/Syntax of FOL Expressions.md"
               }
             }
           },
@@ -166,12 +166,22 @@
   },
   "active": "67021e5e5dfe2d44",
   "lastOpenFiles": [
+    "Notes/Syntax The Connectives.md",
+    "Notes/Summary of 09_KR_Intro21.md",
+    "Notes/Summary of 09_2_fol_inference_KR_21.md",
+    "Notes/Summary of 09_1_FOL_21.md",
+    "Notes/Syntax.md",
+    "Notes/Semantics of Terms Denotations.md",
+    "Notes/Summary_1.md",
+    "Notes/Summary.md",
+    "Notes/Syntax of FOL Expressions.md",
     "Notes/First Order Logic.md",
+    "Notes/FirstOrder Logic.md",
+    "Notes/Inference Rules  part.md",
+    "Notes/Summary .md",
     "Notes/First_Order Logic.md",
     "Notes/First_Order Inference.md",
     "Notes/Resolution Refutation.md",
-    "Notes/Summary.md",
-    "Notes/Summary_1.md",
     "Notes/Summary _2__ Expressions.md",
     "Notes/Converting FOL to CNF.md",
     "Notes/Converting FOL to CNF_1.md",
@@ -182,16 +192,6 @@
     "Notes/Conjunctive Normal Form.md",
     "Notes/Completed Refutation Example.md",
     "Notes/Brief History of Reasoning.md",
-    "Notes/Assigning Truth.md",
-    "Notes/Answer extraction.md",
-    "Notes/Abstract individuals.md",
-    "Notes/A working definition of KR.md",
-    "Notes/ Syntax_ The Connectives.md",
-    "Notes/A KBS gives Cognitive Penetrability.md",
-    "Notes/ Universal Quantifiers_2_.md",
-    "Notes/Existential Quantifiers _3__1.md",
-    "Notes/Existential Quantifiers _3_.md",
-    "Notes/Existential Quantifiers_1.md",
     "Figures/slide_20_image_Picture 2054.png",
     "Notes",
     "New folder",

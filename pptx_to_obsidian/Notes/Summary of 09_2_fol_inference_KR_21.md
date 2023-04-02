@@ -1,4 +1,4 @@
-﻿First-Order logic is a language that is very expressive, but inference is challenging.
+First-Order logic is a language that is very expressive, but inference is challenging.
 The Forward Chaining and Backward Chaining algorithms use Generalized Modus Ponens (but are only complete for HNF).
 Resolution inference is complete for all FOL (even if not HNF) but KBs must be converted to CNF to use it.
 
@@ -14,12 +14,14 @@ Resolution inference is complete for all FOL (even if not HNF) but KBs must be c
 
 
 Content:
-[[First-Order Inference]]
+[[First Order Inference]]
 [[Brief History of Reasoning]]
-[[Inference Rules  (part 1)]]
+[[Inference Rules part]]
 [[Proofs for FOL]]
-[[Generalized Modus Ponens (GMP)]]
+[[FOL Proof as Search]]
+[[Generalized Modus Ponens GMP]]
 [[Unification]]
+[[Unification Algorithm]]
 [[Completeness of FOL Inference]]
 [[Inference Example]]
 [[Ways to apply GMP]]
@@ -28,4 +30,3 @@ Content:
 [[Answer extraction]]
 [[Conjunctive Normal Form]]
 [[Converting FOL to CNF]]
-[[FOL-CNF Conversion Example]]

@@ -1,16 +1,64 @@
 {
   "recentFiles": [
     {
+      "basename": "Syntax of FOL Expressions",
+      "path": "Notes/Syntax of FOL Expressions.md"
+    },
+    {
+      "basename": "Syntax The Connectives",
+      "path": "Notes/Syntax The Connectives.md"
+    },
+    {
+      "basename": "Summary of 09_KR_Intro21",
+      "path": "Notes/Summary of 09_KR_Intro21.md"
+    },
+    {
+      "basename": "Summary of 09_2_fol_inference_KR_21",
+      "path": "Notes/Summary of 09_2_fol_inference_KR_21.md"
+    },
+    {
+      "basename": "Summary of 09_1_FOL_21",
+      "path": "Notes/Summary of 09_1_FOL_21.md"
+    },
+    {
+      "basename": "Syntax",
+      "path": "Notes/Syntax.md"
+    },
+    {
+      "basename": "Semantics of Terms Denotations",
+      "path": "Notes/Semantics of Terms Denotations.md"
+    },
+    {
+      "basename": "Summary_1",
+      "path": "Notes/Summary_1.md"
+    },
+    {
       "basename": "Summary",
       "path": "Notes/Summary.md"
     },
     {
-      "basename": "First_Order Logic",
-      "path": "Notes/First_Order Logic.md"
-    },
-    {
       "basename": "First Order Logic",
       "path": "Notes/First Order Logic.md"
+    },
+    {
+      "basename": "FirstOrder Logic",
+      "path": "Notes/FirstOrder Logic.md"
+    },
+    {
+      "basename": "Disadvantages of using NL",
+      "path": "Notes/Disadvantages of using NL.md"
+    },
+    {
+      "basename": "Inference Rules  part",
+      "path": "Notes/Inference Rules  part.md"
+    },
+    {
+      "basename": "Summary ",
+      "path": "Notes/Summary .md"
+    },
+    {
+      "basename": "First_Order Logic",
+      "path": "Notes/First_Order Logic.md"
     },
     {
       "basename": "First_Order Inference",
@@ -19,10 +67,6 @@
     {
       "basename": "Resolution Refutation",
       "path": "Notes/Resolution Refutation.md"
-    },
-    {
-      "basename": "Summary_1",
-      "path": "Notes/Summary_1.md"
     },
     {
       "basename": "Summary _2__ Expressions",
@@ -39,10 +83,6 @@
     {
       "basename": "Disadvantages of using NL_1",
       "path": "Notes/Disadvantages of using NL_1.md"
-    },
-    {
-      "basename": "Disadvantages of using NL",
-      "path": "Notes/Disadvantages of using NL.md"
     },
     {
       "basename": "Disadvantages of NL",
@@ -159,46 +199,6 @@
     {
       "basename": "Introduction to Knowledge Representation and Reasoning",
       "path": "Notes/Introduction to Knowledge Representation and Reasoning.md"
-    },
-    {
-      "basename": "Inference Rules  _part 1_",
-      "path": "Notes/Inference Rules  _part 1_.md"
-    },
-    {
-      "basename": "Inference Example",
-      "path": "Notes/Inference Example.md"
-    },
-    {
-      "basename": "Generalized Modus Ponens _GMP_",
-      "path": "Notes/Generalized Modus Ponens _GMP_.md"
-    },
-    {
-      "basename": "Forward Chaining with GMP",
-      "path": "Notes/Forward Chaining with GMP.md"
-    },
-    {
-      "basename": "Formulas _2_",
-      "path": "Notes/Formulas _2_.md"
-    },
-    {
-      "basename": "FOL_CNF Conversion Example",
-      "path": "Notes/FOL_CNF Conversion Example.md"
-    },
-    {
-      "basename": "FOL_ Semantics",
-      "path": "Notes/FOL_ Semantics.md"
-    },
-    {
-      "basename": "Existential Quantifiers _2_",
-      "path": "Notes/Existential Quantifiers _2_.md"
-    },
-    {
-      "basename": "Example of Reification",
-      "path": "Notes/Example of Reification.md"
-    },
-    {
-      "basename": "Entailment",
-      "path": "Notes/Entailment.md"
     }
   ],
   "omittedPaths": [],
