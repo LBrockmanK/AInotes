@@ -36,3 +36,7 @@ The black text shows the original form. The blue is what you get after convertin
 
 To begin the actual proof, we negate the clause we hope to prove and then try to show how this leads to a contradiction.
 
+
+
+Prev: [[Resolution]]
+Next: [[Completed Refutation Example]]

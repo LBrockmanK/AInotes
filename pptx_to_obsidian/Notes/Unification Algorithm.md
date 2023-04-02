@@ -47,3 +47,7 @@ The “occurs check” in the middle stops it from replacing variables with term
 T
 The cost of this check is to make the time complexity O(n2), where n is the number of terms in the expressions, so it is sometimes removed for domains where it is unlikely to happen.
 
+
+
+Prev: [[Unification]]
+Next: [[Completeness of FOL Inference]]

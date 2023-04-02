@@ -28,3 +28,6 @@ Then we use Universal elimination
 THen we use Modus Ponens
 
 This combination of 3 steps: and-introduction, universal-elimination and modus-ponens is a very common pattern. 
+
+Prev: [[More Inference Rules for FOL]]
+Next: [[FOL Proof as Search]]

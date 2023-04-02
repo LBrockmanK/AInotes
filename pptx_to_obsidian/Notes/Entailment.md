@@ -7,3 +7,6 @@ Note, that when p is valid, S can be empty.
 Here is another piece of terminology - entailment.
 
 S entails p if and only if every model of S satisfiers p.
+
+Prev: [[Validity and Satisfiability]]
+Next: [[Truth Tables]]

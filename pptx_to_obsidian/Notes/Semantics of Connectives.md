@@ -29,3 +29,6 @@ An equivalence is true when both of the implications (s1 => s2 and s2=> s1) are 
 The precedence of operators is given on the slide.
 
 For now, we will defer our discussion of quantifiers.
+
+Prev: [[Semantics of Terms Denotations]]
+Next: [[An Example]]

@@ -28,3 +28,6 @@ Or, we may only have partial information about a fact. For example, there are a 
 Closure facts are used to define all the members of a type (or to specify that two constants cannot denote the same individual.
 
 There are also several types of terminological facts that we will consider on the next slide.
+
+Prev: [[Non logical symbols]]
+Next: [[Terminological Facts]]

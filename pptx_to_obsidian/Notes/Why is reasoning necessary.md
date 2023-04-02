@@ -11,3 +11,6 @@ Consider this example:
 
 we may never have met Alice before, but we clearly want to put our facts together here
 And not give her medication m-prime.
+
+Prev: [[What is Reasoning]]
+Next: [[Logical Entailment]]

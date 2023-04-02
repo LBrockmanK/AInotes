@@ -12,3 +12,7 @@ The idea of making up new individuals is called reification. Things we typically
 
 When we reify something we usually reduce an n-ary predicate with single place predicates and functions.
 
+
+
+Prev: [[What can we do with this]]
+Next: [[Example of Reification]]

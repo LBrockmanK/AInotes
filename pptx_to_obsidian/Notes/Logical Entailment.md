@@ -22,3 +22,6 @@ We want to choose rules that will be efficient to process and give us all  of wh
 What is actually entailed).
 To verify that entailments are preserved, we  can check each rule by looking at the truth conditions of conclusions, given all possible interpretations  of the premises. 
 However once an inference rule is trusted, such as modus ponens, we don’t need to validate it again.
+
+Prev: [[Why is reasoning necessary]]
+Next: [[Deductive reasoning]]

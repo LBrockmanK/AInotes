@@ -9,3 +9,6 @@ What do we do with all these facts?  Well a KB is not very useful on its own.  W
 A proof is just that: it is a sequence of logical sentences that proceeds from what is known to be true until a suitable conclusion is reached. The solution will tell us whether something is true, and it can also tell us for which individual the answer would be true.
 
 In the meantime, we will consider two issues not addressed so far: what to do when it seems like a predicate does not have a fixed arity and what we can do in FOL to describe measurable quantities.
+
+Prev: [[Using Functions and Equality]]
+Next: [[Abstract individuals]]

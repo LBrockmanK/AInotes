@@ -19,3 +19,4 @@ Functions: father of, best friend, third inning of, one more than, beginning of.
 First order logic contains objects, relations and functions. It is thus a much more powerful language than propositional logic.
 
 Specifically, FOL can express an infinite number of facts using a finite set of quantified propositions.
+Next: [[Syntax]]

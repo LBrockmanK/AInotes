@@ -25,3 +25,6 @@ On the right side we see how we might use these inference rules to prove that a 
 The key difficulty in natural deduction is the branching factor which is determined by the number of sentences and the number of inference rules that we might use.
 
 In automated theorem provers we often restrict ourselves to a subset of the rules (which decreases the branching factor). For example, if the knowledge base can be expressed in horn normal form, then it sufficient to use resolution.
+
+Prev: [[Brief History of Reasoning]]
+Next: [[More Inference Rules for FOL]]

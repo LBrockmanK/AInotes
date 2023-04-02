@@ -19,3 +19,6 @@ The next level is RDF schema, which adds a subclass and property hierarchy and r
 Then we would get to the Web Ontology Language, abbreviated as OWL. OWL supports additional types of statements including disjointness of classes, cardinality restrictions on properties, and transitivity of properties. (There are actually several variants of OWL, each with varying degrees of expressiveness and decidability).
 
 Above OWL would be a proof layer which involves deduction and the representation of proofs.
+
+Prev: [[Who s knowledge is it]]
+Next: [[Three fundamental questions]]

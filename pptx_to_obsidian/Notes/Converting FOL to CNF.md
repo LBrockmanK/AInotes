@@ -42,3 +42,6 @@ Once all the quantifiers are universal, we can drop them all.
 The final steps are to create conjunctions of disjunctions (we do this by distributing V over ^
 
 Then we group conjunctions and disjunctions together.
+
+Prev: [[Conjunctive Normal Form]]
+Next: [[FOL CNF Conversion Example]]

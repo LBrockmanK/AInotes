@@ -6,3 +6,6 @@ At each step pick two clauses that contain complementary literals (such as not c
 While you could pick any two clauses – it is most efficient to work depth first – using whatever is left over from the previous step if you can.
 
 And then, as the proof proceeds what is “left over” gets shorter and shorter.  Occasionally we will have to start a new subtree – but  eventually – if there is a proof – we get down to where we have just one pair of complementary literals.
+
+Prev: [[Resolution Refutation]]
+Next: [[Answer extraction]]

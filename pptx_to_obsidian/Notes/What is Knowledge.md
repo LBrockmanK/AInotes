@@ -25,3 +25,6 @@ Knowledge is like belief, except that there is an implied reference to the world
 Thus, we sometimes say that knowledge is true belief.
 
 To capture this distinction completely we might need different models, each with their own mapping to truth values (called an interpretation).
+
+Prev: [[Three fundamental questions]]
+Next: [[What is a Representation]]

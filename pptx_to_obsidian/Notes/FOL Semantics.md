@@ -15,3 +15,7 @@ To have a semantics, we first need to specify the “backend”, which is our re
 The interpretation mapping is our mapping from the syntax to the domain. To assign a truth value, (1) we  need to map the terms to objects and (2) we need to know what relations (or executed functions) the predicates correspond to and what the connectives do. 
 
 Together the domain and the mapping comprise the interpretation in FOL.
+
+
+Prev: [[Representing Quantities]]
+Next: [[Semantics of Terms Denotations]]

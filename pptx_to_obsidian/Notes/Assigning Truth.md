@@ -12,3 +12,7 @@ To determine the truth of any atomic sentence we look to see if the objects refe
 So we can ask about the truth value of “holding(J, cash1)”.
 
 Since <J, cash1> is in the holding relation the sentence is true.
+
+
+Prev: [[An Example]]
+Next: [[Models and Satisfaction]]

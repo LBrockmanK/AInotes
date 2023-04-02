@@ -14,3 +14,6 @@ madeof(grass,vegetation).
 color(vegetation,green).
 
 The facts at the bottom comprise a small knowledge base.
+
+Prev: [[Which one is the KBS]]
+Next: [[A KBS gives Cognitive Penetrability]]

@@ -12,3 +12,6 @@ To apply resolution, the KB does not need to be horn, but it DOES need to be in 
 A CNF clause is a disjunction of literals, where a literal is an atom or its negation.
 
 Any FOL can be converted to CNF.
+
+Prev: [[Answer extraction]]
+Next: [[Converting FOL to CNF]]

@@ -20,3 +20,6 @@ Other methods rely on search – this is what we mean by “deduction”.  There
 Today you can get free automated theorem provers, and specialized systems for “model checking” that are used in software verification – especially for concurrent systems.
 
 On the next few slides we will consider examples of rules of inference and how they are used in proofs.
+
+Prev: [[First Order Inference]]
+Next: [[Inference Rules part]]

@@ -14,3 +14,6 @@ For example, we might express the idea of John purchased a bike differently, dep
 So, we add an abstract purchase event, here “p” and use it to state everything in terms of unary functions and the equality predicate.
 
 Another good use is when a predicate depends on a sequence of events.
+
+Prev: [[Abstract individuals]]
+Next: [[Representing Quantities]]

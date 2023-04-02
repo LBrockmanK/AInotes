@@ -8,3 +8,7 @@ If we have two clauses that use the same variable we must first “standardize t
 Lets consider the examples in the table
 
 Read the slide.
+
+
+Prev: [[Generalized Modus Ponens GMP]]
+Next: [[Unification Algorithm]]

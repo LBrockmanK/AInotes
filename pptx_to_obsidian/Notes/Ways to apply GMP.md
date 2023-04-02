@@ -12,3 +12,7 @@ A third approach is called resolution because we iteratively try to resolve clau
 
 The next two slides show you examples of forward and backward proofs and then a resolution proof.
 
+
+
+Prev: [[Inference Example]]
+Next: [[Forward Chaining with GMP]]

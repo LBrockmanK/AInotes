@@ -6,3 +6,6 @@ The third question is to explain what we mean by reasoning.
 Reasoning is the process by which we make implicit knowledge explicit and …
 We do that by manipulating symbols  ..
 However any manipulations we use must respect the agreed upon meanings of the symbols.
+
+Prev: [[Disadvantages of using NL]]
+Next: [[Why is reasoning necessary]]

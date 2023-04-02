@@ -14,3 +14,7 @@ Some sentences are always true, no matter what truth assignment we consider for 
 Some sentences are sometimes true. We call these satisfiable.
 
 Some sentences are never true. We call these unsatisfiable. We can also call them inconsistent or contradictory.
+
+
+Prev: [[Models and Satisfaction]]
+Next: [[Entailment]]

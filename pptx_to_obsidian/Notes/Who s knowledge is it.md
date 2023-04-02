@@ -21,3 +21,6 @@ Logics are expressive, have well-defined semantics, and support reasoning.
 There are several variations of logic because in its full-expressiveness, logic is undecidable.
 Different logics make it easier or harder to say things, and make it easier or harder to do automated reasoning.
 Part of what you want to learn is how to select a logic and reasoner that is just powerful enough to do what is needed in time that meets the resource constraints of the problem
+
+Prev: [[A working definition of KR]]
+Next: [[KR and the Semantic Web]]

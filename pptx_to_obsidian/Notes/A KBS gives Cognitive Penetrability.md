@@ -13,3 +13,6 @@ Such actions are the ones we learn to do, rather than do because of some reflex.
 Learning also means that the actions may differ depending on the conditions. So, for example,
 We might normally leave the room if we hear a fire alarm. But, we might not leave the room if we hear the alarm
 And we believe the alarm is being tested.
+
+Prev: [[Where is the KR]]
+Next: [[Summary of 09_KR_Intro21]]

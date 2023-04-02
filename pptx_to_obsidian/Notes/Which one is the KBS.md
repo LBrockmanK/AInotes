@@ -36,3 +36,6 @@ color(vegetation,green).
 
 Example 2. Note that both programs do the same thing, 
 but the second one has a separate collection of knowledge structures.
+
+Prev: [[Other Forms of Reasoning]]
+Next: [[Where is the KR]]

@@ -44,3 +44,6 @@ The third fatal flaw for automated reasoning would be that NL appears to be non-
 What this means is that similar sentences might have very different representations and it wasn’t clear to logicians how to relate the two.
 While this is a complaint, this non-compositionality can be addressed if one uses another construct from 
 Mathematics, called the lambda calculus.
+
+Prev: [[Representation Languages]]
+Next: [[What is Reasoning]]

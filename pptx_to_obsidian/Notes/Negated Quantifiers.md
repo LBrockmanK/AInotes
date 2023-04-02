@@ -11,3 +11,6 @@ Negated:  (x sleeps(x))
 Along these lines , when we have a universal “For all x P(x)” and we negate it to “not for all x P(x)”, then this is the same as saying “there exists x,  not P(x)”. In other words, the two negations on the outside can be eliminated. (But leave the one on the inside alone!)
 
 So, an equivalent of “It is not the case that everybody sleeps.” is to say that there is somebody that doesn’t sleep.”
+
+Prev: [[Using Multiple Quantifiers]]
+Next: [[Some Terminology]]

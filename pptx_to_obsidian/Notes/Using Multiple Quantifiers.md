@@ -40,3 +40,6 @@ Another interesting property is that we can rewrite each of the quantifiers in t
 This is akin to saying that we can reduce a double negation.
 
 For example in English, “everybody sleeps” means the same as “nobody doesn’t sleep.”
+
+Prev: [[Existential Quantifiers]]
+Next: [[Negated Quantifiers]]

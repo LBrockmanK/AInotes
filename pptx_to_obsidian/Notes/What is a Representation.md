@@ -22,3 +22,6 @@ It uses sentences in some language to represent propositions.
 **
 The mapping from representor to represented corresponds to the semantics of the representation.
 Whem the mapping is part of the real world, to access the semantics in a machine, we would need to represent this mapping, that we willl call the interpretation.
+
+Prev: [[What is Knowledge]]
+Next: [[Representation Languages]]

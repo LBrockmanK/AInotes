@@ -11,12 +11,8 @@
             "id": "67021e5e5dfe2d44",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Summary of 09_1_FOL_21.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
         ]
@@ -93,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Summary of 09_1_FOL_21.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +105,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Summary of 09_1_FOL_21.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Notes/Summary of 09_1_FOL_21.md"
-              }
+              "state": {}
             }
           },
           {
@@ -166,9 +158,13 @@
   },
   "active": "67021e5e5dfe2d44",
   "lastOpenFiles": [
+    "Notes/Models and Satisfaction.md",
+    "Notes/Assigning Truth.md",
+    "Notes/An Example.md",
+    "Notes/Semantics of Connectives.md",
+    "Notes/Summary of 09_1_FOL_21.md",
     "Notes/Summary of 09_2_fol_inference_KR_21.md",
     "Notes/Summary of 09_KR_Intro21.md",
-    "Notes/Summary of 09_1_FOL_21.md",
     "Notes/Some Terminology.md",
     "Notes/Syntax of FOL Expressions.md",
     "Notes/Syntax The Connectives.md",
@@ -188,10 +184,6 @@
     "Notes/Converting FOL to CNF_1.md",
     "Notes/Disadvantages of using NL.md",
     "Notes/Disadvantages of NL.md",
-    "Notes/Disadvantages of using NL_1.md",
-    "Notes/Deductive reasoning.md",
-    "Notes/Conjunctive Normal Form.md",
-    "Notes/Completed Refutation Example.md",
     "Figures/slide_20_image_Picture 2054.png",
     "Notes",
     "New folder",

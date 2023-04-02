@@ -45,35 +45,52 @@ def similarity(text1, text2):
         embeddings = model(**inputs).last_hidden_state.mean(dim=1).numpy()
 
     similarity_score = np.inner(embeddings[0], embeddings[1]) / (
-        np.linalg.norm(embeddings[0]) * np.linalg.norm(embeddings[
-1])
-    )
+        np.linalg.norm(embeddings[0]) * np.linalg.norm(embeddings[1]))
     return similarity_score
 
 # Find likely links between subject
-def link_slides(content,similarity_threshold):
+def link_slides(content, similarity_threshold):
     # We're going to want to take each title line, and search the text of other slides for similarities and link those back to the working slide
     # Link every slide to its predecessor and follower
-    return content
+    linked_content = []
+
+    for index, slide in enumerate(content):
+        
+        # Skip processing if the subject starts with "Summary"
+        if not slide["subject"].startswith("Summary"):
+            # Link slides
+            if index > 0:  # There is a previous slide
+                prev_slide = content[index - 1]
+                slide["text"] += f'\n\nPrev: [[{prev_slide["subject"]}]]'
+
+            if index < len(content) - 1:  # There is a next slide
+                next_slide = content[index + 1]
+                slide["text"] += f'\nNext: [[{next_slide["subject"]}]]'
+
+        linked_content.append(slide)
+
+    return linked_content
 
 # Function to process and merge similar slides in a content list
 def process_slides(content, similarity_threshold, length):
     # Summarization and other operations
     processed_content = []
     for slide in content:
-        # TODO: Maybe remove Susan's name
+        
+        # Skip processing if the subject starts with "Summary"
+        if not slide["subject"].startswith("Summary"):
+            # TODO: Maybe remove Susan's name
 
-        # TODO: Need to skip summary slides
+            # Summarize the text in the slide
+            slide["text"] = summarizer(slide["text"], max_length=length, do_sample=False)[0]["summary_text"]
 
-        # Summarize the text in the slide
-        slide["text"] = summarizer(slide["text"], max_length=length, do_sample=False)[0]["summary_text"]
-
-        # Add the source file name to the end of the text field
-        slide["text"] += f"\n\nSource: {slide['source']}"
+            # Add the source file name to the end of the text field
+            slide["text"] += f"\n\nSource: {slide['source']}"
 
         processed_content.append(slide)
 
     return processed_content
+
 
 def merge_slides(content, similarity_threshold):
     merged_content = []
@@ -239,6 +256,7 @@ def create_markdown_files(content, output_dir):
         md_filepath = os.path.join(output_dir, md_filename)
 
         # Check if the file already exists and append an incrementing number to the file name
+        # TODO: Will likely need some way to handle links getting broken, most likely we will need to check for duplicate subject lines well ahead of time and handle them early, probably right after merging and flattening
         counter = 1
         while os.path.exists(md_filepath):
             md_filename = f"{subject_line}_{counter}.md"
@@ -298,8 +316,8 @@ def main():
     # # Summarize slide content
     # contents = process_slides(contents, 0.8, 10000)
 
-    # # Find likely links between subjects and other note contents
-    # contents = link_slides(contents,0.8)
+    # Find likely links between subjects and other note contents
+    contents = link_slides(contents,0.8)
 
     # Save slide contents into markdown files
     create_markdown_files(contents, notes_output_dir)

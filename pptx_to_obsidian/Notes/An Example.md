@@ -1,4 +1,4 @@
-﻿
+
 21
 
 *
@@ -12,5 +12,8 @@ For example,
    Brother contains {<R,J>, <J,R>}
    Person contains {<R>, <J>}
    King contains {<J>}
+
+Prev: [[Semantics of Connectives]]
+Next: [[Assigning Truth]]
 
 ![[slide_20_image_Picture 2054.png]]

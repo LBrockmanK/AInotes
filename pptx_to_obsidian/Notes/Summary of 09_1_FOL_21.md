@@ -1,4 +1,4 @@
-﻿Logical symbols:
+Logical symbols:
 Punctuation: (, )
 Variables:	x, y, x1…
 Connectives:Ù Ú Ø Þ Û = " $

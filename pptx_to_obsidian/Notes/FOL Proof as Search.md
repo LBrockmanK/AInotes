@@ -11,3 +11,7 @@ One problem with treating FOL proof as search is the branching factor (especiall
 We really only care about one possible substitution the one that makes modus ponens possible.
 
 One way to reduce the search space would be to combine these AI, UE, and MP into one “macro” step
+
+
+Prev: [[Proofs for FOL]]
+Next: [[Generalized Modus Ponens GMP]]

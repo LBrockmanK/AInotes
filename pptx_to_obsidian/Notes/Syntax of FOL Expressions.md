@@ -13,3 +13,6 @@ There are  terms, which are like the nouns, in that they are symbols we will use
 There are also formulas, which will be used to express  propositions. A proposition is a statement that will have a truth value after all of the symbols have been given an interpretation.
 
 In the next few slides we will consider each of these two types of expressions.
+
+Prev: [[Syntax]]
+Next: [[Terms]]

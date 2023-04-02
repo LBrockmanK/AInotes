@@ -29,3 +29,6 @@ Or we might want to represent restrictions, or constraints of the arguments of r
 These are just some possibilities. We might also want to define transitive predicates, or compound predicates that are defined in terms of simpler ones.
 
 What is typical is that these facts are captured as universally quantified conditionals or biconditionals.
+
+Prev: [[Basic Facts]]
+Next: [[Using Functions and Equality]]

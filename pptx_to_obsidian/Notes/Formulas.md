@@ -23,3 +23,6 @@ e.g. " x " y (spouse(x,y)  spouse(y,x))
 The sentences of FOL consist of the atomic sentences, along with complex sentences that are built using connectives (the same connectives as propositional logic) and complex sentences that contain quantified variables.
 
 In first order logic there are two quantifiers; upside down A means “for all” and backwards, upside down E is “there exists” .
+
+Prev: [[Terms]]
+Next: [[Syntax The Connectives]]

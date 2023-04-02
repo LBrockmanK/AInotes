@@ -53,3 +53,6 @@ We have two atomic sentences and a implication whose condition looks like it mat
 What the sentence says is that the relation taller is transitive.
 By replacing x with Larrry, y with Curly and z with Moe
 The conclusion that is justtified is that “Larry is taller than Moe
+
+Prev: [[FOL Proof as Search]]
+Next: [[Unification]]

@@ -11,3 +11,6 @@ The essence of the definition is that knowledge representation and reasoning inv
 A domain of discourse, or conceptualization, is simply the entities that comprise a problem including the objects, their properties and capabilities, and any explicitly known facts about them.
 
 Inference  is a procedure to determine the truth of facts that are not explicit in the representation.
+
+Prev: [[Introduction to Knowledge Representation and Reasoning]]
+Next: [[Who s knowledge is it]]

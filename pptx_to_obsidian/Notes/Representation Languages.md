@@ -9,3 +9,6 @@ Logics have been used since the time of Aristotle; but the use of modern logics 
 Natural languages, such as English, are also representation languages.
 Using NL might be appealing because it is very expressive and is well-known.
 However, it didn’t suit mathematicians in creating precise theories ---  for at least three reasons.
+
+Prev: [[What is a Representation]]
+Next: [[Disadvantages of using NL]]

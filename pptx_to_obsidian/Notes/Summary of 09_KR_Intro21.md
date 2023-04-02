@@ -1,4 +1,4 @@
-By explicitly representing knowledge, we can:
+﻿By explicitly representing knowledge, we can:
 reuse knowledge to solve different tasks.
 Returning a list of all white things, or painting pictures
 extend existing behavior by adding new knowledge.

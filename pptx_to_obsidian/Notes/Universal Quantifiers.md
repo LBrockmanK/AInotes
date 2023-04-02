@@ -32,3 +32,6 @@ So a sentence like “all humans are mammals” is equivalent to a conjunction o
 Note that not all possible instantiations will be useful. For example, “If MyHouse is human then MyHouse is a mammal” is a true sentence even if both of the embedded atomic propositions are false.
 
 Also, if a conceptualization includes function symbols, then this will be an infinite conjunction, which is why we wouldn’t represent it this way in the first place. (Or we might just say “No functions”.)
+
+Prev: [[Truth Tables]]
+Next: [[Using Quantifiers]]

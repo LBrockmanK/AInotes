@@ -25,3 +25,6 @@ Read the slide.
 	[animal(F(x))  loves(G(x),x)]  [loves(x,F(x))  loves(G(x),x)]
 
 Read the slide
+
+Prev: [[Converting FOL to CNF]]
+Next: [[Summary of 09_2_fol_inference_KR_21]]

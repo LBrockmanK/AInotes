@@ -17,3 +17,6 @@ So, instead, what we do is introduce an abstract entity for the measurable thing
 
 For example, the age(suzy) will be a time duration. years(age(suzy)) will convert that duration to a number.
 With this approach, we can write expressions that map between the units, such as “the number of months will always be twelve times the number of years.
+
+Prev: [[Example of Reification]]
+Next: [[FOL Semantics]]

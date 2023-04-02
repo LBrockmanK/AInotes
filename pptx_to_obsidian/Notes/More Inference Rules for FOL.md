@@ -22,3 +22,6 @@ UE: ground term can be any constant symbol or function symbol applied to only gr
 EE: constant symbol must not exist in the KB or else accidental inferences may be drawn
       Ex Mother(x,Joy)    infer with EE   Mother(Joy,Joy)   leads to an illogical inference
 EI: All instances of the ground term must be replaced with a new variable for the sentence
+
+Prev: [[Inference Rules part]]
+Next: [[Proofs for FOL]]

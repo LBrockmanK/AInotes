@@ -12,3 +12,6 @@ Functions: WifeOf,  FounderOf, etc
 The nonlogical symbols are those that we define.
 We can name things like people and places, such as John, Jane, or Milwaukee
 We can also define the types of people or relations among them.
+
+Prev: [[Syntax The Connectives]]
+Next: [[Basic Facts]]

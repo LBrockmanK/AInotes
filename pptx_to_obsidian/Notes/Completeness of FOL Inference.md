@@ -11,3 +11,7 @@ Truth tables are essentially depth limited searches because we decide ahead of t
 Natural deduction is complete – it is like breadth first search.
 Generalized modus ponens is incomplete for first order logic – because not all sentences can put put in the correct format .
 However, given sentences in the correct format it is complete.
+
+
+Prev: [[Unification Algorithm]]
+Next: [[Inference Example]]

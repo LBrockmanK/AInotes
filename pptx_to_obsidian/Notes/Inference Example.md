@@ -13,3 +13,6 @@ Here we consider an English description of a situation and its translation into 
 
 This is our knowledge base.
 We need to make sure it is in horn form.
+
+Prev: [[Completeness of FOL Inference]]
+Next: [[Ways to apply GMP]]

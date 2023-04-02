@@ -33,3 +33,6 @@ A common mistake is to use implication as the main connective instead of conjunc
 
 If you use implication then what you get is a very weak sentence. Suppose that we mistranslate “There is a human rock.” which is false into a logical expression that includes implication. We get a disjunction of implications which will be true if any of the subparts is true.
 However remember that an implication is equivalent to not(premise) or conclusion which here would include “not(human(my_house)) or rock(my_house)”. Well since my_house is not human, this part would be true and hence the whole existentially quantified thing would be true.  What we defined is actually “there is something that is either not human or  a rock”, which is true but irrelevant.
+
+Prev: [[Using Quantifiers]]
+Next: [[Using Multiple Quantifiers]]

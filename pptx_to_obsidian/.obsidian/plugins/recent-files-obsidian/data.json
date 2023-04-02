@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "Models and Satisfaction",
+      "path": "Notes/Models and Satisfaction.md"
+    },
+    {
+      "basename": "Assigning Truth",
+      "path": "Notes/Assigning Truth.md"
+    },
+    {
+      "basename": "An Example",
+      "path": "Notes/An Example.md"
+    },
+    {
+      "basename": "Semantics of Connectives",
+      "path": "Notes/Semantics of Connectives.md"
+    },
+    {
       "basename": "Summary of 09_1_FOL_21",
       "path": "Notes/Summary of 09_1_FOL_21.md"
     },
@@ -109,10 +125,6 @@
       "path": "Notes/Brief History of Reasoning.md"
     },
     {
-      "basename": "Assigning Truth",
-      "path": "Notes/Assigning Truth.md"
-    },
-    {
       "basename": "Answer extraction",
       "path": "Notes/Answer extraction.md"
     },
@@ -147,10 +159,6 @@
     {
       "basename": "Existential Quantifiers _3_",
       "path": "Notes/Existential Quantifiers _3_.md"
-    },
-    {
-      "basename": "An Example",
-      "path": "Notes/An Example.md"
     },
     {
       "basename": "An Example_1",
@@ -189,16 +197,8 @@
       "path": "Notes/More Inference Rules for FOL.md"
     },
     {
-      "basename": "Models and Satisfaction",
-      "path": "Notes/Models and Satisfaction.md"
-    },
-    {
       "basename": "Logical Entailment",
       "path": "Notes/Logical Entailment.md"
-    },
-    {
-      "basename": "KR and the Semantic Web",
-      "path": "Notes/KR and the Semantic Web.md"
     }
   ],
   "omittedPaths": [],

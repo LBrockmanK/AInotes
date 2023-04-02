@@ -9,3 +9,6 @@ In the examples that we have seen, every variable that we have seen has been bou
 A so-called free variable is one that is not bound by a quantifier. But if a variable is free, then we have no way to determine the meaning of the sentence.
 
 A well-formed formula (WFF, or “woof”) is a sentence where all the variables are quantified.
+
+Prev: [[Negated Quantifiers]]
+Next: [[Summary of 09_1_FOL_21]]
