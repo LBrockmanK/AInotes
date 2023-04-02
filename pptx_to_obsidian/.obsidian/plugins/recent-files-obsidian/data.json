@@ -1,152 +1,204 @@
 {
   "recentFiles": [
     {
-      "basename": " Formulas",
-      "path": "Notes/ Formulas.md"
-    },
-    {
-      "basename": "Using Multiple Quantifiers _3_",
-      "path": "Notes/Using Multiple Quantifiers _3_.md"
-    },
-    {
-      "basename": "Using Quantifiers",
-      "path": "Notes/Using Quantifiers.md"
-    },
-    {
-      "basename": "Using Multiple Quantifiers _2_",
-      "path": "Notes/Using Multiple Quantifiers _2_.md"
-    },
-    {
-      "basename": "Using Multiple Quantifiers",
-      "path": "Notes/Using Multiple Quantifiers.md"
-    },
-    {
-      "basename": "Completed Refutation Example",
-      "path": "Notes/Completed Refutation Example.md"
-    },
-    {
-      "basename": " Syntax_ The Connectives",
-      "path": "Notes/ Syntax_ The Connectives.md"
-    },
-    {
-      "basename": " Universal Quantifiers_2_",
-      "path": "Notes/ Universal Quantifiers_2_.md"
-    },
-    {
-      "basename": "A KBS gives Cognitive Penetrability",
-      "path": "Notes/A KBS gives Cognitive Penetrability.md"
-    },
-    {
-      "basename": "Abstract individuals",
-      "path": "Notes/Abstract individuals.md"
-    },
-    {
-      "basename": "Answer extraction",
-      "path": "Notes/Answer extraction.md"
-    },
-    {
-      "basename": "Backward Chaining with GMP",
-      "path": "Notes/Backward Chaining with GMP.md"
-    },
-    {
-      "basename": "Basic Facts",
-      "path": "Notes/Basic Facts.md"
-    },
-    {
-      "basename": "Brief History of Reasoning",
-      "path": "Notes/Brief History of Reasoning.md"
-    },
-    {
-      "basename": "Completeness of FOL Inference",
-      "path": "Notes/Completeness of FOL Inference.md"
-    },
-    {
-      "basename": "Conjunctive Normal Form",
-      "path": "Notes/Conjunctive Normal Form.md"
-    },
-    {
-      "basename": "Assigning Truth",
-      "path": "Notes/Assigning Truth.md"
-    },
-    {
-      "basename": "An Example",
-      "path": "Notes/An Example.md"
-    },
-    {
-      "basename": "A working definition of KR",
-      "path": "Notes/A working definition of KR.md"
-    },
-    {
-      "basename": "Note_3",
-      "path": "Notes/Note_3.md"
-    },
-    {
-      "basename": "Note_2",
-      "path": "Notes/Note_2.md"
-    },
-    {
-      "basename": "Note_1",
-      "path": "Notes/Note_1.md"
-    },
-    {
-      "basename": "Disadvantages of NL",
-      "path": "Notes/Disadvantages of NL.md"
+      "basename": "Converting FOL to CNF_1",
+      "path": "Notes/Converting FOL to CNF_1.md"
     },
     {
       "basename": "Converting FOL to CNF",
       "path": "Notes/Converting FOL to CNF.md"
     },
     {
+      "basename": "Disadvantages of using NL_1",
+      "path": "Notes/Disadvantages of using NL_1.md"
+    },
+    {
+      "basename": "Disadvantages of using NL",
+      "path": "Notes/Disadvantages of using NL.md"
+    },
+    {
+      "basename": "Disadvantages of NL",
+      "path": "Notes/Disadvantages of NL.md"
+    },
+    {
       "basename": "Deductive reasoning",
       "path": "Notes/Deductive reasoning.md"
     },
     {
-      "basename": "Disadvantage of using NL",
-      "path": "Notes/Disadvantage of using NL.md"
+      "basename": "Conjunctive Normal Form",
+      "path": "Notes/Conjunctive Normal Form.md"
+    },
+    {
+      "basename": "Completed Refutation Example",
+      "path": "Notes/Completed Refutation Example.md"
+    },
+    {
+      "basename": "Brief History of Reasoning",
+      "path": "Notes/Brief History of Reasoning.md"
+    },
+    {
+      "basename": "Assigning Truth",
+      "path": "Notes/Assigning Truth.md"
+    },
+    {
+      "basename": "Answer extraction",
+      "path": "Notes/Answer extraction.md"
+    },
+    {
+      "basename": "Abstract individuals",
+      "path": "Notes/Abstract individuals.md"
+    },
+    {
+      "basename": "A working definition of KR",
+      "path": "Notes/A working definition of KR.md"
+    },
+    {
+      "basename": " Syntax_ The Connectives",
+      "path": "Notes/ Syntax_ The Connectives.md"
+    },
+    {
+      "basename": "A KBS gives Cognitive Penetrability",
+      "path": "Notes/A KBS gives Cognitive Penetrability.md"
+    },
+    {
+      "basename": " Universal Quantifiers_2_",
+      "path": "Notes/ Universal Quantifiers_2_.md"
+    },
+    {
+      "basename": "Existential Quantifiers_1",
+      "path": "Notes/Existential Quantifiers_1.md"
+    },
+    {
+      "basename": "Existential Quantifiers _3__1",
+      "path": "Notes/Existential Quantifiers _3__1.md"
+    },
+    {
+      "basename": "Existential Quantifiers _3_",
+      "path": "Notes/Existential Quantifiers _3_.md"
+    },
+    {
+      "basename": "An Example",
+      "path": "Notes/An Example.md"
+    },
+    {
+      "basename": "An Example_1",
+      "path": "Notes/An Example_1.md"
+    },
+    {
+      "basename": "Abstract individuals_1",
+      "path": "Notes/Abstract individuals_1.md"
+    },
+    {
+      "basename": "Summary of Benefits of KBS",
+      "path": "Notes/Summary of Benefits of KBS.md"
+    },
+    {
+      "basename": "Summary",
+      "path": "Notes/Summary.md"
+    },
+    {
+      "basename": "Summary _2__ Expressions",
+      "path": "Notes/Summary _2__ Expressions.md"
+    },
+    {
+      "basename": "Summary_ Unification Algorithm",
+      "path": "Notes/Summary_ Unification Algorithm.md"
+    },
+    {
+      "basename": "Proofs for FOL",
+      "path": "Notes/Proofs for FOL.md"
+    },
+    {
+      "basename": "Non_logical symbols",
+      "path": "Notes/Non_logical symbols.md"
+    },
+    {
+      "basename": "Next up_",
+      "path": "Notes/Next up_.md"
+    },
+    {
+      "basename": "Negated Quantifiers",
+      "path": "Notes/Negated Quantifiers.md"
+    },
+    {
+      "basename": "More Inference Rules for FOL",
+      "path": "Notes/More Inference Rules for FOL.md"
+    },
+    {
+      "basename": "Models and Satisfaction",
+      "path": "Notes/Models and Satisfaction.md"
+    },
+    {
+      "basename": "Logical Entailment",
+      "path": "Notes/Logical Entailment.md"
+    },
+    {
+      "basename": "KR and the Semantic Web",
+      "path": "Notes/KR and the Semantic Web.md"
+    },
+    {
+      "basename": "Introduction to Knowledge Representation and Reasoning",
+      "path": "Notes/Introduction to Knowledge Representation and Reasoning.md"
+    },
+    {
+      "basename": "Inference Rules  _part 1_",
+      "path": "Notes/Inference Rules  _part 1_.md"
+    },
+    {
+      "basename": "Inference Example",
+      "path": "Notes/Inference Example.md"
+    },
+    {
+      "basename": "Generalized Modus Ponens _GMP_",
+      "path": "Notes/Generalized Modus Ponens _GMP_.md"
+    },
+    {
+      "basename": "Forward Chaining with GMP",
+      "path": "Notes/Forward Chaining with GMP.md"
+    },
+    {
+      "basename": "Formulas _2_",
+      "path": "Notes/Formulas _2_.md"
+    },
+    {
+      "basename": "FOL_CNF Conversion Example",
+      "path": "Notes/FOL_CNF Conversion Example.md"
+    },
+    {
+      "basename": "FOL_ Semantics",
+      "path": "Notes/FOL_ Semantics.md"
+    },
+    {
+      "basename": "First_Order Logic",
+      "path": "Notes/First_Order Logic.md"
+    },
+    {
+      "basename": "First Order Logic",
+      "path": "Notes/First Order Logic.md"
+    },
+    {
+      "basename": "First_Order Inference",
+      "path": "Notes/First_Order Inference.md"
+    },
+    {
+      "basename": "Existential Quantifiers _2_",
+      "path": "Notes/Existential Quantifiers _2_.md"
+    },
+    {
+      "basename": "Example of Reification",
+      "path": "Notes/Example of Reification.md"
+    },
+    {
+      "basename": "Entailment",
+      "path": "Notes/Entailment.md"
     },
     {
       "basename": "Complex Facts",
       "path": "Notes/Complex Facts.md"
     },
     {
-      "basename": "Note_4",
-      "path": "Notes/Note_4.md"
-    },
-    {
-      "basename": "Note_8",
-      "path": "Notes/Note_8.md"
-    },
-    {
-      "basename": "Note_6",
-      "path": "Notes/Note_6.md"
-    },
-    {
-      "basename": "Note_5",
-      "path": "Notes/Note_5.md"
-    },
-    {
-      "basename": "Homepage",
-      "path": "Homepage.md"
-    },
-    {
-      "basename": "Note_14",
-      "path": "Notes/Note_14.md"
-    },
-    {
-      "basename": "Note_18",
-      "path": "Notes/Note_18.md"
-    },
-    {
-      "basename": "Note_20",
-      "path": "Notes/Note_20.md"
-    },
-    {
-      "basename": "Note_21",
-      "path": "Notes/Note_21.md"
-    },
-    {
-      "basename": "slide_20_image_Picture 2054",
-      "path": "Figures/slide_20_image_Picture 2054.png"
+      "basename": "Completeness of FOL Inference",
+      "path": "Notes/Completeness of FOL Inference.md"
     }
   ],
   "omittedPaths": [],

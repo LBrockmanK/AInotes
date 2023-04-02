@@ -12,3 +12,17 @@ These next few slides contain several interesting properties of quantifiers and 
 First, when you have two nested quantifiers that are the same, it doesn’t matter what order they come in. (It is like you are picking two elements from a set but immediately putting the first element back before you pick the second one, so there is no dependence between the two.)
 
 In English this is like saying “Everyone likes everybody” is the same as “Everyone is liked by everybody”.
+Properties of quantifiers:
+x y is not the same as y x
+x y is not the same as y x
+
+Why?
+x y likes(x,y) “Everyone has someone they like.”
+y x likes(x,y)  “There is someone who is liked by everyone.”
+34
+
+However, when the quantifiers are different then the order is VERY important.
+
+So to express “Everyone has someone that they like” we use for all x, there exists y. which means that each x can have a different y that they like. (Or they can like the same y; there is no restriction).
+
+However to express “There is someone who is liked by everyone”, we have to put the existential on the outside (exists x for_all y likes(x,y)) .

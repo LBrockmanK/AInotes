@@ -68,6 +68,7 @@ def process_slides(content, similarity_threshold, length):
     return processed_content
 
 def merge_slides(content, similarity_threshold):
+    #TODO: This is leaving things with basically the exact same name unmerged, or even the same name, might be related to _# being added on which similarity has trouble parsing? Try removing special characters when doing check?
     merged_content = []
 
     # Merging similar slides
@@ -182,6 +183,13 @@ def create_markdown_files(content, output_dir):
         md_filename = f"{valid_subject_line}.md"
         md_filepath = os.path.join(output_dir, md_filename)
 
+        # Check if the file already exists and append an incrementing number to the file name
+        counter = 1
+        while os.path.exists(md_filepath):
+            md_filename = f"{valid_subject_line}_{counter}.md"
+            md_filepath = os.path.join(output_dir, md_filename)
+            counter += 1
+
         with open(md_filepath, "w", encoding="utf-8-sig") as md_file:
             md_file.write(body_text)
 
@@ -200,6 +208,7 @@ def main():
     clear_directory(figures_output_dir)
     notes_output_dir = os.path.join(base_output_dir, "Notes")
     os.makedirs(notes_output_dir, exist_ok=True)
+    clear_directory(notes_output_dir)
 
     # Check if the figures_output_dir is writable
     if not check_directory_writable(figures_output_dir):
@@ -229,8 +238,8 @@ def main():
     # Combine all slide decks into one
     contents = [slide for slide_deck in contents for slide in slide_deck]
 
-    # # Merge slides based on subject similarity
-    # contents = merge_slides(contents, 0.8)
+    # Merge slides based on subject similarity
+    contents = merge_slides(contents, 0.6)
 
     # # Summarize slide content
     # contents = process_slides(contents, 0.8, 10000)

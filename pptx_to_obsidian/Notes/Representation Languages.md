@@ -9,3 +9,19 @@ Logics have been used since the time of Aristotle; but the use of modern logics 
 Natural languages, such as English, are also representation languages.
 Using NL might be appealing because it is very expressive and is well-known.
 However, it didn’t suit mathematicians in creating precise theories ---  for at least three reasons.
+Example 1:
+printColor(snow) :- !, write("It's white.").
+printColor(grass) :- !, write("It's green.").
+printColor(sky) :- !, write("It's yellow.").
+printColor(X) :- write("Beats me.").
+Example 2
+printColor(X) :- colour(X,Y), !,
+write("It's "), write(Y), write(".").
+printColor(X) :- write("Beats me.").
+color(snow,white).
+color(sky,yellow).
+color(X,Y) :- madeof(X,Z), color(Z,Y).
+madeof(grass,vegetation).
+color(vegetation,green).
+
+The facts at the bottom comprise a small knowledge base.

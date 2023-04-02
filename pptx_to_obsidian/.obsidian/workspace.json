@@ -11,12 +11,8 @@
             "id": "67021e5e5dfe2d44",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/ Formulas.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -93,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/ Formulas.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +105,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/ Formulas.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Notes/ Formulas.md"
-              }
+              "state": {}
             }
           },
           {
@@ -166,32 +158,32 @@
   },
   "active": "67021e5e5dfe2d44",
   "lastOpenFiles": [
-    "Notes/Using Multiple Quantifiers _3_.md",
-    "Notes/Using Quantifiers.md",
-    "Notes/Using Multiple Quantifiers _2_.md",
-    "Notes/Using Multiple Quantifiers.md",
-    "Notes/Completed Refutation Example.md",
-    "Notes/ Syntax_ The Connectives.md",
-    "Notes/ Universal Quantifiers_2_.md",
-    "Notes/A KBS gives Cognitive Penetrability.md",
-    "Notes/Abstract individuals.md",
-    "Notes/Answer extraction.md",
-    "Notes/Backward Chaining with GMP.md",
-    "Notes/Basic Facts.md",
-    "Notes/Brief History of Reasoning.md",
-    "Notes/Completeness of FOL Inference.md",
-    "Notes/Conjunctive Normal Form.md",
-    "Notes/Assigning Truth.md",
-    "Notes/An Example.md",
-    "Notes/A working definition of KR.md",
-    "Notes/Note_2.md",
-    "Notes/Note_1.md",
-    "Notes/Disadvantages of NL.md",
     "Notes/Converting FOL to CNF.md",
+    "Notes/Converting FOL to CNF_1.md",
+    "Notes/Disadvantages of using NL.md",
+    "Notes/Disadvantages of NL.md",
+    "Notes/Disadvantages of using NL_1.md",
     "Notes/Deductive reasoning.md",
-    "Notes/Disadvantage of using NL.md",
-    "Notes/Complex Facts.md",
-    "Notes/ Formulas.md",
+    "Notes/Conjunctive Normal Form.md",
+    "Notes/Completed Refutation Example.md",
+    "Notes/Brief History of Reasoning.md",
+    "Notes/Assigning Truth.md",
+    "Notes/Answer extraction.md",
+    "Notes/Abstract individuals.md",
+    "Notes/A working definition of KR.md",
+    "Notes/ Syntax_ The Connectives.md",
+    "Notes/A KBS gives Cognitive Penetrability.md",
+    "Notes/ Universal Quantifiers_2_.md",
+    "Notes/Existential Quantifiers _3__1.md",
+    "Notes/Existential Quantifiers _3_.md",
+    "Notes/Existential Quantifiers_1.md",
+    "Notes/An Example.md",
+    "Notes/An Example_1.md",
+    "Notes/Abstract individuals_1.md",
+    "Notes/Summary of Benefits of KBS.md",
+    "Notes/Summary.md",
+    "Notes/Summary _2__ Expressions.md",
+    "Notes/Summary_ Unification Algorithm.md",
     "Figures/slide_20_image_Picture 2054.png",
     "Notes",
     "New folder",

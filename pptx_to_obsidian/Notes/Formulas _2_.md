@@ -10,3 +10,15 @@ e.g. " x " y (spouse(x,y)  spouse(y,x))
 The sentences of FOL consist of the atomic sentences, along with complex sentences that are built using connectives (the same connectives as propositional logic) and complex sentences that contain quantified variables.
 
 In first order logic there are two quantifiers; upside down A means “for all” and backwards, upside down E is “there exists” .
+The basic facts of a problem can usually be expressed as atomic sentences.
+Type facts
+Person(John), Person(Jane), Company(Aurora)
+Property facts
+Married(John,Jane), WorksFor(John,Aurora)
+Equality facts
+Jane = WifeOf(John)
+10
+
+Many facts can be expressed as atomic sentences.
+
+These include basic type facts, property facts, and equality facts.
