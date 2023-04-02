@@ -10,7 +10,3 @@ We also defined the legal expressions of the language including the terms and th
 
 Note that a sentence that has a variable that is not bound by a quantifier (known as a free variable) is not well-formed and would not have a truth assignment.
 
-
-SUSAN MCROY
-
-In this lecture we will consider first-order inference.

@@ -74,18 +74,25 @@ def merge_slides(content, similarity_threshold):
     # Merging similar slides
     while content:
         current_slide = content.pop(0)
-        found_similar_slide = False
+        merged_slide = current_slide.copy()
 
-        for i, slide in enumerate(content):
-            if similarity(current_slide["subject"], slide["subject"]) > similarity_threshold:
-                merged_slide = {"subject": current_slide["subject"],"text": current_slide["text"] + "\n" + slide["text"],"images": current_slide["images"] + slide["images"]}
-                merged_content.append(merged_slide)
-                content.pop(i)
-                found_similar_slide = True
+        while content:
+            next_slide = content[0]
+
+            if similarity(current_slide["subject"], next_slide["subject"]) > similarity_threshold:
+                # Merge slides
+                print(f"Merging slides: '{current_slide['subject']}' and '{next_slide['subject']}'")
+                merged_slide["text"] += "\n" + next_slide["text"]
+                merged_slide["images"].extend(next_slide["images"])
+
+                # Remove the merged slide from the content list
+                content.pop(0)
+            else:
+                print(f"Not merging slides: '{current_slide['subject']}' and '{next_slide['subject']}'")
                 break
 
-        if not found_similar_slide:
-            merged_content.append(current_slide)
+        # Add the merged_slide to the merged_content list
+        merged_content.append(merged_slide)
 
     return merged_content
 
@@ -108,6 +115,10 @@ def extract_content(pptx_file, output_dir):
     # Initialize an empty list to store the extracted content.
     content = []
     previous_subject = "UNKNOWN"
+
+    # TODO: Maybe do a check for special characters or anything that could be indicative of weird formatting, if we detect it (or maybe a small amount)
+    # of overall text, can we convert the whole slide to an image? Is that possible? At least we can be a check in summarizer to preserve equations and
+    # other stuff
 
     # Iterate through the slides in the presentation using their index and value.
     for slide_num, slide in enumerate(prs.slides):
@@ -232,14 +243,14 @@ def main():
                 pptx_path = os.path.join(root, file)
                 # Extract the content (text and images) from the PPTX file using the extract_content function.
                 content = extract_content(pptx_path, figures_output_dir)
+                # Merge slides based on subject similarity
+                content = merge_slides(content, 0.6) # This similarity threshold seems to be the sweet spot
+                # TODO: We need to mark the summarry slides at the end and link them to all preceding slides and rename them based on slide deck name
                 # Append the extracted content to the 'contents' list.
                 contents.append(content)
 
     # Combine all slide decks into one
     contents = [slide for slide_deck in contents for slide in slide_deck]
-
-    # Merge slides based on subject similarity
-    contents = merge_slides(contents, 0.6)
 
     # # Summarize slide content
     # contents = process_slides(contents, 0.8, 10000)

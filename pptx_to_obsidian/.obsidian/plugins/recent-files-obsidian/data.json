@@ -1,6 +1,34 @@
 {
   "recentFiles": [
     {
+      "basename": "First_Order Logic",
+      "path": "Notes/First_Order Logic.md"
+    },
+    {
+      "basename": "First Order Logic",
+      "path": "Notes/First Order Logic.md"
+    },
+    {
+      "basename": "First_Order Inference",
+      "path": "Notes/First_Order Inference.md"
+    },
+    {
+      "basename": "Resolution Refutation",
+      "path": "Notes/Resolution Refutation.md"
+    },
+    {
+      "basename": "Summary",
+      "path": "Notes/Summary.md"
+    },
+    {
+      "basename": "Summary_1",
+      "path": "Notes/Summary_1.md"
+    },
+    {
+      "basename": "Summary _2__ Expressions",
+      "path": "Notes/Summary _2__ Expressions.md"
+    },
+    {
       "basename": "Converting FOL to CNF_1",
       "path": "Notes/Converting FOL to CNF_1.md"
     },
@@ -93,14 +121,6 @@
       "path": "Notes/Summary of Benefits of KBS.md"
     },
     {
-      "basename": "Summary",
-      "path": "Notes/Summary.md"
-    },
-    {
-      "basename": "Summary _2__ Expressions",
-      "path": "Notes/Summary _2__ Expressions.md"
-    },
-    {
       "basename": "Summary_ Unification Algorithm",
       "path": "Notes/Summary_ Unification Algorithm.md"
     },
@@ -169,18 +189,6 @@
       "path": "Notes/FOL_ Semantics.md"
     },
     {
-      "basename": "First_Order Logic",
-      "path": "Notes/First_Order Logic.md"
-    },
-    {
-      "basename": "First Order Logic",
-      "path": "Notes/First Order Logic.md"
-    },
-    {
-      "basename": "First_Order Inference",
-      "path": "Notes/First_Order Inference.md"
-    },
-    {
       "basename": "Existential Quantifiers _2_",
       "path": "Notes/Existential Quantifiers _2_.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "Entailment",
       "path": "Notes/Entailment.md"
-    },
-    {
-      "basename": "Complex Facts",
-      "path": "Notes/Complex Facts.md"
-    },
-    {
-      "basename": "Completeness of FOL Inference",
-      "path": "Notes/Completeness of FOL Inference.md"
     }
   ],
   "omittedPaths": [],
