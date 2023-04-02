@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Summary",
+      "path": "Notes/Summary.md"
+    },
+    {
       "basename": "First_Order Logic",
       "path": "Notes/First_Order Logic.md"
     },
@@ -15,10 +19,6 @@
     {
       "basename": "Resolution Refutation",
       "path": "Notes/Resolution Refutation.md"
-    },
-    {
-      "basename": "Summary",
-      "path": "Notes/Summary.md"
     },
     {
       "basename": "Summary_1",

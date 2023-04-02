@@ -21,6 +21,10 @@ summarizer = pipeline("summarization", model="t5-small")
 
 # Function to compute text similarity using sentence embeddings
 def similarity(text1, text2):
+    # Keep only alphabetical characters and spaces
+    text1 = ''.join(c for c in text1 if c.isalpha() or c == ' ')
+    text2 = ''.join(c for c in text2 if c.isalpha() or c == ' ')
+
     inputs = tokenizer([text1, text2], return_tensors="pt", padding=True, truncation=True)
 
     # Filter out unknown tokens
@@ -40,7 +44,8 @@ def similarity(text1, text2):
         embeddings = model(**inputs).last_hidden_state.mean(dim=1).numpy()
 
     similarity_score = np.inner(embeddings[0], embeddings[1]) / (
-        np.linalg.norm(embeddings[0]) * np.linalg.norm(embeddings[1])
+        np.linalg.norm(embeddings[0]) * np.linalg.norm(embeddings[
+1])
     )
     return similarity_score
 
@@ -60,6 +65,8 @@ def process_slides(content, similarity_threshold, length):
 
         # TODO: Maybe remove Susan's name
 
+        # TODO: Need to skip summary slides
+
         # Summarize the text in the slide
         slide["text"] = summarizer(slide["text"], max_length=length, do_sample=False)[0]["summary_text"]
 
@@ -68,7 +75,6 @@ def process_slides(content, similarity_threshold, length):
     return processed_content
 
 def merge_slides(content, similarity_threshold):
-    #TODO: This is leaving things with basically the exact same name unmerged, or even the same name, might be related to _# being added on which similarity has trouble parsing? Try removing special characters when doing check?
     merged_content = []
 
     # Merging similar slides
@@ -93,6 +99,15 @@ def merge_slides(content, similarity_threshold):
 
         # Add the merged_slide to the merged_content list
         merged_content.append(merged_slide)
+
+    # Check if the final slide's subject is similar to "Summary"
+    if similarity(merged_content[-1]["subject"], "Summary") > similarity_threshold:
+        # Add a new line and "Content:" to the final slide's text field
+        merged_content[-1]["text"] += "\n\nContent:"
+
+        # Add a new line with the subject line enclosed in double square brackets for each object in
+        for slide in merged_content[:-1]:  # Exclude the last slide (summary slide)
+            merged_content[-1]["text"] += f"\n[[{slide['subject']}]]"
 
     return merged_content
 
@@ -190,8 +205,7 @@ def create_markdown_files(content, output_dir):
         subject_line = slide["subject"]
 
         # Replace invalid characters in the subject line for creating a file
-        valid_subject_line = "".join(c if c.isalnum() or c == ' ' else '_' for c in subject_line).rstrip()
-        md_filename = f"{valid_subject_line}.md"
+        md_filename = f"{subject_line}.md"
         md_filepath = os.path.join(output_dir, md_filename)
 
         # Check if the file already exists and append an incrementing number to the file name
@@ -244,7 +258,7 @@ def main():
                 # Extract the content (text and images) from the PPTX file using the extract_content function.
                 content = extract_content(pptx_path, figures_output_dir)
                 # Merge slides based on subject similarity
-                content = merge_slides(content, 0.6) # This similarity threshold seems to be the sweet spot
+                content = merge_slides(content, 0.6)
                 # TODO: We need to mark the summarry slides at the end and link them to all preceding slides and rename them based on slide deck name
                 # Append the extracted content to the 'contents' list.
                 contents.append(content)

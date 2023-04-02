@@ -111,3 +111,32 @@ However, when the quantifiers are different then the order is VERY important.
 So to express “Everyone has someone that they like” we use for all x, there exists y. which means that each x can have a different y that they like. (Or they can like the same y; there is no restriction).
 
 However to express “There is someone who is liked by everyone”, we have to put the existential on the outside (exists x for_all y likes(x,y)) .
+Properties of quantifiers:
+x P(x) is the same as x P(x)
+x P(x) is the same as x P(x)
+
+Why?
+x sleep(x)“Everybody sleeps.”
+x  sleep(x)double negative: “Nobody doesn’t sleep.”
+35
+
+
+Another interesting property is that we can rewrite each of the quantifiers in terms of the other one. You just negate both the new quantifier and the sentence inside the expression.
+
+This is akin to saying that we can reduce a double negation.
+
+For example in English, “everybody sleeps” means the same as “nobody doesn’t sleep.”
+Properties of quantifiers:
+x P(x) when negated is x P(x)
+x P(x) when negated is x P(x)
+
+Why?
+x sleeps(x)“Everybody sleeps.”
+Negated:  (x sleeps(x))
+x  sleeps(x)which says: “Somebody doesn’t sleep.”
+36
+
+
+Along these lines , when we have a universal “For all x P(x)” and we negate it to “not for all x P(x)”, then this is the same as saying “there exists x,  not P(x)”. In other words, the two negations on the outside can be eliminated. (But leave the one on the inside alone!)
+
+So, an equivalent of “It is not the case that everybody sleeps.” is to say that there is somebody that doesn’t sleep.”

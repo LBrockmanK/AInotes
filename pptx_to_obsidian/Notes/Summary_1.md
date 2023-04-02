@@ -11,3 +11,21 @@ Resolution inference is complete for all FOL (even if not HNF) but KBs must be c
 
 
 
+
+
+Content:
+[[First-Order Inference]]
+[[Brief History of Reasoning]]
+[[Inference Rules  (part 1)]]
+[[Proofs for FOL]]
+[[Generalized Modus Ponens (GMP)]]
+[[Unification]]
+[[Completeness of FOL Inference]]
+[[Inference Example]]
+[[Ways to apply GMP]]
+[[Resolution]]
+[[Resolution Refutation]]
+[[Answer extraction]]
+[[Conjunctive Normal Form]]
+[[Converting FOL to CNF]]
+[[FOL-CNF Conversion Example]]
