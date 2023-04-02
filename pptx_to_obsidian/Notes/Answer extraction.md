@@ -3,7 +3,6 @@ One solution, called answer extraction,  involves replacing a query y P(y) wi
 Since A occurs nowhere else, it will not be possible to derive the empty clause and we can terminate the derivation as soon as the resolvent contains only the answer predicate.
 The binding for x in A(x) will be the answer we want.
 
-
 In the example that we considered, we were asking if a known person (West) was a criminal. What if we wanted to ask the question, Who is a criminal around here?
 
 This would be equivalent to the query There exists y, criminal(y).

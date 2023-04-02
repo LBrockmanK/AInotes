@@ -21,7 +21,6 @@ Modus Ponens: 4, 5
 
 AI, UE, MP is a common inference pattern
 
-
 We start by using And Introduction
 
 Then we use Universal elimination

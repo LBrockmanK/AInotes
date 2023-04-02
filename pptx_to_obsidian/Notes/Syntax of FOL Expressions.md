@@ -4,7 +4,6 @@ Formulas (propositions)
 
 4
 
-
 Now that we have defined the symbols (the vocabulary) for FOL,  we can consider the expressions.
 
 There are two types of expressions.

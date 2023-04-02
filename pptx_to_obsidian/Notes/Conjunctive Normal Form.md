@@ -7,7 +7,6 @@ e.g.happy(Sally)
 
 Any FOL KB can be converted into CNF
 
-
 To apply resolution, the KB does not need to be horn, but it DOES need to be in conjunctive normal form.
 
 A CNF clause is a disjunction of literals, where a literal is an atom or its negation.

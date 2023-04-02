@@ -32,7 +32,7 @@ Helps(y, Mother(y))
       unify without OC   {y/Mother(y)}				
 Successful(Mother(y))		
 Everyone's mother is successful!!!
-									
+
 or SUBST is infinite recursion
  Mother(Mother(Mother(Mother(…
 The algorithm recursively explores the two expressions and simultaneously builds , which is shortest length substitution list to make a match 

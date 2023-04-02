@@ -11,7 +11,6 @@ Each quantifier must have a unique variable name
 Avoids confusion in steps 5 and 6
 e.g. [xP]xQ]	becomes xPyQ
 
-
 Here is an overview of the algorithm for converting FOL to conjunctive normal form.
 
 Read the slide
@@ -22,7 +21,6 @@ Everyone has a name.x person(x)  y name(y)  has(x,y)
 	wrong:x person(x)  name(K)has(x,K)Everyone has the same name K!!
 	We want everyone to have a name based on who they are
 	right:x person(x)  name(F(x))has(x,F(x))
-
 
 The next step is to replace existential quantifiers with unique constants. We call this process skolemization.
 
@@ -39,37 +37,8 @@ All variables in KB will be assumed to be universally quantified
 	(PQ)R becomes (PQR)
 	(PQ)R becomes (PQR)
 
-
 Once all the quantifiers are universal, we can drop them all.
 
 The final steps are to create conjunctions of disjunctions (we do this by distributing V over ^
 
 Then we group conjunctions and disjunctions together.
-“Everyone who loves all animals is loved by someone.”
-	x [y animal(y)  loves(x,y)]  [y loves(y,x)]
-
-1&2. Eliminate biconditionals and implications
-	x [y animal(y)  loves(x,y)]  [y loves(y,x)]
-
-3. Reduce scope of  to single literals
-	x [y {animal(y)  loves(x,y)}]  [y loves(y,x)]
-	x [y animal(y)  loves(x,y)]  [y loves(y,x)]
-	x [y animal(y)  loves(x,y)]  [y loves(y,x)]
-
-Here is an example.
-
-Read the slide.
-4. Standardize variables apart
-	x [y animal(y)  loves(x,y)]  [z loves(z,x)]
-
-5. Eliminate Existentials by skolemizing
-	x [animal(F(x))  loves(x,F(x))]  loves(G(x),x)
-
-6. Drop universals
-	[animal(F(x))  loves(x,F(x))]  loves(G(x),x)
-
-7&8. Distribute  over  , group conjunctions/disjunctions:
-	[animal(F(x))  loves(G(x),x)]  [loves(x,F(x))  loves(G(x),x)]
-
-
-Read the slide

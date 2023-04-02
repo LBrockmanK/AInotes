@@ -1,24 +1,28 @@
 {
   "recentFiles": [
     {
-      "basename": "Syntax of FOL Expressions",
-      "path": "Notes/Syntax of FOL Expressions.md"
-    },
-    {
-      "basename": "Syntax The Connectives",
-      "path": "Notes/Syntax The Connectives.md"
-    },
-    {
-      "basename": "Summary of 09_KR_Intro21",
-      "path": "Notes/Summary of 09_KR_Intro21.md"
+      "basename": "Summary of 09_1_FOL_21",
+      "path": "Notes/Summary of 09_1_FOL_21.md"
     },
     {
       "basename": "Summary of 09_2_fol_inference_KR_21",
       "path": "Notes/Summary of 09_2_fol_inference_KR_21.md"
     },
     {
-      "basename": "Summary of 09_1_FOL_21",
-      "path": "Notes/Summary of 09_1_FOL_21.md"
+      "basename": "Summary of 09_KR_Intro21",
+      "path": "Notes/Summary of 09_KR_Intro21.md"
+    },
+    {
+      "basename": "Some Terminology",
+      "path": "Notes/Some Terminology.md"
+    },
+    {
+      "basename": "Syntax of FOL Expressions",
+      "path": "Notes/Syntax of FOL Expressions.md"
+    },
+    {
+      "basename": "Syntax The Connectives",
+      "path": "Notes/Syntax The Connectives.md"
     },
     {
       "basename": "Syntax",
@@ -195,10 +199,6 @@
     {
       "basename": "KR and the Semantic Web",
       "path": "Notes/KR and the Semantic Web.md"
-    },
-    {
-      "basename": "Introduction to Knowledge Representation and Reasoning",
-      "path": "Notes/Introduction to Knowledge Representation and Reasoning.md"
     }
   ],
   "omittedPaths": [],

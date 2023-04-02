@@ -29,11 +29,10 @@ single atomic sentence:      P(x)
 SUBST(,q)
 (where SUBST(pi') = SUBST(pi) for all i)
 
-
 To use this rule, we must make some assumptions. (If our problem doesn’t initially meet these conditions, then we will try to transform it so that it does.)
- 
+
   First, all variables are universally quantified.
- 
+
   Second the KB must be in horn form.
   In HNF, we have one positive literal.
 
@@ -47,7 +46,6 @@ p1  p2  q    = taller(x,y)  taller(y,z)  taller(x,z)
 SUBST(,q) = taller(Larry,Moe)
 SUBST(,q)
 (where SUBST(pi') = SUBST(pi) for all i)
-
 
 Here is another example using GMP
 

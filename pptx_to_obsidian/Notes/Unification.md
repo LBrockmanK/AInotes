@@ -1,6 +1,5 @@
 ﻿Substitution  is said to unify p and q if SUBST(,p) = SUBST(,q)
 
-
 The process of matching clauses that contain variables and constants is called unification. The substitution is called the unifier. By convention we use the symbol theta to refer to it.
 
 In these examples,  assume all variables universally quantified.

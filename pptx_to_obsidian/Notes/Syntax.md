@@ -1,4 +1,4 @@
-The syntax of a logic tells you the well-formed sequences of symbols
+﻿The syntax of a logic tells you the well-formed sequences of symbols
 FOL has 2 types of symbols:
 Logical symbols have a fixed meaning in the language. There are 3 types:
 Punctuation (such as parentheses)

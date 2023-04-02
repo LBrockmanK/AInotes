@@ -7,7 +7,6 @@ Can prove α if KB╞  α
 Cannot always prove that KB doesn’t╞  α 
 Resolution repeatedly combines two clauses to make a new one until an empty clause is derived (a contradiction)
 
-
 Resolution is a refutation technique.  We try to prove that a sentence alpha is entailed by a knowledge base by showing that the knowledge base and the negation of alpha is unsatisfiable.
 
 To apply resolution both the knowledge base and the negation of alpha must be in conjunctive normal form (but this is always possible).

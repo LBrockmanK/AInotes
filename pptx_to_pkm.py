@@ -11,6 +11,7 @@ import torch
 import numpy as np
 from pptx.shapes.picture import Picture
 import errno
+import re
 
 # Initialize the tokenizer and model for sentence embeddings
 tokenizer = AutoTokenizer.from_pretrained("t5-small", model_max_length=512)
@@ -130,6 +131,9 @@ def merge_slides(content, similarity_threshold):
 
         # Append the combined summary slide to the end of the merged_content list
         merged_content.append(summary_slide)
+
+    for slide in merged_content:
+        slide["text"] = re.sub(r'\n\s*\n', '\n\n', slide["text"])
 
     return merged_content
 
@@ -284,8 +288,7 @@ def main():
                 # Extract the content (text and images) from the PPTX file using the extract_content function.
                 content = extract_content(pptx_path, figures_output_dir)
                 # Merge slides based on subject similarity
-                content = merge_slides(content, 0.7)
-                # TODO: We need to mark the summarry slides at the end and link them to all preceding slides and rename them based on slide deck name
+                content = merge_slides(content, 0.9)
                 # Append the extracted content to the 'contents' list.
                 contents.append(content)
 

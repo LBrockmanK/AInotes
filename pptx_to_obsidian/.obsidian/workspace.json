@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Syntax of FOL Expressions.md",
+                "file": "Notes/Summary of 09_1_FOL_21.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Syntax of FOL Expressions.md",
+                "file": "Notes/Summary of 09_1_FOL_21.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Syntax of FOL Expressions.md",
+                "file": "Notes/Summary of 09_1_FOL_21.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Syntax of FOL Expressions.md"
+                "file": "Notes/Summary of 09_1_FOL_21.md"
               }
             }
           },
@@ -166,15 +166,16 @@
   },
   "active": "67021e5e5dfe2d44",
   "lastOpenFiles": [
-    "Notes/Syntax The Connectives.md",
-    "Notes/Summary of 09_KR_Intro21.md",
     "Notes/Summary of 09_2_fol_inference_KR_21.md",
+    "Notes/Summary of 09_KR_Intro21.md",
     "Notes/Summary of 09_1_FOL_21.md",
+    "Notes/Some Terminology.md",
+    "Notes/Syntax of FOL Expressions.md",
+    "Notes/Syntax The Connectives.md",
     "Notes/Syntax.md",
     "Notes/Semantics of Terms Denotations.md",
     "Notes/Summary_1.md",
     "Notes/Summary.md",
-    "Notes/Syntax of FOL Expressions.md",
     "Notes/First Order Logic.md",
     "Notes/FirstOrder Logic.md",
     "Notes/Inference Rules  part.md",
@@ -191,7 +192,6 @@
     "Notes/Deductive reasoning.md",
     "Notes/Conjunctive Normal Form.md",
     "Notes/Completed Refutation Example.md",
-    "Notes/Brief History of Reasoning.md",
     "Figures/slide_20_image_Picture 2054.png",
     "Notes",
     "New folder",

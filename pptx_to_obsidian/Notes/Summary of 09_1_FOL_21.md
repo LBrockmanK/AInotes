@@ -1,4 +1,4 @@
-Logical symbols:
+﻿Logical symbols:
 Punctuation: (, )
 Variables:	x, y, x1…
 Connectives:Ù Ú Ø Þ Û = " $
@@ -26,16 +26,16 @@ We also defined the legal expressions of the language including the terms and th
 
 Note that a sentence that has a variable that is not bound by a quantifier (known as a free variable) is not well-formed and would not have a truth assignment.
 
-
-
 Content:
 [[First Order Logic]]
 [[Syntax]]
 [[Syntax of FOL Expressions]]
 [[Terms]]
+[[Formulas]]
 [[Syntax The Connectives]]
 [[Non logical symbols]]
 [[Basic Facts]]
+[[Terminological Facts]]
 [[Using Functions and Equality]]
 [[What can we do with this]]
 [[Abstract individuals]]
@@ -43,12 +43,16 @@ Content:
 [[Representing Quantities]]
 [[FOL Semantics]]
 [[Semantics of Terms Denotations]]
+[[Semantics of Connectives]]
 [[An Example]]
 [[Assigning Truth]]
 [[Models and Satisfaction]]
+[[Validity and Satisfiability]]
 [[Entailment]]
 [[Truth Tables]]
 [[Universal Quantifiers]]
+[[Using Quantifiers]]
+[[Existential Quantifiers]]
 [[Using Multiple Quantifiers]]
 [[Negated Quantifiers]]
 [[Some Terminology]]

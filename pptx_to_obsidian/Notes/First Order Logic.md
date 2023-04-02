@@ -1,7 +1,6 @@
 ﻿SUSAN MCROY
 1
 
-
 In this lecture we will consider first-order logic (FOL), which is also known as predicate logic (FOPL).
 
 First-order logic is the foundation for all successful forms of Knowledge Representation. It is a good language for describing the properties of individuals and static facts (that is, those that are true at a given moment in time).

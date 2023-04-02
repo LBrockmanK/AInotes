@@ -1,3 +1,20 @@
+By explicitly representing knowledge, we can:
+reuse knowledge to solve different tasks.
+Returning a list of all white things, or painting pictures
+extend existing behavior by adding new knowledge.
+E.g. Canaries are yellow.
+debug faulty behavior by locating erroneous beliefs.
+E..g. “No the sky is not yellow. It is blue.”
+explain and justify behavior of the system
+E.g. “because grass is a form of vegetation
+
+Explicit representations of knowledge give KR system many advantages over traditional procedural programs.
+
+First, the knowledge is reusable. The same facts could be used to solve several different tasks.
+Second, the knowledge is extendable. We can add new facts and the behavior will adapt immediately.
+Third, we can look at the encoded facts and use them to debug faulty behavior.
+Fourth, we can use the facts to explain and justify the behavior of the system.  
+This is especially important for medical applications.
 We will do a quick review of First Order Logic, focusing on the language and its entailments.
 FOL was invented by Frege to formalize mathematics.
 Later we will consider what we might want to represent, and what inference procedures we might want to apply.
@@ -9,9 +26,19 @@ Before considering various restrictions and extensions  of FOL,  we will also co
 
 Content:
 [[Introduction to Knowledge Representation and Reasoning]]
+[[A working definition of KR]]
+[[Who s knowledge is it]]
+[[KR and the Semantic Web]]
 [[Three fundamental questions]]
 [[What is Knowledge]]
 [[What is a Representation]]
+[[Representation Languages]]
+[[Disadvantages of using NL]]
+[[What is Reasoning]]
+[[Why is reasoning necessary]]
+[[Logical Entailment]]
 [[Deductive reasoning]]
 [[Other Forms of Reasoning]]
+[[Which one is the KBS]]
+[[Where is the KR]]
 [[A KBS gives Cognitive Penetrability]]

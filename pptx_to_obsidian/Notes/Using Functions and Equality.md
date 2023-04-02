@@ -8,7 +8,6 @@ Are equalities implied?
 Answer: x y shoe(x)  shoe(y)  (x=y)  			z (shoe(z)  (x=z)  (y=z))
 13
 
-
 Functions are used when we don’t have a symbol for an object, but we have another term that is related.
 Lets say that Mike and Mary are both 22, but we don’t know that, just that
 they are twins. We can define a function age that returns the age of any object.
