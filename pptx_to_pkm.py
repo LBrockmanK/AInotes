@@ -55,17 +55,38 @@ def link_slides(content, similarity_threshold):
     linked_content = []
 
     for index, slide in enumerate(content):
-        
+
         # Skip processing if the subject starts with "Summary"
         if not slide["subject"].startswith("Summary"):
             # Link slides
             if index > 0:  # There is a previous slide
                 prev_slide = content[index - 1]
-                slide["text"] += f'\n\nPrev: [[{prev_slide["subject"]}]]'
+                slide["text"] += f'\n\nPrev: [[{prev_slide["title"]}|{prev_slide["subject"]}]]'
 
             if index < len(content) - 1:  # There is a next slide
                 next_slide = content[index + 1]
-                slide["text"] += f'\nNext: [[{next_slide["subject"]}]]'
+                slide["text"] += f'\nNext: [[{next_slide["title"]}|{next_slide["subject"]}]]'
+
+            # # Perform similarity scan and enclose matching text segments in double square brackets
+            # subject_words = slide["subject"].split()
+            # subject_length = len(subject_words)
+
+            # for other_slide in content:
+            #     if other_slide != slide:
+            #         other_slide_text = other_slide["text"]
+            #         # TODO: I think this might have the possibility of recursive brackets
+            #         other_slide_words = re.split(r'(\[\[.*?\]\]|\s+)', other_slide_text)
+
+            #         for i in range(len(other_slide_words) - subject_length + 1):
+            #             segment = "".join(other_slide_words[i:i + subject_length]).strip()
+            #             similarity_score = similarity(slide["subject"], segment)
+
+            #             if similarity_score > similarity_threshold and not segment.startswith("[["):
+            #                 # Enclose the matching segment in double square brackets
+            #                 other_slide_words[i:i + subject_length] = [f"[[{slide['title']}|{segment}]]"]
+
+            #         # Update the text of the other_slide
+            #         other_slide["text"] = "".join(other_slide_words).strip()
 
         linked_content.append(slide)
 
@@ -83,9 +104,6 @@ def process_slides(content, similarity_threshold, length):
 
             # Summarize the text in the slide
             slide["text"] = summarizer(slide["text"], max_length=length, do_sample=False)[0]["summary_text"]
-
-            # Add the source file name to the end of the text field
-            slide["text"] += f"\n\nSource: {slide['source']}"
 
         processed_content.append(slide)
 
@@ -138,10 +156,10 @@ def merge_slides(content, similarity_threshold):
 
         # Add a new line with the subject line enclosed in double square brackets for each object in
         for slide in merged_content[:summary_start]:  # Exclude the summary slides
-            summary_slide["text"] += f"\n[[{slide['subject']}]]"
+            summary_slide["text"] += f"\n[[{slide['title']}|{slide['subject']}]]"
 
         # Set the subject line for the combined summary slide
-        summary_slide["subject"] = "Summary of " + summary_slide["source"]
+        summary_slide["title"] = "Summary of " + summary_slide["source"]
 
         # Remove the merged summary slides from the merged_content list
         merged_content = merged_content[:summary_start]
@@ -182,8 +200,10 @@ def extract_content(pptx_file, output_dir):
     # Iterate through the slides in the presentation using their index and value.
     for slide_num, slide in enumerate(prs.slides):
         # Initialize a dictionary to store the text and images for each slide.
-        slide_content = {"subject": "", "text": "", "images": [], "source": source_name}
+        slide_content = {"subject": "", "text": "", "images": [], "source": source_name, "title": ""}
         text_boxes = []
+        # TODO: Possibly add a meta text section for things we want to append at end but note be processed by summarizer?
+        # TODO: Alternative way to enforce unique filenames would be sub folders
 
         # Iterate through the shapes in each slide.
         for shape in slide.shapes:
@@ -227,6 +247,8 @@ def extract_content(pptx_file, output_dir):
         # Update the previous_subject variable with the current slide's subject.
         previous_subject = slide_content["subject"]
 
+        slide_content["title"] = slide_content["subject"] + " " + slide_content["source"]
+
         # Append the slide_content dictionary to the content list.
         content.append(slide_content)
 
@@ -248,23 +270,12 @@ def check_directory_writable(directory):
 
 def create_markdown_files(content, output_dir):
     for slide_num, slide in enumerate(content):
-        body_text = slide["text"]
-        subject_line = slide["subject"]
-
         # Replace invalid characters in the subject line for creating a file
-        md_filename = f"{subject_line}.md"
+        md_filename = f"{slide['title']}.md"
         md_filepath = os.path.join(output_dir, md_filename)
 
-        # Check if the file already exists and append an incrementing number to the file name
-        # TODO: Will likely need some way to handle links getting broken, most likely we will need to check for duplicate subject lines well ahead of time and handle them early, probably right after merging and flattening
-        counter = 1
-        while os.path.exists(md_filepath):
-            md_filename = f"{subject_line}_{counter}.md"
-            md_filepath = os.path.join(output_dir, md_filename)
-            counter += 1
-
         with open(md_filepath, "w", encoding="utf-8-sig") as md_file:
-            md_file.write(body_text)
+            md_file.write(slide["text"])
 
             if slide["images"]:
                 md_file.write("\n\n")
@@ -312,6 +323,8 @@ def main():
 
     # Combine all slide decks into one
     contents = [slide for slide_deck in contents for slide in slide_deck]
+
+    # Ensure all slides have unique names
 
     # # Summarize slide content
     # contents = process_slides(contents, 0.8, 10000)

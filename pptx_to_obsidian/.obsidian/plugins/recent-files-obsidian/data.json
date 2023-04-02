@@ -1,6 +1,54 @@
 {
   "recentFiles": [
     {
+      "basename": "Proofs for FOL 09_2_fol_inference_KR_21",
+      "path": "Notes/Proofs for FOL 09_2_fol_inference_KR_21.md"
+    },
+    {
+      "basename": "Summary of 09_2_fol_inference_KR_21",
+      "path": "Notes/Summary of 09_2_fol_inference_KR_21.md"
+    },
+    {
+      "basename": "Terms 09_1_FOL_21",
+      "path": "Notes/Terms 09_1_FOL_21.md"
+    },
+    {
+      "basename": "Syntax of FOL Expressions 09_1_FOL_21",
+      "path": "Notes/Syntax of FOL Expressions 09_1_FOL_21.md"
+    },
+    {
+      "basename": "Syntax 09_1_FOL_21",
+      "path": "Notes/Syntax 09_1_FOL_21.md"
+    },
+    {
+      "basename": "First Order Logic 09_1_FOL_21",
+      "path": "Notes/First Order Logic 09_1_FOL_21.md"
+    },
+    {
+      "basename": "First Order Inference 09_2_fol_inference_KR_21",
+      "path": "Notes/First Order Inference 09_2_fol_inference_KR_21.md"
+    },
+    {
+      "basename": "FOL CNF Conversion Example 09_2_fol_inference_KR_21",
+      "path": "Notes/FOL CNF Conversion Example 09_2_fol_inference_KR_21.md"
+    },
+    {
+      "basename": "FOL Semantics 09_1_FOL_21",
+      "path": "Notes/FOL Semantics 09_1_FOL_21.md"
+    },
+    {
+      "basename": "FOL Proof as Search 09_2_fol_inference_KR_21",
+      "path": "Notes/FOL Proof as Search 09_2_fol_inference_KR_21.md"
+    },
+    {
+      "basename": "Abstract individuals 09_1_FOL_21",
+      "path": "Notes/Abstract individuals 09_1_FOL_21.md"
+    },
+    {
+      "basename": "An Example 09_1_FOL_21",
+      "path": "Notes/An Example 09_1_FOL_21.md"
+    },
+    {
       "basename": "Models and Satisfaction",
       "path": "Notes/Models and Satisfaction.md"
     },
@@ -19,10 +67,6 @@
     {
       "basename": "Summary of 09_1_FOL_21",
       "path": "Notes/Summary of 09_1_FOL_21.md"
-    },
-    {
-      "basename": "Summary of 09_2_fol_inference_KR_21",
-      "path": "Notes/Summary of 09_2_fol_inference_KR_21.md"
     },
     {
       "basename": "Summary of 09_KR_Intro21",
@@ -155,50 +199,6 @@
     {
       "basename": "Existential Quantifiers _3__1",
       "path": "Notes/Existential Quantifiers _3__1.md"
-    },
-    {
-      "basename": "Existential Quantifiers _3_",
-      "path": "Notes/Existential Quantifiers _3_.md"
-    },
-    {
-      "basename": "An Example_1",
-      "path": "Notes/An Example_1.md"
-    },
-    {
-      "basename": "Abstract individuals_1",
-      "path": "Notes/Abstract individuals_1.md"
-    },
-    {
-      "basename": "Summary of Benefits of KBS",
-      "path": "Notes/Summary of Benefits of KBS.md"
-    },
-    {
-      "basename": "Summary_ Unification Algorithm",
-      "path": "Notes/Summary_ Unification Algorithm.md"
-    },
-    {
-      "basename": "Proofs for FOL",
-      "path": "Notes/Proofs for FOL.md"
-    },
-    {
-      "basename": "Non_logical symbols",
-      "path": "Notes/Non_logical symbols.md"
-    },
-    {
-      "basename": "Next up_",
-      "path": "Notes/Next up_.md"
-    },
-    {
-      "basename": "Negated Quantifiers",
-      "path": "Notes/Negated Quantifiers.md"
-    },
-    {
-      "basename": "More Inference Rules for FOL",
-      "path": "Notes/More Inference Rules for FOL.md"
-    },
-    {
-      "basename": "Logical Entailment",
-      "path": "Notes/Logical Entailment.md"
     }
   ],
   "omittedPaths": [],

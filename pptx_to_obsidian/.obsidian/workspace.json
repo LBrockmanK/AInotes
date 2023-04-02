@@ -11,8 +11,12 @@
             "id": "67021e5e5dfe2d44",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Proofs for FOL 09_2_fol_inference_KR_21.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -89,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Notes/Proofs for FOL 09_2_fol_inference_KR_21.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Notes/Proofs for FOL 09_2_fol_inference_KR_21.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Notes/Proofs for FOL 09_2_fol_inference_KR_21.md"
+              }
             }
           },
           {
@@ -158,12 +166,22 @@
   },
   "active": "67021e5e5dfe2d44",
   "lastOpenFiles": [
+    "Notes/Summary of 09_2_fol_inference_KR_21.md",
+    "Notes/Terms 09_1_FOL_21.md",
+    "Notes/Syntax of FOL Expressions 09_1_FOL_21.md",
+    "Notes/Syntax 09_1_FOL_21.md",
+    "Notes/First Order Logic 09_1_FOL_21.md",
+    "Notes/First Order Inference 09_2_fol_inference_KR_21.md",
+    "Notes/FOL CNF Conversion Example 09_2_fol_inference_KR_21.md",
+    "Notes/FOL Semantics 09_1_FOL_21.md",
+    "Notes/FOL Proof as Search 09_2_fol_inference_KR_21.md",
+    "Notes/Abstract individuals 09_1_FOL_21.md",
+    "Notes/An Example 09_1_FOL_21.md",
     "Notes/Models and Satisfaction.md",
     "Notes/Assigning Truth.md",
     "Notes/An Example.md",
     "Notes/Semantics of Connectives.md",
     "Notes/Summary of 09_1_FOL_21.md",
-    "Notes/Summary of 09_2_fol_inference_KR_21.md",
     "Notes/Summary of 09_KR_Intro21.md",
     "Notes/Some Terminology.md",
     "Notes/Syntax of FOL Expressions.md",
@@ -174,16 +192,6 @@
     "Notes/Summary.md",
     "Notes/First Order Logic.md",
     "Notes/FirstOrder Logic.md",
-    "Notes/Inference Rules  part.md",
-    "Notes/Summary .md",
-    "Notes/First_Order Logic.md",
-    "Notes/First_Order Inference.md",
-    "Notes/Resolution Refutation.md",
-    "Notes/Summary _2__ Expressions.md",
-    "Notes/Converting FOL to CNF.md",
-    "Notes/Converting FOL to CNF_1.md",
-    "Notes/Disadvantages of using NL.md",
-    "Notes/Disadvantages of NL.md",
     "Figures/slide_20_image_Picture 2054.png",
     "Notes",
     "New folder",
