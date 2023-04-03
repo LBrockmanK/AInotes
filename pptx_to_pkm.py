@@ -12,6 +12,8 @@ import numpy as np
 from pptx.shapes.picture import Picture
 import errno
 import re
+from io import BytesIO
+import imgkit
 
 # Initialize the tokenizer and model for sentence embeddings
 tokenizer = AutoTokenizer.from_pretrained("t5-small", model_max_length=512)
@@ -55,7 +57,7 @@ def link_slides(content, similarity_threshold):
     linked_content = []
 
     for index, slide in enumerate(content):
-
+        print(f"Linking slide: {index}")
         # Skip processing if the subject starts with "Summary"
         if not slide["subject"].startswith("Summary"):
             # Link slides
@@ -67,26 +69,27 @@ def link_slides(content, similarity_threshold):
                 next_slide = content[index + 1]
                 slide["text"] += f'\nNext: [[{next_slide["title"]}|{next_slide["subject"]}]]'
 
-            # # Perform similarity scan and enclose matching text segments in double square brackets
-            # subject_words = slide["subject"].split()
-            # subject_length = len(subject_words)
+            # TODO: This method seems a bit too resource intensive
+            # Perform similarity scan and enclose matching text segments in double square brackets
+            subject_words = slide["subject"].split()
+            subject_length = len(subject_words)
 
-            # for other_slide in content:
-            #     if other_slide != slide:
-            #         other_slide_text = other_slide["text"]
-            #         # TODO: I think this might have the possibility of recursive brackets
-            #         other_slide_words = re.split(r'(\[\[.*?\]\]|\s+)', other_slide_text)
+            for other_slide in content:
+                if other_slide != slide:
+                    other_slide_text = other_slide["text"]
+                    # TODO: I think this might have the possibility of recursive brackets
+                    other_slide_words = re.split(r'(\[\[.*?\]\]|\s+)', other_slide_text)
 
-            #         for i in range(len(other_slide_words) - subject_length + 1):
-            #             segment = "".join(other_slide_words[i:i + subject_length]).strip()
-            #             similarity_score = similarity(slide["subject"], segment)
+                    for i in range(len(other_slide_words) - subject_length + 1):
+                        segment = "".join(other_slide_words[i:i + subject_length]).strip()
+                        similarity_score = similarity(slide["subject"], segment)
 
-            #             if similarity_score > similarity_threshold and not segment.startswith("[["):
-            #                 # Enclose the matching segment in double square brackets
-            #                 other_slide_words[i:i + subject_length] = [f"[[{slide['title']}|{segment}]]"]
+                        if similarity_score > similarity_threshold and not segment.startswith("[["):
+                            # Enclose the matching segment in double square brackets
+                            other_slide_words[i:i + subject_length] = [f"[[{slide['title']}|{segment}]]"]
 
-            #         # Update the text of the other_slide
-            #         other_slide["text"] = "".join(other_slide_words).strip()
+                    # Update the text of the other_slide
+                    other_slide["text"] = "".join(other_slide_words).strip()
 
         linked_content.append(slide)
 
