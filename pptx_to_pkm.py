@@ -66,11 +66,13 @@ def link_slides(content, similarity_threshold):
             # Link slides
             if index > 0:  # There is a previous slide
                 prev_slide = content[index - 1]
-                slide["text"] += f'\n\nPrev: [[{prev_slide["title"]}|{prev_slide["subject"]}]]'
+                slide["links"] += f'\n\nPrev: [[{prev_slide["title"]}|{prev_slide["subject"]}]]'
 
             if index < len(content) - 1:  # There is a next slide
                 next_slide = content[index + 1]
-                slide["text"] += f'\nNext: [[{next_slide["title"]}|{next_slide["subject"]}]]'
+                slide["links"] += f'\nNext: [[{next_slide["title"]}|{next_slide["subject"]}]]'
+
+            slide["links"] += f'\nRelated Content:'
 
             # TODO: This method seems a bit too resource intensive, also caused a crash fairly late in the game
             # TODO: Can we try synonym detection to check different potential links instead?
@@ -209,7 +211,7 @@ def extract_content(pptx_file, output_dir):
     # Iterate through the slides in the presentation using their index and value.
     for slide_num, slide in enumerate(prs.slides):
         # Initialize a dictionary to store the text and images for each slide.
-        slide_content = {"subject": "", "text": "", "images": [], "source": source_name, "title": ""}
+        slide_content = {"subject": "", "text": "", "images": [], "source": source_name, "title": "", "links" : ""}
         text_boxes = []
 
         # Iterate through the shapes in each slide.
@@ -280,12 +282,12 @@ def create_markdown_files(content, output_dir):
         md_filepath = os.path.join(output_dir, md_filename)
 
         with open(md_filepath, "w", encoding="utf-8-sig") as md_file:
-            md_file.write(slide["text"])
-
             if slide["images"]:
                 md_file.write("\n\n")
                 for image in slide["images"]:
                     md_file.write(f"![[{image}]]\n")
+
+            md_file.write(slide["links"])
 
 def main():
     # Set the input directory path where the PPTX files are stored.

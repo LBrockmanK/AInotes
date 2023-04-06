@@ -1,6 +1,66 @@
 {
   "recentFiles": [
     {
+      "basename": "FOL Proof as Search 09_2_fol_inference_KR_21",
+      "path": "Notes/FOL Proof as Search 09_2_fol_inference_KR_21.md"
+    },
+    {
+      "basename": "FOL Semantics 09_1_FOL_21",
+      "path": "Notes/FOL Semantics 09_1_FOL_21.md"
+    },
+    {
+      "basename": "Formulas 09_1_FOL_21",
+      "path": "Notes/Formulas 09_1_FOL_21.md"
+    },
+    {
+      "basename": "Forward Chaining with GMP 09_2_fol_inference_KR_21",
+      "path": "Notes/Forward Chaining with GMP 09_2_fol_inference_KR_21.md"
+    },
+    {
+      "basename": "Logical Entailment 09_KR_Intro21",
+      "path": "Notes/Logical Entailment 09_KR_Intro21.md"
+    },
+    {
+      "basename": "Some Terminology 09_1_FOL_21",
+      "path": "Notes/Some Terminology 09_1_FOL_21.md"
+    },
+    {
+      "basename": "Summary of 09_1_FOL_21",
+      "path": "Notes/Summary of 09_1_FOL_21.md"
+    },
+    {
+      "basename": "FOL CNF Conversion Example 09_2_fol_inference_KR_21",
+      "path": "Notes/FOL CNF Conversion Example 09_2_fol_inference_KR_21.md"
+    },
+    {
+      "basename": "First Order Inference 09_2_fol_inference_KR_21",
+      "path": "Notes/First Order Inference 09_2_fol_inference_KR_21.md"
+    },
+    {
+      "basename": "Entailment 09_1_FOL_21",
+      "path": "Notes/Entailment 09_1_FOL_21.md"
+    },
+    {
+      "basename": "Deductive reasoning 09_KR_Intro21",
+      "path": "Notes/Deductive reasoning 09_KR_Intro21.md"
+    },
+    {
+      "basename": "Completeness of FOL Inference 09_2_fol_inference_KR_21",
+      "path": "Notes/Completeness of FOL Inference 09_2_fol_inference_KR_21.md"
+    },
+    {
+      "basename": "Brief History of Reasoning 09_2_fol_inference_KR_21",
+      "path": "Notes/Brief History of Reasoning 09_2_fol_inference_KR_21.md"
+    },
+    {
+      "basename": "Basic Facts 09_1_FOL_21",
+      "path": "Notes/Basic Facts 09_1_FOL_21.md"
+    },
+    {
+      "basename": "Assigning Truth 09_1_FOL_21",
+      "path": "Notes/Assigning Truth 09_1_FOL_21.md"
+    },
+    {
       "basename": "What is a Representation 09_KR_Intro21",
       "path": "Notes/What is a Representation 09_KR_Intro21.md"
     },
@@ -25,16 +85,8 @@
       "path": "Notes/Inference Example 09_2_fol_inference_KR_21.md"
     },
     {
-      "basename": "Forward Chaining with GMP 09_2_fol_inference_KR_21",
-      "path": "Notes/Forward Chaining with GMP 09_2_fol_inference_KR_21.md"
-    },
-    {
       "basename": "First Order Logic 09_1_FOL_21",
       "path": "Notes/First Order Logic 09_1_FOL_21.md"
-    },
-    {
-      "basename": "Completeness of FOL Inference 09_2_fol_inference_KR_21",
-      "path": "Notes/Completeness of FOL Inference 09_2_fol_inference_KR_21.md"
     },
     {
       "basename": "09_1_FOL_21_slide_19",
