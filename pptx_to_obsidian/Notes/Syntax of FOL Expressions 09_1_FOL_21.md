@@ -16,3 +16,5 @@ In the next few slides we will consider each of these two types of expressions.
 
 Prev: [[Syntax 09_1_FOL_21|Syntax]]
 Next: [[Terms 09_1_FOL_21|Terms]]
+
+![[09_1_FOL_21_slide_3.jpg]]

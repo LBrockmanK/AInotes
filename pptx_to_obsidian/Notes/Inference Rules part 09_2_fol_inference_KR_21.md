@@ -28,3 +28,5 @@ In automated theorem provers we often restrict ourselves to a subset of the rule
 
 Prev: [[Brief History of Reasoning 09_2_fol_inference_KR_21|Brief History of Reasoning]]
 Next: [[More Inference Rules for FOL 09_2_fol_inference_KR_21|More Inference Rules for FOL]]
+
+![[09_2_fol_inference_KR_21_slide_2.jpg]]

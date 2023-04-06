@@ -19,3 +19,5 @@ A ground term (or a ground anything) is an expression without any variables, tha
 
 Prev: [[Syntax of FOL Expressions 09_1_FOL_21|Syntax of FOL Expressions]]
 Next: [[Formulas 09_1_FOL_21|Formulas]]
+
+![[09_1_FOL_21_slide_4.jpg]]

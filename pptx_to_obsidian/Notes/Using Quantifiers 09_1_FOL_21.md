@@ -13,3 +13,5 @@ If we mistranslate “All humans are mammals” as “For all x human(x) and mam
 
 Prev: [[Universal Quantifiers 09_1_FOL_21|Universal Quantifiers]]
 Next: [[Existential Quantifiers 09_1_FOL_21|Existential Quantifiers]]
+
+![[09_1_FOL_21_slide_28.jpg]]

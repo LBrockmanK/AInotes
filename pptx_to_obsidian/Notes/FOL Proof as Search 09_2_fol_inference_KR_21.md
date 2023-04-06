@@ -15,3 +15,5 @@ One way to reduce the search space would be to combine these AI, UE, and MP into
 
 Prev: [[Proofs for FOL 09_2_fol_inference_KR_21|Proofs for FOL]]
 Next: [[Generalized Modus Ponens GMP 09_2_fol_inference_KR_21|Generalized Modus Ponens GMP]]
+
+![[09_2_fol_inference_KR_21_slide_6.jpg]]

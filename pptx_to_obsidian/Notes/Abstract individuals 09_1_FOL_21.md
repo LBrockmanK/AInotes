@@ -16,3 +16,5 @@ When we reify something we usually reduce an n-ary predicate with single place p
 
 Prev: [[What can we do with this 09_1_FOL_21|What can we do with this]]
 Next: [[Example of Reification 09_1_FOL_21|Example of Reification]]
+
+![[09_1_FOL_21_slide_14.jpg]]

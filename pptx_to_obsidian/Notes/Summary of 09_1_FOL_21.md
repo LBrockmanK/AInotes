@@ -56,3 +56,6 @@ Content:
 [[Using Multiple Quantifiers 09_1_FOL_21|Using Multiple Quantifiers]]
 [[Negated Quantifiers 09_1_FOL_21|Negated Quantifiers]]
 [[Some Terminology 09_1_FOL_21|Some Terminology]]
+
+![[09_1_FOL_21_slide_37.jpg]]
+![[09_1_FOL_21_slide_38.jpg]]

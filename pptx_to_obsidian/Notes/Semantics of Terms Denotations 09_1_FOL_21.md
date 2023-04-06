@@ -12,3 +12,5 @@ To interpret terms with variables, we will also need to have a variable assignme
 
 Prev: [[FOL Semantics 09_1_FOL_21|FOL Semantics]]
 Next: [[Semantics of Connectives 09_1_FOL_21|Semantics of Connectives]]
+
+![[09_1_FOL_21_slide_18.jpg]]

@@ -13,3 +13,5 @@ When an interpretation satisfies a set  we say that it is a logical model of the
 
 Prev: [[Assigning Truth 09_1_FOL_21|Assigning Truth]]
 Next: [[Validity and Satisfiability 09_1_FOL_21|Validity and Satisfiability]]
+
+![[09_1_FOL_21_slide_22.jpg]]

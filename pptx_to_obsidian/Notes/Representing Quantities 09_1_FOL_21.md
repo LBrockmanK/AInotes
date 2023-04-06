@@ -20,3 +20,5 @@ With this approach, we can write expressions that map between the units, such as
 
 Prev: [[Example of Reification 09_1_FOL_21|Example of Reification]]
 Next: [[FOL Semantics 09_1_FOL_21|FOL Semantics]]
+
+![[09_1_FOL_21_slide_16.jpg]]

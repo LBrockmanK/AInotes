@@ -18,3 +18,5 @@ Some sentences are never true. We call these unsatisfiable. We can also call the
 
 Prev: [[Models and Satisfaction 09_1_FOL_21|Models and Satisfaction]]
 Next: [[Entailment 09_1_FOL_21|Entailment]]
+
+![[09_1_FOL_21_slide_23.jpg]]

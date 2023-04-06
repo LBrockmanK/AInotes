@@ -56,3 +56,8 @@ The conclusion that is justtified is that “Larry is taller than Moe
 
 Prev: [[FOL Proof as Search 09_2_fol_inference_KR_21|FOL Proof as Search]]
 Next: [[Unification 09_2_fol_inference_KR_21|Unification]]
+
+![[09_2_fol_inference_KR_21_slide_7.jpg]]
+![[09_2_fol_inference_KR_21_slide_8.jpg]]
+![[09_2_fol_inference_KR_21_slide_9.jpg]]
+![[09_2_fol_inference_KR_21_slide_10.jpg]]

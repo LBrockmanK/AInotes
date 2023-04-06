@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/A KBS gives Cognitive Penetrability 09_KR_Intro21.md",
+                "file": "Notes/What is a Representation 09_KR_Intro21.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/A KBS gives Cognitive Penetrability 09_KR_Intro21.md",
+                "file": "Notes/What is a Representation 09_KR_Intro21.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/A KBS gives Cognitive Penetrability 09_KR_Intro21.md",
+                "file": "Notes/What is a Representation 09_KR_Intro21.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/A KBS gives Cognitive Penetrability 09_KR_Intro21.md"
+                "file": "Notes/What is a Representation 09_KR_Intro21.md"
               }
             }
           },
@@ -166,7 +166,25 @@
   },
   "active": "67021e5e5dfe2d44",
   "lastOpenFiles": [
-    "Figures/slide_20_image_Picture 2054.png",
+    "Notes/Using Functions and Equality 09_1_FOL_21.md",
+    "Notes/Non logical symbols 09_1_FOL_21.md",
+    "Notes/Ways to apply GMP 09_2_fol_inference_KR_21.md",
+    "Homepage.md",
+    "Notes/Inference Example 09_2_fol_inference_KR_21.md",
+    "Notes/Forward Chaining with GMP 09_2_fol_inference_KR_21.md",
+    "Notes/First Order Logic 09_1_FOL_21.md",
+    "Notes/Completeness of FOL Inference 09_2_fol_inference_KR_21.md",
+    "Notes/Unification Algorithm 09_2_fol_inference_KR_21.md",
+    "Figures/09_KR_Intro21_slide_25.jpg",
+    "Figures/09_KR_Intro21_slide_24.jpg",
+    "Figures/09_KR_Intro21_slide_23.jpg",
+    "Figures/09_KR_Intro21_slide_22.jpg",
+    "Figures/09_KR_Intro21_slide_21.jpg",
+    "Figures/09_KR_Intro21_slide_20.jpg",
+    "Figures/09_KR_Intro21_slide_19.jpg",
+    "Figures/09_KR_Intro21_slide_18.jpg",
+    "Figures/09_KR_Intro21_slide_17.jpg",
+    "Figures/09_KR_Intro21_slide_16.jpg",
     "Notes/A KBS gives Cognitive Penetrability 09_KR_Intro21.md",
     "Notes/Brief History of Reasoning 09_2_fol_inference_KR_21.md",
     "Notes/Basic Facts 09_1_FOL_21.md",
@@ -184,24 +202,6 @@
     "Notes/Proofs for FOL 09_2_fol_inference_KR_21.md",
     "Notes/Negated Quantifiers 09_1_FOL_21.md",
     "Notes/Models and Satisfaction 09_1_FOL_21.md",
-    "Notes/Inference Rules part 09_2_fol_inference_KR_21.md",
-    "Notes/Logical Entailment 09_KR_Intro21.md",
-    "Notes/Forward Chaining with GMP 09_2_fol_inference_KR_21.md",
-    "Notes/FOL CNF Conversion Example 09_2_fol_inference_KR_21.md",
-    "Notes/First Order Logic 09_1_FOL_21.md",
-    "Notes/First Order Inference 09_2_fol_inference_KR_21.md",
-    "Notes/Existential Quantifiers 09_1_FOL_21.md",
-    "Notes/Example of Reification 09_1_FOL_21.md",
-    "Figures/09_1_FOL_21_slide_19.jpg",
-    "Figures/09_1_FOL_21_slide_17.jpg",
-    "Figures/09_1_FOL_21_slide_15.jpg",
-    "Figures/09_1_FOL_21_slide_13.jpg",
-    "Figures/09_1_FOL_21_slide_10.jpg",
-    "Figures/09_1_FOL_21_slide_7.jpg",
-    "Figures/09_1_FOL_21_slide_3.jpg",
-    "Figures/09_1_FOL_21_slide_1.jpg",
-    "Figures/09_1_FOL_21_slide_0.jpg",
-    "Figures/slide_0.jpg",
     "Notes",
     "New folder",
     "Figures",

@@ -25,3 +25,5 @@ However once an inference rule is trusted, such as modus ponens, we don’t need
 
 Prev: [[Why is reasoning necessary 09_KR_Intro21|Why is reasoning necessary]]
 Next: [[Deductive reasoning 09_KR_Intro21|Deductive reasoning]]
+
+![[09_KR_Intro21_slide_17.jpg]]

@@ -29,3 +29,5 @@ Content:
 [[Conjunctive Normal Form 09_2_fol_inference_KR_21|Conjunctive Normal Form]]
 [[Converting FOL to CNF 09_2_fol_inference_KR_21|Converting FOL to CNF]]
 [[FOL CNF Conversion Example 09_2_fol_inference_KR_21|FOL CNF Conversion Example]]
+
+![[09_2_fol_inference_KR_21_slide_31.jpg]]

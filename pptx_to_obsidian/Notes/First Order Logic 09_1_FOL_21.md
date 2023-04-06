@@ -20,3 +20,6 @@ First order logic contains objects, relations and functions. It is thus a much m
 
 Specifically, FOL can express an infinite number of facts using a finite set of quantified propositions.
 Next: [[Syntax 09_1_FOL_21|Syntax]]
+
+![[09_1_FOL_21_slide_0.jpg]]
+![[09_1_FOL_21_slide_1.jpg]]

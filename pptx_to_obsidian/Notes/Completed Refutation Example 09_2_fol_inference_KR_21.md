@@ -9,3 +9,5 @@ And then, as the proof proceeds what is “left over” gets shorter and shorter
 
 Prev: [[Resolution Refutation 09_2_fol_inference_KR_21|Resolution Refutation]]
 Next: [[Answer extraction 09_2_fol_inference_KR_21|Answer extraction]]
+
+![[09_2_fol_inference_KR_21_slide_23.jpg]]

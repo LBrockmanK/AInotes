@@ -1,4 +1,4 @@
-﻿The vocabulary will define the domain-dependent predicates and functions.
+The vocabulary will define the domain-dependent predicates and functions.
 We can name individual people, places, etc.
 Such as: John, Jane, Milwaukee, Aurora
 We will also be able to define for them:
@@ -15,3 +15,5 @@ We can also define the types of people or relations among them.
 
 Prev: [[Syntax The Connectives 09_1_FOL_21|Syntax The Connectives]]
 Next: [[Basic Facts 09_1_FOL_21|Basic Facts]]
+
+![[09_1_FOL_21_slide_8.jpg]]

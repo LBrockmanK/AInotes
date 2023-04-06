@@ -17,3 +17,5 @@ Another good use is when a predicate depends on a sequence of events.
 
 Prev: [[Abstract individuals 09_1_FOL_21|Abstract individuals]]
 Next: [[Representing Quantities 09_1_FOL_21|Representing Quantities]]
+
+![[09_1_FOL_21_slide_15.jpg]]

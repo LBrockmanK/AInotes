@@ -194,7 +194,7 @@ def clear_directory(directory):
             print(f"Failed to delete {file_path}. Reason: {e}")
 
 # Function to extract text and images from a PPTX file
-def extract_content(pptx_file, output_dir, image_threshold):
+def extract_content(pptx_file, output_dir):
     # Read the PPTX file using the python-pptx library and store it in the variable 'prs'.
     prs = Presentation(pptx_file)
     # Initialize an empty list to store the extracted content.
@@ -206,40 +206,17 @@ def extract_content(pptx_file, output_dir, image_threshold):
     Application = win32com.client.Dispatch("PowerPoint.Application")
     win32_presentation = Application.Presentations.Open(os.path.abspath(pptx_file), WithWindow=False)  # win32com Presentation
 
-    # TODO: Maybe do a check for special characters or anything that could be indicative of weird formatting, if we detect it (or maybe a small amount)
-    # of overall text, can we convert the whole slide to an image? Is that possible? At least we can be a check in summarizer to preserve equations and
-    # other stuff
-    # Possibly also check for more than 2 text boxes and assume that if those exist that the formatting will be too complex
-
     # Iterate through the slides in the presentation using their index and value.
     for slide_num, slide in enumerate(prs.slides):
         # Initialize a dictionary to store the text and images for each slide.
         slide_content = {"subject": "", "text": "", "images": [], "source": source_name, "title": ""}
         text_boxes = []
-        # TODO: Possibly add a meta text section for things we want to append at end but note be processed by summarizer?
-        # TODO: Alternative way to enforce unique filenames would be sub folders
 
         # Iterate through the shapes in each slide.
         for shape in slide.shapes:
             # Check if the shape has a text frame and append its text to the text_boxes list.
             if shape.has_text_frame:
                 text_boxes.append(shape.text)
-
-            # Check if the shape has an image.
-            if isinstance(shape, Picture):
-                # Filter out audio images by checking if "Audio" is in the shape name.
-                if "Audio" not in shape.name:
-                    # Store the image object in the variable 'image'.
-                    image = shape.image
-                    # Create an image file path using the slide number, shape name, and image file extension.
-                    image_path = f"slide_{slide_num}_image_{shape.name}.{image.ext}"
-                    # Create the full image path, including the output directory.
-                    full_image_path = os.path.join(output_dir, image_path)
-                    # Write the image binary data (blob) to a new image file with the created file path.
-                    with open(full_image_path, "wb") as image_file:
-                       image_file.write(image.blob)
-                    # Append the image file path to the slide_content dictionary.
-                    slide_content["images"].append(image_path)
 
         # Add notes text to text_boxes
         if slide.has_notes_slide:
@@ -263,19 +240,10 @@ def extract_content(pptx_file, output_dir, image_threshold):
 
         slide_content["title"] = slide_content["subject"] + " " + slide_content["source"]
 
-        # Detect content that does not convert well and turn it into an image
-        non_alphabetic_chars = sum((not c.isalpha()) and (c not in string.punctuation) for c in slide_content["text"])
-        total_chars = len(slide_content["text"])
-
-        if total_chars > 0 and non_alphabetic_chars / total_chars > image_threshold:
-            # Clear the text and image fields
-            slide_content["text"] = ""
-            slide_content["images"] = []
-
-            # Add the whole slide image to the image field
-            slide_image_path = os.path.abspath(os.path.join(output_dir, f"{source_name}_slide_{slide_num}.jpg"))
-            win32_presentation.Slides[slide_num + 1].Export(slide_image_path, "JPG")
-            slide_content["images"].append(os.path.basename(slide_image_path))
+        # Add the whole slide image to the image field
+        slide_image_path = os.path.abspath(os.path.join(output_dir, f"{source_name}_slide_{slide_num}.jpg"))
+        win32_presentation.Slides[slide_num + 1].Export(slide_image_path, "JPG")
+        slide_content["images"].append(os.path.basename(slide_image_path))
 
         content.append(slide_content)
 
@@ -352,7 +320,7 @@ def main():
                 # Create the full path of the PPTX file by joining the root directory and the file name.
                 pptx_path = os.path.join(root, file)
                 # Extract the content (text and images) from the PPTX file using the extract_content function.
-                content = extract_content(pptx_path, figures_output_dir, 0.2)
+                content = extract_content(pptx_path, figures_output_dir)
                 # Merge slides based on subject similarity
                 content = merge_slides(content, 0.9)
                 # Append the extracted content to the 'contents' list.

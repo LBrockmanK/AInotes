@@ -14,3 +14,5 @@ So, an equivalent of “It is not the case that everybody sleeps.” is to say t
 
 Prev: [[Using Multiple Quantifiers 09_1_FOL_21|Using Multiple Quantifiers]]
 Next: [[Some Terminology 09_1_FOL_21|Some Terminology]]
+
+![[09_1_FOL_21_slide_35.jpg]]

@@ -42,3 +42,6 @@ Content:
 [[Which one is the KBS 09_KR_Intro21|Which one is the KBS]]
 [[Where is the KR 09_KR_Intro21|Where is the KR]]
 [[A KBS gives Cognitive Penetrability 09_KR_Intro21|A KBS gives Cognitive Penetrability]]
+
+![[09_KR_Intro21_slide_24.jpg]]
+![[09_KR_Intro21_slide_25.jpg]]

@@ -1,4 +1,4 @@
-﻿“Mike and Mary are the same age.”
+“Mike and Mary are the same age.”
 Are functional relations specified?
 Are equalities specified?
 Answer: age(Mike) = age(Mary)
@@ -18,3 +18,5 @@ Equality is also very useful when we need to count some number of objects. The i
 
 Prev: [[Terminological Facts 09_1_FOL_21|Terminological Facts]]
 Next: [[What can we do with this 09_1_FOL_21|What can we do with this]]
+
+![[09_1_FOL_21_slide_12.jpg]]

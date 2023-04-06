@@ -26,3 +26,6 @@ In first order logic there are two quantifiers; upside down A means â€œfor allâ€
 
 Prev: [[Terms 09_1_FOL_21|Terms]]
 Next: [[Syntax The Connectives 09_1_FOL_21|Syntax The Connectives]]
+
+![[09_1_FOL_21_slide_5.jpg]]
+![[09_1_FOL_21_slide_6.jpg]]
