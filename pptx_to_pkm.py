@@ -13,7 +13,6 @@ from pptx.shapes.picture import Picture
 import errno
 import re
 from io import BytesIO
-import imgkit
 
 # Initialize the tokenizer and model for sentence embeddings
 tokenizer = AutoTokenizer.from_pretrained("t5-small", model_max_length=512)
@@ -69,7 +68,10 @@ def link_slides(content, similarity_threshold):
                 next_slide = content[index + 1]
                 slide["text"] += f'\nNext: [[{next_slide["title"]}|{next_slide["subject"]}]]'
 
-            # TODO: This method seems a bit too resource intensive
+            # TODO: This method seems a bit too resource intensive, also caused a crash fairly late in the game
+            # TODO: Can we try synonym detection to check different potential links instead?
+            # TODO: Or maybe check for similarity with large sections of text at a low threshold, then do a more detailed look for a spot to link if it passes
+            # TODO: Make a list of slides to link with the above method in one pass, then go through each note and find the best spot to link it?
             # Perform similarity scan and enclose matching text segments in double square brackets
             subject_words = slide["subject"].split()
             subject_length = len(subject_words)
@@ -188,7 +190,7 @@ def clear_directory(directory):
             print(f"Failed to delete {file_path}. Reason: {e}")
 
 # Function to extract text and images from a PPTX file
-def extract_content(pptx_file, output_dir):
+def extract_content(pptx_file, output_dir, image_threshold):
     # Read the PPTX file using the python-pptx library and store it in the variable 'prs'.
     prs = Presentation(pptx_file)
     # Initialize an empty list to store the extracted content.
@@ -199,6 +201,7 @@ def extract_content(pptx_file, output_dir):
     # TODO: Maybe do a check for special characters or anything that could be indicative of weird formatting, if we detect it (or maybe a small amount)
     # of overall text, can we convert the whole slide to an image? Is that possible? At least we can be a check in summarizer to preserve equations and
     # other stuff
+    # Possibly also check for more than 2 text boxes and assume that if those exist that the formatting will be too complex
 
     # Iterate through the slides in the presentation using their index and value.
     for slide_num, slide in enumerate(prs.slides):
@@ -251,6 +254,22 @@ def extract_content(pptx_file, output_dir):
         previous_subject = slide_content["subject"]
 
         slide_content["title"] = slide_content["subject"] + " " + slide_content["source"]
+
+        # Detect content that does not convert well and turn it into an image
+        character_threshold = image_threshold * sum(len(shape.text) for shape in slide.shapes if shape.has_text_frame)
+        if len(slide_content["text"]) > character_threshold:
+            slide_content["text"] = ""
+            slide_content["images"].clear()
+
+            # Save the slide as an image
+            slide_image_path = os.path.join(output_dir, f"slide_{slide_num}_full_image.png")
+            slide_image = prs.slides[slide_num].export(BytesIO(), "PNG")
+            slide_image.seek(0)
+            img = Image.open(slide_image)
+            img.save(slide_image_path)
+            
+            # Append the image file path to the slide_content dictionary
+            slide_content["images"].append(slide_image_path)
 
         # Append the slide_content dictionary to the content list.
         content.append(slide_content)
@@ -318,16 +337,15 @@ def main():
                 # Create the full path of the PPTX file by joining the root directory and the file name.
                 pptx_path = os.path.join(root, file)
                 # Extract the content (text and images) from the PPTX file using the extract_content function.
-                content = extract_content(pptx_path, figures_output_dir)
+                content = extract_content(pptx_path, figures_output_dir, 0.1)
                 # Merge slides based on subject similarity
                 content = merge_slides(content, 0.9)
                 # Append the extracted content to the 'contents' list.
                 contents.append(content)
 
+    # TODO: Maybe keep these separate until the linking stage or even part way through linking? Do we want cross deck linking or not?
     # Combine all slide decks into one
     contents = [slide for slide_deck in contents for slide in slide_deck]
-
-    # Ensure all slides have unique names
 
     # # Summarize slide content
     # contents = process_slides(contents, 0.8, 10000)
