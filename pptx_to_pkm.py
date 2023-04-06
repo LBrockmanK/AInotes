@@ -13,10 +13,14 @@ from pptx.shapes.picture import Picture
 import errno
 import re
 from io import BytesIO
+import win32com.client
+import string
+import unicodedata
 
 # Initialize the tokenizer and model for sentence embeddings
 tokenizer = AutoTokenizer.from_pretrained("t5-small", model_max_length=512)
 model = AutoModel.from_pretrained("sentence-transformers/paraphrase-MiniLM-L6-v2")
+imgslide = 0
 
 # Initialize the summarization pipeline
 summarizer = pipeline("summarization", model="t5-small")
@@ -73,25 +77,25 @@ def link_slides(content, similarity_threshold):
             # TODO: Or maybe check for similarity with large sections of text at a low threshold, then do a more detailed look for a spot to link if it passes
             # TODO: Make a list of slides to link with the above method in one pass, then go through each note and find the best spot to link it?
             # Perform similarity scan and enclose matching text segments in double square brackets
-            subject_words = slide["subject"].split()
-            subject_length = len(subject_words)
+            # subject_words = slide["subject"].split()
+            # subject_length = len(subject_words)
 
-            for other_slide in content:
-                if other_slide != slide:
-                    other_slide_text = other_slide["text"]
-                    # TODO: I think this might have the possibility of recursive brackets
-                    other_slide_words = re.split(r'(\[\[.*?\]\]|\s+)', other_slide_text)
+            # for other_slide in content:
+            #     if other_slide != slide:
+            #         other_slide_text = other_slide["text"]
+            #         # TODO: I think this might have the possibility of recursive brackets
+            #         other_slide_words = re.split(r'(\[\[.*?\]\]|\s+)', other_slide_text)
 
-                    for i in range(len(other_slide_words) - subject_length + 1):
-                        segment = "".join(other_slide_words[i:i + subject_length]).strip()
-                        similarity_score = similarity(slide["subject"], segment)
+            #         for i in range(len(other_slide_words) - subject_length + 1):
+            #             segment = "".join(other_slide_words[i:i + subject_length]).strip()
+            #             similarity_score = similarity(slide["subject"], segment)
 
-                        if similarity_score > similarity_threshold and not segment.startswith("[["):
-                            # Enclose the matching segment in double square brackets
-                            other_slide_words[i:i + subject_length] = [f"[[{slide['title']}|{segment}]]"]
+            #             if similarity_score > similarity_threshold and not segment.startswith("[["):
+            #                 # Enclose the matching segment in double square brackets
+            #                 other_slide_words[i:i + subject_length] = [f"[[{slide['title']}|{segment}]]"]
 
-                    # Update the text of the other_slide
-                    other_slide["text"] = "".join(other_slide_words).strip()
+            #         # Update the text of the other_slide
+            #         other_slide["text"] = "".join(other_slide_words).strip()
 
         linked_content.append(slide)
 
@@ -198,6 +202,10 @@ def extract_content(pptx_file, output_dir, image_threshold):
     previous_subject = "UNKNOWN"
     source_name = os.path.splitext(os.path.basename(pptx_file))[0]
 
+    # Access PowerPoint Application
+    Application = win32com.client.Dispatch("PowerPoint.Application")
+    win32_presentation = Application.Presentations.Open(os.path.abspath(pptx_file), WithWindow=False)  # win32com Presentation
+
     # TODO: Maybe do a check for special characters or anything that could be indicative of weird formatting, if we detect it (or maybe a small amount)
     # of overall text, can we convert the whole slide to an image? Is that possible? At least we can be a check in summarizer to preserve equations and
     # other stuff
@@ -256,26 +264,33 @@ def extract_content(pptx_file, output_dir, image_threshold):
         slide_content["title"] = slide_content["subject"] + " " + slide_content["source"]
 
         # Detect content that does not convert well and turn it into an image
-        character_threshold = image_threshold * sum(len(shape.text) for shape in slide.shapes if shape.has_text_frame)
-        if len(slide_content["text"]) > character_threshold:
+        non_alphabetic_chars = sum((not c.isalpha()) and (c not in string.punctuation) for c in slide_content["text"])
+        total_chars = len(slide_content["text"])
+
+        if total_chars > 0 and non_alphabetic_chars / total_chars > image_threshold:
+            # Clear the text and image fields
             slide_content["text"] = ""
-            slide_content["images"].clear()
+            slide_content["images"] = []
 
-            # Save the slide as an image
-            slide_image_path = os.path.join(output_dir, f"slide_{slide_num}_full_image.png")
-            slide_image = prs.slides[slide_num].export(BytesIO(), "PNG")
-            slide_image.seek(0)
-            img = Image.open(slide_image)
-            img.save(slide_image_path)
-            
-            # Append the image file path to the slide_content dictionary
-            slide_content["images"].append(slide_image_path)
+            # Add the whole slide image to the image field
+            slide_image_path = os.path.abspath(os.path.join(output_dir, f"{source_name}_slide_{slide_num}.jpg"))
+            win32_presentation.Slides[slide_num + 1].Export(slide_image_path, "JPG")
+            slide_content["images"].append(os.path.basename(slide_image_path))
 
-        # Append the slide_content dictionary to the content list.
         content.append(slide_content)
+
+    # Close PowerPoint Application
+    win32_presentation.Close()
+    Application.Quit()
+    win32_presentation = None
+    Application = None
 
     # Return the content list containing text and images from the PPTX file.
     return content
+
+def is_special_char(c):
+    category = unicodedata.category(c)
+    return category.startswith("M") or category.startswith("S")
 
 def check_directory_writable(directory):
     try:
@@ -337,7 +352,7 @@ def main():
                 # Create the full path of the PPTX file by joining the root directory and the file name.
                 pptx_path = os.path.join(root, file)
                 # Extract the content (text and images) from the PPTX file using the extract_content function.
-                content = extract_content(pptx_path, figures_output_dir, 0.1)
+                content = extract_content(pptx_path, figures_output_dir, 0.2)
                 # Merge slides based on subject similarity
                 content = merge_slides(content, 0.9)
                 # Append the extracted content to the 'contents' list.
@@ -346,6 +361,10 @@ def main():
     # TODO: Maybe keep these separate until the linking stage or even part way through linking? Do we want cross deck linking or not?
     # Combine all slide decks into one
     contents = [slide for slide_deck in contents for slide in slide_deck]
+
+    # TODO: Images are getting put after next / prev links, probably need a link field to store those to add to text at end?
+
+    # TODO: Maybe make every one an image, and have text data stored separetly to use for similarity / linking after summarization
 
     # # Summarize slide content
     # contents = process_slides(contents, 0.8, 10000)
