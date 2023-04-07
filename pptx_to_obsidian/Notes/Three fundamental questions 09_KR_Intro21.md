@@ -1,6 +1,9 @@
-
-
+﻿- [ ] TODO:
 ![[09_KR_Intro21_slide_5.jpg]]
+Now we will consider some of the fundamental or philosophical issues that underly 
+Knowledge representation and reasoning.
+Lets consider each of these three concepts in turn.
+
 
 [[What can we do with this 09_1_FOL_21|What can we do with this]]
 [[Models and Satisfaction 09_1_FOL_21|Models and Satisfaction]]

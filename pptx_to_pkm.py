@@ -118,6 +118,7 @@ def merge_slides(content, similarity_threshold):
                 print(f"Merging slides: '{current_slide['subject']}' and '{next_slide['subject']}'")
                 merged_slide["text"] += "\n" + next_slide["text"]
                 merged_slide["images"].extend(next_slide["images"])
+                merged_slide["notes"].append(next_slide["notes"][0])
 
                 # Remove the merged slide from the content list
                 content.pop(0)
@@ -192,7 +193,7 @@ def extract_content(pptx_file, output_dir):
     # Iterate through the slides in the presentation using their index and value.
     for slide_num, slide in enumerate(prs.slides):
         # Initialize a dictionary to store the text and images for each slide.
-        slide_content = {"subject": "", "text": "", "images": [], "source": source_name, "title": "", "links" : ""}
+        slide_content = {"subject": "", "text": "", "images": [], "source": source_name, "title": "", "links" : "", "notes" : []}
         text_boxes = []
 
         # Iterate through the shapes in each slide.
@@ -202,11 +203,15 @@ def extract_content(pptx_file, output_dir):
                 text_boxes.append(shape.text)
 
         # Add notes text to text_boxes
+        notes_text = ""
         if slide.has_notes_slide:
             notes_slide = slide.notes_slide
             for shape in notes_slide.shapes:
                 if shape.has_text_frame:
-                    text_boxes.append(shape.text)
+                    notes_text += shape.text + "\n"
+            text_boxes.append(notes_text.strip())
+            
+        slide_content["notes"].append(notes_text.strip())
 
         # Assign the first text box as the subject, and join the rest of the text boxes with a newline.
         if text_boxes:
@@ -263,10 +268,12 @@ def create_markdown_files(content, output_dir):
         md_filepath = os.path.join(output_dir, md_filename)
 
         with open(md_filepath, "w", encoding="utf-8-sig") as md_file:
-            if slide["images"]:
-                md_file.write("\n\n")
-                for image in slide["images"]:
+            if slide["images"] and slide["notes"]:
+                md_file.write("- [ ] TODO:\n")
+                for image, note in zip(slide["images"], slide["notes"]):
                     md_file.write(f"![[{image}]]\n")
+                    md_file.write(f"{note}\n")
+                    md_file.write("\n")
 
             md_file.write(slide["links"])
 
@@ -309,12 +316,8 @@ def main():
                 # Append the extracted content to the 'contents' list.
                 contents.append(content)
 
-    # TODO: Maybe keep these separate until the linking stage or even part way through linking? Do we want cross deck linking or not?
     # Combine all slide decks into one
     contents = [slide for slide_deck in contents for slide in slide_deck]
-
-    # TODO: Can we still extract the "notes" and append them to the final image? Probably also still have them in summarized text for linking
-    # TODO: Can we add check marks for obsidian tasks for searching?
 
     # Summarize slide content
     contents = process_slides(contents, 100)

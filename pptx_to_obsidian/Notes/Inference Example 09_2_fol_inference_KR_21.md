@@ -1,6 +1,12 @@
-﻿
-
+﻿- [ ] TODO:
 ![[09_2_fol_inference_KR_21_slide_15.jpg]]
+Now we will consider a proof using GMP.
+
+Here we consider an English description of a situation and its translation into logic.
+
+This is our knowledge base.
+We need to make sure it is in horn form.
+
 
 [[What can we do with this 09_1_FOL_21|What can we do with this]]
 [[Generalized Modus Ponens GMP 09_2_fol_inference_KR_21|Generalized Modus Ponens GMP]]

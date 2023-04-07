@@ -1,6 +1,7 @@
-﻿
-
+﻿- [ ] TODO:
 ![[09_2_fol_inference_KR_21_slide_0.jpg]]
+In this lecture we will consider first-order inference.
+
 
 
 Prev: [[Summary of 09_1_FOL_21|Summary]]

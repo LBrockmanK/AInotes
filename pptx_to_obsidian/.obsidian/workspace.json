@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homepage.md",
+                "file": "Unread.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "e6c049d8aba0f3bc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Unread.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -93,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Homepage.md",
+                "file": "Unread.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Homepage.md",
+                "file": "Unread.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Homepage.md"
+                "file": "Unread.md"
               }
             }
           },
@@ -164,34 +177,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "67021e5e5dfe2d44",
+  "active": "e6c049d8aba0f3bc",
   "lastOpenFiles": [
+    "Read.md",
+    "Unread.md",
+    "Notes/Summary of 09_KR_Intro21.md",
+    "Notes/Converting FOL to CNF 09_2_fol_inference_KR_21.md",
+    "Notes/Brief History of Reasoning 09_2_fol_inference_KR_21.md",
+    "Notes/Completeness of FOL Inference 09_2_fol_inference_KR_21.md",
+    "Notes/Basic Facts 09_1_FOL_21.md",
+    "Notes/An Example 09_1_FOL_21.md",
+    "Notes/Generalized Modus Ponens GMP 09_2_fol_inference_KR_21.md",
+    "Notes/Models and Satisfaction 09_1_FOL_21.md",
+    "Notes/Representing Quantities 09_1_FOL_21.md",
+    "Notes/Inference Example 09_2_fol_inference_KR_21.md",
+    "Notes/FOL Semantics 09_1_FOL_21.md",
+    "Notes/First Order Logic 09_1_FOL_21.md",
+    "Notes/Inference Rules part 09_2_fol_inference_KR_21.md",
     "Notes/What can we do with this 09_1_FOL_21.md",
-    "Homepage.md",
     "Notes/Assigning Truth 09_1_FOL_21.md",
     "Notes/Three fundamental questions 09_KR_Intro21.md",
     "Notes/Disadvantages of using NL 09_KR_Intro21.md",
     "Notes/Non logical symbols 09_1_FOL_21.md",
-    "Notes/Generalized Modus Ponens GMP 09_2_fol_inference_KR_21.md",
     "Notes/Introduction to Knowledge Representation and Reasoning 09_KR_Intro21.md",
-    "Notes/Converting FOL to CNF 09_2_fol_inference_KR_21.md",
     "Notes/Universal Quantifiers 09_1_FOL_21.md",
     "Notes/Summary of 09_1_FOL_21.md",
     "Notes/Answer extraction 09_2_fol_inference_KR_21.md",
-    "Notes/First Order Logic 09_1_FOL_21.md",
     "Notes/Some Terminology 09_1_FOL_21.md",
     "Notes/Summary of 09_2_fol_inference_KR_21.md",
-    "Notes/Summary of 09_KR_Intro21.md",
-    "Notes/FOL Semantics 09_1_FOL_21.md",
-    "Notes/An Example 09_1_FOL_21.md",
-    "Notes/Brief History of Reasoning 09_2_fol_inference_KR_21.md",
-    "Notes/Semantics of Terms Denotations 09_1_FOL_21.md",
-    "Notes/FOL Proof as Search 09_2_fol_inference_KR_21.md",
-    "Notes/Formulas 09_1_FOL_21.md",
-    "Notes/Forward Chaining with GMP 09_2_fol_inference_KR_21.md",
-    "Notes/Logical Entailment 09_KR_Intro21.md",
-    "Notes/FOL CNF Conversion Example 09_2_fol_inference_KR_21.md",
-    "Notes/First Order Inference 09_2_fol_inference_KR_21.md",
     "Figures/09_KR_Intro21_slide_25.jpg",
     "Figures/09_KR_Intro21_slide_24.jpg",
     "Figures/09_KR_Intro21_slide_23.jpg",

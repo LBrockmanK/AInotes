@@ -1,6 +1,11 @@
-﻿
-
+﻿- [ ] TODO:
 ![[09_1_FOL_21_slide_24.jpg]]
+25
+
+Here is another piece of terminology - entailment.
+
+S entails p if and only if every model of S satisfiers p.
+
 
 
 Prev: [[Models and Satisfaction 09_1_FOL_21|Models and Satisfaction]]

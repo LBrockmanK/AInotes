@@ -1,6 +1,12 @@
-﻿
-
+﻿- [ ] TODO:
 ![[09_KR_Intro21_slide_9.jpg]]
+We have different choices for representation languages.
+In KR, logics or some variation are most often used.
+Logics have been used since the time of Aristotle; but the use of modern logics began with Frege and Russell
+Natural languages, such as English, are also representation languages.
+Using NL might be appealing because it is very expressive and is well-known.
+However, it didn’t suit mathematicians in creating precise theories ---  for at least three reasons.
+
 
 [[What can we do with this 09_1_FOL_21|What can we do with this]]
 [[Models and Satisfaction 09_1_FOL_21|Models and Satisfaction]]

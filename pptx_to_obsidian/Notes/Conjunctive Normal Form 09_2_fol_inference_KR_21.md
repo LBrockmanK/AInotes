@@ -1,6 +1,11 @@
-﻿
-
+﻿- [ ] TODO:
 ![[09_2_fol_inference_KR_21_slide_25.jpg]]
+To apply resolution, the KB does not need to be horn, but it DOES need to be in conjunctive normal form.
+
+A CNF clause is a disjunction of literals, where a literal is an atom or its negation.
+
+Any FOL can be converted to CNF.
+
 
 [[What can we do with this 09_1_FOL_21|What can we do with this]]
 [[Models and Satisfaction 09_1_FOL_21|Models and Satisfaction]]

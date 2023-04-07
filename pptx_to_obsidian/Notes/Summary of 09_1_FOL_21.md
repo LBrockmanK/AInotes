@@ -1,7 +1,19 @@
-﻿
-
+﻿- [ ] TODO:
 ![[09_1_FOL_21_slide_37.jpg]]
+38
+
+*
+That completes our overview of the language of first order logic, including both the logical and the non-logical symbols.
+
+As we look ahead to inference we may choose to exclude some of these to make reasoning more efficient.  In particular, functions (which make the domain infinite) and equality (which can add a large number of irrelevant relations) are often excluded.
+
 ![[09_1_FOL_21_slide_38.jpg]]
+39
+
+We also defined the legal expressions of the language including the terms and the well-formed formulas.
+
+Note that a sentence that has a variable that is not bound by a quantifier (known as a free variable) is not well-formed and would not have a truth assignment.
+
 
 
 Content:
