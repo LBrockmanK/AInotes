@@ -74,12 +74,12 @@ def link_slides(content, similarity_threshold):
 
             slide["links"] += f'\nRelated Content:'
 
-            # # Perform similarity scan and link related slides
-            # for other_index, other_slide in enumerate(content):
-            #     if index != other_index:
-            #         similarity_score = similarity(slide["subject"], other_slide["text"])
-            #         if similarity_score > similarity_threshold:
-            #             other_slide["links"] += f'\n[[{slide["title"]}|{slide["subject"]}]]'
+            # Perform similarity scan and link related slides
+            for other_index, other_slide in enumerate(content):
+                if index != other_index:
+                    similarity_score = similarity(slide["subject"], other_slide["text"])
+                    if similarity_score > similarity_threshold:
+                        other_slide["links"] += f'\n[[{slide["title"]}|{slide["subject"]}]]'
 
         linked_content.append(slide)
 
@@ -89,7 +89,7 @@ def link_slides(content, similarity_threshold):
 def process_slides(content, length):
     # Summarization and other operations
     processed_content = []
-    for index, slide in content:
+    for index, slide in enumerate(content):
         print(f"Processing slide: {index}")
         # Skip processing if the subject starts with "Summary"
         if not slide["subject"].startswith("Summary"):
@@ -316,11 +316,11 @@ def main():
     # TODO: Can we still extract the "notes" and append them to the final image? Probably also still have them in summarized text for linking
     # TODO: Can we add check marks for obsidian tasks for searching?
 
-    # # Summarize slide content
-    # contents = process_slides(contents, 100)
+    # Summarize slide content
+    contents = process_slides(contents, 100)
 
     # Find likely links between subjects and other note contents
-    contents = link_slides(contents,0.8)
+    contents = link_slides(contents,0.5)
 
     # Save slide contents into markdown files
     create_markdown_files(contents, notes_output_dir)

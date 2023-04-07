@@ -16,3 +16,6 @@ Content:
 [[Representation Languages 09_KR_Intro21|Representation Languages]]
 [[Disadvantages of using NL 09_KR_Intro21|Disadvantages of using NL]]
 [[Deductive reasoning 09_KR_Intro21|Deductive reasoning]]
+[[Generalized Modus Ponens GMP 09_2_fol_inference_KR_21|Generalized Modus Ponens GMP]]
+[[Introduction to Knowledge Representation and Reasoning 09_KR_Intro21|Introduction to Knowledge Representation and Reasoning]]
+[[Disadvantages of using NL 09_KR_Intro21|Disadvantages of using NL]]

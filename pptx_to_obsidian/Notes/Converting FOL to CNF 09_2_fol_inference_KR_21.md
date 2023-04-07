@@ -1,4 +1,4 @@
-
+﻿
 
 ![[09_2_fol_inference_KR_21_slide_26.jpg]]
 ![[09_2_fol_inference_KR_21_slide_27.jpg]]
