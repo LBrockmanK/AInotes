@@ -1,12 +1,44 @@
 {
   "recentFiles": [
     {
-      "basename": "FOL Proof as Search 09_2_fol_inference_KR_21",
-      "path": "Notes/FOL Proof as Search 09_2_fol_inference_KR_21.md"
+      "basename": "Some Terminology 09_1_FOL_21",
+      "path": "Notes/Some Terminology 09_1_FOL_21.md"
+    },
+    {
+      "basename": "Summary of 09_1_FOL_21",
+      "path": "Notes/Summary of 09_1_FOL_21.md"
+    },
+    {
+      "basename": "Summary of 09_2_fol_inference_KR_21",
+      "path": "Notes/Summary of 09_2_fol_inference_KR_21.md"
+    },
+    {
+      "basename": "Summary of 09_KR_Intro21",
+      "path": "Notes/Summary of 09_KR_Intro21.md"
     },
     {
       "basename": "FOL Semantics 09_1_FOL_21",
       "path": "Notes/FOL Semantics 09_1_FOL_21.md"
+    },
+    {
+      "basename": "Generalized Modus Ponens GMP 09_2_fol_inference_KR_21",
+      "path": "Notes/Generalized Modus Ponens GMP 09_2_fol_inference_KR_21.md"
+    },
+    {
+      "basename": "An Example 09_1_FOL_21",
+      "path": "Notes/An Example 09_1_FOL_21.md"
+    },
+    {
+      "basename": "Brief History of Reasoning 09_2_fol_inference_KR_21",
+      "path": "Notes/Brief History of Reasoning 09_2_fol_inference_KR_21.md"
+    },
+    {
+      "basename": "Semantics of Terms Denotations 09_1_FOL_21",
+      "path": "Notes/Semantics of Terms Denotations 09_1_FOL_21.md"
+    },
+    {
+      "basename": "FOL Proof as Search 09_2_fol_inference_KR_21",
+      "path": "Notes/FOL Proof as Search 09_2_fol_inference_KR_21.md"
     },
     {
       "basename": "Formulas 09_1_FOL_21",
@@ -19,14 +51,6 @@
     {
       "basename": "Logical Entailment 09_KR_Intro21",
       "path": "Notes/Logical Entailment 09_KR_Intro21.md"
-    },
-    {
-      "basename": "Some Terminology 09_1_FOL_21",
-      "path": "Notes/Some Terminology 09_1_FOL_21.md"
-    },
-    {
-      "basename": "Summary of 09_1_FOL_21",
-      "path": "Notes/Summary of 09_1_FOL_21.md"
     },
     {
       "basename": "FOL CNF Conversion Example 09_2_fol_inference_KR_21",
@@ -47,10 +71,6 @@
     {
       "basename": "Completeness of FOL Inference 09_2_fol_inference_KR_21",
       "path": "Notes/Completeness of FOL Inference 09_2_fol_inference_KR_21.md"
-    },
-    {
-      "basename": "Brief History of Reasoning 09_2_fol_inference_KR_21",
-      "path": "Notes/Brief History of Reasoning 09_2_fol_inference_KR_21.md"
     },
     {
       "basename": "Basic Facts 09_1_FOL_21",

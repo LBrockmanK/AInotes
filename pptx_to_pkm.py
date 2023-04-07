@@ -62,7 +62,7 @@ def link_slides(content, similarity_threshold):
     for index, slide in enumerate(content):
         print(f"Linking slide: {index}")
         # Skip processing if the subject starts with "Summary"
-        if not slide["subject"].startswith("Summary"):
+        if not slide["title"].startswith("Summary of "):
             # Link slides
             if index > 0:  # There is a previous slide
                 prev_slide = content[index - 1]
@@ -74,44 +74,25 @@ def link_slides(content, similarity_threshold):
 
             slide["links"] += f'\nRelated Content:'
 
-            # TODO: This method seems a bit too resource intensive, also caused a crash fairly late in the game
-            # TODO: Can we try synonym detection to check different potential links instead?
-            # TODO: Or maybe check for similarity with large sections of text at a low threshold, then do a more detailed look for a spot to link if it passes
-            # TODO: Make a list of slides to link with the above method in one pass, then go through each note and find the best spot to link it?
-            # Perform similarity scan and enclose matching text segments in double square brackets
-            # subject_words = slide["subject"].split()
-            # subject_length = len(subject_words)
-
-            # for other_slide in content:
-            #     if other_slide != slide:
-            #         other_slide_text = other_slide["text"]
-            #         # TODO: I think this might have the possibility of recursive brackets
-            #         other_slide_words = re.split(r'(\[\[.*?\]\]|\s+)', other_slide_text)
-
-            #         for i in range(len(other_slide_words) - subject_length + 1):
-            #             segment = "".join(other_slide_words[i:i + subject_length]).strip()
-            #             similarity_score = similarity(slide["subject"], segment)
-
-            #             if similarity_score > similarity_threshold and not segment.startswith("[["):
-            #                 # Enclose the matching segment in double square brackets
-            #                 other_slide_words[i:i + subject_length] = [f"[[{slide['title']}|{segment}]]"]
-
-            #         # Update the text of the other_slide
-            #         other_slide["text"] = "".join(other_slide_words).strip()
+            # # Perform similarity scan and link related slides
+            # for other_index, other_slide in enumerate(content):
+            #     if index != other_index:
+            #         similarity_score = similarity(slide["subject"], other_slide["text"])
+            #         if similarity_score > similarity_threshold:
+            #             other_slide["links"] += f'\n[[{slide["title"]}|{slide["subject"]}]]'
 
         linked_content.append(slide)
 
     return linked_content
 
 # Function to process and merge similar slides in a content list
-def process_slides(content, similarity_threshold, length):
+def process_slides(content, length):
     # Summarization and other operations
     processed_content = []
-    for slide in content:
-        
+    for index, slide in content:
+        print(f"Processing slide: {index}")
         # Skip processing if the subject starts with "Summary"
         if not slide["subject"].startswith("Summary"):
-            # TODO: Maybe remove Susan's name
 
             # Summarize the text in the slide
             slide["text"] = summarizer(slide["text"], max_length=length, do_sample=False)[0]["summary_text"]
@@ -123,7 +104,7 @@ def process_slides(content, similarity_threshold, length):
 
 def merge_slides(content, similarity_threshold):
     merged_content = []
-
+    # TODO: Do we want to merge the subjects together then set the title based on that?
     # Merging similar slides
     while content:
         current_slide = content.pop(0)
@@ -163,11 +144,11 @@ def merge_slides(content, similarity_threshold):
             summary_slide["images"].extend(slide["images"])
 
         # Add a new line and "Content:" to the merged summary slide's text field
-        summary_slide["text"] += "\n\nContent:"
+        summary_slide["links"] += "\n\nContent:"
 
         # Add a new line with the subject line enclosed in double square brackets for each object in
         for slide in merged_content[:summary_start]:  # Exclude the summary slides
-            summary_slide["text"] += f"\n[[{slide['title']}|{slide['subject']}]]"
+            summary_slide["links"] += f"\n[[{slide['title']}|{slide['subject']}]]"
 
         # Set the subject line for the combined summary slide
         summary_slide["title"] = "Summary of " + summary_slide["source"]
@@ -324,7 +305,7 @@ def main():
                 # Extract the content (text and images) from the PPTX file using the extract_content function.
                 content = extract_content(pptx_path, figures_output_dir)
                 # Merge slides based on subject similarity
-                content = merge_slides(content, 0.9)
+                content = merge_slides(content, 0.6)
                 # Append the extracted content to the 'contents' list.
                 contents.append(content)
 
@@ -332,12 +313,10 @@ def main():
     # Combine all slide decks into one
     contents = [slide for slide_deck in contents for slide in slide_deck]
 
-    # TODO: Images are getting put after next / prev links, probably need a link field to store those to add to text at end?
-
-    # TODO: Maybe make every one an image, and have text data stored separetly to use for similarity / linking after summarization
+    # TODO: Maybe link the summary slides to eachother
 
     # # Summarize slide content
-    # contents = process_slides(contents, 0.8, 10000)
+    # contents = process_slides(contents, 100)
 
     # Find likely links between subjects and other note contents
     contents = link_slides(contents,0.8)
