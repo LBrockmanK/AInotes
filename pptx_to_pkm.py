@@ -225,7 +225,7 @@ def extract_content(pptx_file, output_dir):
 
         # Add the whole slide image to the image field
         slide_image_path = os.path.abspath(os.path.join(output_dir, f"{source_name}_slide_{slide_num}.jpg"))
-        win32_presentation.Slides[slide_num + 1].Export(slide_image_path, "JPG")
+        win32_presentation.Slides[slide_num].Export(slide_image_path, "JPG")
         slide_content["images"].append(os.path.basename(slide_image_path))
 
         content.append(slide_content)
@@ -313,7 +313,8 @@ def main():
     # Combine all slide decks into one
     contents = [slide for slide_deck in contents for slide in slide_deck]
 
-    # TODO: Maybe link the summary slides to eachother
+    # TODO: Can we still extract the "notes" and append them to the final image? Probably also still have them in summarized text for linking
+    # TODO: Can we add check marks for obsidian tasks for searching?
 
     # # Summarize slide content
     # contents = process_slides(contents, 100)

@@ -1,12 +1,36 @@
 {
   "recentFiles": [
     {
-      "basename": "Some Terminology 09_1_FOL_21",
-      "path": "Notes/Some Terminology 09_1_FOL_21.md"
+      "basename": "Homepage",
+      "path": "Homepage.md"
+    },
+    {
+      "basename": "Disadvantages of using NL 09_KR_Intro21",
+      "path": "Notes/Disadvantages of using NL 09_KR_Intro21.md"
+    },
+    {
+      "basename": "Converting FOL to CNF 09_2_fol_inference_KR_21",
+      "path": "Notes/Converting FOL to CNF 09_2_fol_inference_KR_21.md"
+    },
+    {
+      "basename": "Answer extraction 09_2_fol_inference_KR_21",
+      "path": "Notes/Answer extraction 09_2_fol_inference_KR_21.md"
     },
     {
       "basename": "Summary of 09_1_FOL_21",
       "path": "Notes/Summary of 09_1_FOL_21.md"
+    },
+    {
+      "basename": "First Order Logic 09_1_FOL_21",
+      "path": "Notes/First Order Logic 09_1_FOL_21.md"
+    },
+    {
+      "basename": "Some Terminology 09_1_FOL_21",
+      "path": "Notes/Some Terminology 09_1_FOL_21.md"
+    },
+    {
+      "basename": "Universal Quantifiers 09_1_FOL_21",
+      "path": "Notes/Universal Quantifiers 09_1_FOL_21.md"
     },
     {
       "basename": "Summary of 09_2_fol_inference_KR_21",
@@ -97,16 +121,8 @@
       "path": "Notes/Ways to apply GMP 09_2_fol_inference_KR_21.md"
     },
     {
-      "basename": "Homepage",
-      "path": "Homepage.md"
-    },
-    {
       "basename": "Inference Example 09_2_fol_inference_KR_21",
       "path": "Notes/Inference Example 09_2_fol_inference_KR_21.md"
-    },
-    {
-      "basename": "First Order Logic 09_1_FOL_21",
-      "path": "Notes/First Order Logic 09_1_FOL_21.md"
     },
     {
       "basename": "09_1_FOL_21_slide_19",

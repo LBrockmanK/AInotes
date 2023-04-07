@@ -1,4 +1,4 @@
-﻿
+
 
 ![[09_KR_Intro21_slide_10.jpg]]
 ![[09_KR_Intro21_slide_11.jpg]]
