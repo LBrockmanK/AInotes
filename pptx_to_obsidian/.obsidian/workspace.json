@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Unread.md",
+                "file": "Notes/Terms 09_1_FOL_21.md",
                 "mode": "preview",
                 "source": false
               }
@@ -106,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Unread.md",
+                "file": "Notes/Terms 09_1_FOL_21.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Unread.md",
+                "file": "Notes/Terms 09_1_FOL_21.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Unread.md"
+                "file": "Notes/Terms 09_1_FOL_21.md"
               }
             }
           },
@@ -179,8 +179,11 @@
   },
   "active": "e6c049d8aba0f3bc",
   "lastOpenFiles": [
-    "Read.md",
+    "Notes/Syntax 09_1_FOL_21.md",
+    "Notes/First Order Logic 09_1_FOL_21.md",
+    "Notes/Summary of 09_1_FOL_21.md",
     "Unread.md",
+    "Read.md",
     "Notes/Summary of 09_KR_Intro21.md",
     "Notes/Converting FOL to CNF 09_2_fol_inference_KR_21.md",
     "Notes/Brief History of Reasoning 09_2_fol_inference_KR_21.md",
@@ -192,7 +195,6 @@
     "Notes/Representing Quantities 09_1_FOL_21.md",
     "Notes/Inference Example 09_2_fol_inference_KR_21.md",
     "Notes/FOL Semantics 09_1_FOL_21.md",
-    "Notes/First Order Logic 09_1_FOL_21.md",
     "Notes/Inference Rules part 09_2_fol_inference_KR_21.md",
     "Notes/What can we do with this 09_1_FOL_21.md",
     "Notes/Assigning Truth 09_1_FOL_21.md",
@@ -201,10 +203,8 @@
     "Notes/Non logical symbols 09_1_FOL_21.md",
     "Notes/Introduction to Knowledge Representation and Reasoning 09_KR_Intro21.md",
     "Notes/Universal Quantifiers 09_1_FOL_21.md",
-    "Notes/Summary of 09_1_FOL_21.md",
     "Notes/Answer extraction 09_2_fol_inference_KR_21.md",
     "Notes/Some Terminology 09_1_FOL_21.md",
-    "Notes/Summary of 09_2_fol_inference_KR_21.md",
     "Figures/09_KR_Intro21_slide_25.jpg",
     "Figures/09_KR_Intro21_slide_24.jpg",
     "Figures/09_KR_Intro21_slide_23.jpg",

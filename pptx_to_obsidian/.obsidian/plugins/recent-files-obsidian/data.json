@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "Terms 09_1_FOL_21",
+      "path": "Notes/Terms 09_1_FOL_21.md"
+    },
+    {
+      "basename": "Syntax 09_1_FOL_21",
+      "path": "Notes/Syntax 09_1_FOL_21.md"
+    },
+    {
+      "basename": "First Order Logic 09_1_FOL_21",
+      "path": "Notes/First Order Logic 09_1_FOL_21.md"
+    },
+    {
+      "basename": "Summary of 09_1_FOL_21",
+      "path": "Notes/Summary of 09_1_FOL_21.md"
+    },
+    {
       "basename": "Unread",
       "path": "Unread.md"
     },
@@ -53,10 +69,6 @@
       "path": "Notes/FOL Semantics 09_1_FOL_21.md"
     },
     {
-      "basename": "First Order Logic 09_1_FOL_21",
-      "path": "Notes/First Order Logic 09_1_FOL_21.md"
-    },
-    {
       "basename": "Inference Rules part 09_2_fol_inference_KR_21",
       "path": "Notes/Inference Rules part 09_2_fol_inference_KR_21.md"
     },
@@ -87,10 +99,6 @@
     {
       "basename": "Universal Quantifiers 09_1_FOL_21",
       "path": "Notes/Universal Quantifiers 09_1_FOL_21.md"
-    },
-    {
-      "basename": "Summary of 09_1_FOL_21",
-      "path": "Notes/Summary of 09_1_FOL_21.md"
     },
     {
       "basename": "Answer extraction 09_2_fol_inference_KR_21",

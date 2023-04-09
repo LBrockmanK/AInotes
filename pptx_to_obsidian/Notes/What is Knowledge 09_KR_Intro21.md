@@ -1,4 +1,4 @@
-﻿- [x] TODO:
+- [ ] TODO:
 ﻿	![[09_KR_Intro21_slide_6.jpg]]
 ﻿	First, what do we mean by knowledge.
 ﻿	Knowledge is a mental state, one of many, that holds of an agent and some statement (called a proposition).
