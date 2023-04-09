@@ -104,8 +104,6 @@ def process_slides(content, length):
 
 def merge_slides(content, similarity_threshold):
     merged_content = []
-    # TODO: Do we want to merge the subjects together then set the title based on that?
-    # TODO: Maybe instead of unique names, have sub folders for different sources, Will make things read better
     # Merging similar slides
     while content:
         current_slide = content.pop(0)
