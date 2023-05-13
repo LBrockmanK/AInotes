@@ -29,7 +29,5 @@ In the next few slides we will consider each of these two types of expressions.
 Prev: [[First Order Logic 09_1_FOL_21|First Order Logic]]
 Next: [[Terms 09_1_FOL_21|Terms]]
 Related Content:
-[[Non logical symbols 09_1_FOL_21|Non logical symbols]]
-[[Basic Facts 09_1_FOL_21|Basic Facts]]
-[[Using Functions and Equality 09_1_FOL_21|Using Functions and Equality]]
-[[Example of Reification 09_1_FOL_21|Example of Reification]]
+[[Completeness of FOL Inference 09_2_fol_inference_KR_21|Completeness of FOL Inference]]
+[[Resolution 09_2_fol_inference_KR_21|Resolution]]

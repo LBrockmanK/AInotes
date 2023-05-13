@@ -15,7 +15,10 @@ Equality is also very useful when we need to count some number of objects. The i
 Prev: [[Basic Facts 09_1_FOL_21|Basic Facts]]
 Next: [[What can we do with this 09_1_FOL_21|What can we do with this]]
 Related Content:
-[[Syntax 09_1_FOL_21|Syntax]]
 [[Non logical symbols 09_1_FOL_21|Non logical symbols]]
-[[Basic Facts 09_1_FOL_21|Basic Facts]]
 [[Example of Reification 09_1_FOL_21|Example of Reification]]
+[[Representing Quantities 09_1_FOL_21|Representing Quantities]]
+[[FOL Semantics 09_1_FOL_21|FOL Semantics]]
+[[An Example 09_1_FOL_21|An Example]]
+[[Models and Satisfaction 09_1_FOL_21|Models and Satisfaction]]
+[[Entailment 09_1_FOL_21|Entailment]]

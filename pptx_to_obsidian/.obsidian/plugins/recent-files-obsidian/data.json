@@ -1,6 +1,26 @@
 {
   "recentFiles": [
     {
+      "basename": "Universal Quantifiers 09_1_FOL_21",
+      "path": "Notes/Universal Quantifiers 09_1_FOL_21.md"
+    },
+    {
+      "basename": "Unification 09_2_fol_inference_KR_21",
+      "path": "Notes/Unification 09_2_fol_inference_KR_21.md"
+    },
+    {
+      "basename": "Converting FOL to CNF 09_2_fol_inference_KR_21",
+      "path": "Notes/Converting FOL to CNF 09_2_fol_inference_KR_21.md"
+    },
+    {
+      "basename": "Unread",
+      "path": "Unread.md"
+    },
+    {
+      "basename": "Read",
+      "path": "Read.md"
+    },
+    {
       "basename": "First Order Logic 09_1_FOL_21",
       "path": "Notes/First Order Logic 09_1_FOL_21.md"
     },
@@ -15,14 +35,6 @@
     {
       "basename": "Completeness of FOL Inference 09_2_fol_inference_KR_21",
       "path": "Notes/Completeness of FOL Inference 09_2_fol_inference_KR_21.md"
-    },
-    {
-      "basename": "Unread",
-      "path": "Unread.md"
-    },
-    {
-      "basename": "Read",
-      "path": "Read.md"
     },
     {
       "basename": "Terms 09_1_FOL_21",
@@ -41,16 +53,8 @@
       "path": "Notes/Summary of 09_KR_Intro21.md"
     },
     {
-      "basename": "Converting FOL to CNF 09_2_fol_inference_KR_21",
-      "path": "Notes/Converting FOL to CNF 09_2_fol_inference_KR_21.md"
-    },
-    {
       "basename": "Brief History of Reasoning 09_2_fol_inference_KR_21",
       "path": "Notes/Brief History of Reasoning 09_2_fol_inference_KR_21.md"
-    },
-    {
-      "basename": "Basic Facts 09_1_FOL_21",
-      "path": "Notes/Basic Facts 09_1_FOL_21.md"
     },
     {
       "basename": "An Example 09_1_FOL_21",
@@ -95,10 +99,6 @@
     {
       "basename": "Introduction to Knowledge Representation and Reasoning 09_KR_Intro21",
       "path": "Notes/Introduction to Knowledge Representation and Reasoning 09_KR_Intro21.md"
-    },
-    {
-      "basename": "Universal Quantifiers 09_1_FOL_21",
-      "path": "Notes/Universal Quantifiers 09_1_FOL_21.md"
     },
     {
       "basename": "Answer extraction 09_2_fol_inference_KR_21",

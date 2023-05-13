@@ -1,4 +1,4 @@
-﻿- [ ] TODO:
+- [ ] TODO:
 ![[09_2_fol_inference_KR_21_slide_11.jpg]]
 The process of matching clauses that contain variables and constants is called unification. The substitution is called the unifier. By convention we use the symbol theta to refer to it.
 
@@ -40,9 +40,7 @@ The cost of this check is to make the time complexity O(n2), where n is the numb
 Prev: [[Generalized Modus Ponens GMP 09_2_fol_inference_KR_21|Generalized Modus Ponens GMP]]
 Next: [[Completeness of FOL Inference 09_2_fol_inference_KR_21|Completeness of FOL Inference]]
 Related Content:
-[[Syntax The Connectives 09_1_FOL_21|Syntax The Connectives]]
+[[Universal Quantifiers 09_1_FOL_21|Universal Quantifiers]]
 [[Some Terminology 09_1_FOL_21|Some Terminology]]
 [[Summary of 09_1_FOL_21|Summary]]
-[[Brief History of Reasoning 09_2_fol_inference_KR_21|Brief History of Reasoning]]
 [[Converting FOL to CNF 09_2_fol_inference_KR_21|Converting FOL to CNF]]
-[[What is Knowledge 09_KR_Intro21|What is Knowledge]]

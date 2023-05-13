@@ -14,11 +14,5 @@ The columns after the first two are determined by the rules for the operators, g
 Prev: [[Entailment 09_1_FOL_21|Entailment]]
 Next: [[Universal Quantifiers 09_1_FOL_21|Universal Quantifiers]]
 Related Content:
-[[Terms 09_1_FOL_21|Terms]]
-[[What can we do with this 09_1_FOL_21|What can we do with this]]
-[[FOL Semantics 09_1_FOL_21|FOL Semantics]]
-[[An Example 09_1_FOL_21|An Example]]
-[[Assigning Truth 09_1_FOL_21|Assigning Truth]]
-[[Models and Satisfaction 09_1_FOL_21|Models and Satisfaction]]
-[[Entailment 09_1_FOL_21|Entailment]]
-[[Universal Quantifiers 09_1_FOL_21|Universal Quantifiers]]
+[[Brief History of Reasoning 09_2_fol_inference_KR_21|Brief History of Reasoning]]
+[[Inference Example 09_2_fol_inference_KR_21|Inference Example]]

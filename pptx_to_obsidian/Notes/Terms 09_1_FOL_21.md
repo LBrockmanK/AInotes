@@ -33,11 +33,7 @@ In first order logic there are two quantifiers; upside down A means â€œfor allâ€
 Prev: [[Syntax 09_1_FOL_21|Syntax]]
 Next: [[Syntax The Connectives 09_1_FOL_21|Syntax The Connectives]]
 Related Content:
+[[Syntax The Connectives 09_1_FOL_21|Syntax The Connectives]]
 [[What can we do with this 09_1_FOL_21|What can we do with this]]
-[[FOL Semantics 09_1_FOL_21|FOL Semantics]]
-[[An Example 09_1_FOL_21|An Example]]
 [[Assigning Truth 09_1_FOL_21|Assigning Truth]]
-[[Models and Satisfaction 09_1_FOL_21|Models and Satisfaction]]
-[[Entailment 09_1_FOL_21|Entailment]]
-[[Truth Tables 09_1_FOL_21|Truth Tables]]
-[[Universal Quantifiers 09_1_FOL_21|Universal Quantifiers]]
+[[What is Knowledge 09_KR_Intro21|What is Knowledge]]

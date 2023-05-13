@@ -1,4 +1,4 @@
-﻿- [ ] TODO:
+- [ ] TODO:
 ![[09_2_fol_inference_KR_21_slide_26.jpg]]
 Here is an overview of the algorithm for converting FOL to conjunctive normal form.
 
@@ -29,9 +29,7 @@ Read the slide
 Prev: [[Conjunctive Normal Form 09_2_fol_inference_KR_21|Conjunctive Normal Form]]
 Next: [[Summary of 09_2_fol_inference_KR_21|Summary]]
 Related Content:
-[[Syntax The Connectives 09_1_FOL_21|Syntax The Connectives]]
+[[Universal Quantifiers 09_1_FOL_21|Universal Quantifiers]]
 [[Some Terminology 09_1_FOL_21|Some Terminology]]
 [[Summary of 09_1_FOL_21|Summary]]
-[[Brief History of Reasoning 09_2_fol_inference_KR_21|Brief History of Reasoning]]
 [[Unification 09_2_fol_inference_KR_21|Unification]]
-[[What is Knowledge 09_KR_Intro21|What is Knowledge]]

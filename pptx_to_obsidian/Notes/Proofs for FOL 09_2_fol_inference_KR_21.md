@@ -26,11 +26,5 @@ One way to reduce the search space would be to combine these AI, UE, and MP into
 Prev: [[Inference Rules part 09_2_fol_inference_KR_21|Inference Rules part]]
 Next: [[Generalized Modus Ponens GMP 09_2_fol_inference_KR_21|Generalized Modus Ponens GMP]]
 Related Content:
-[[First Order Logic 09_1_FOL_21|First Order Logic]]
-[[Generalized Modus Ponens GMP 09_2_fol_inference_KR_21|Generalized Modus Ponens GMP]]
-[[Completeness of FOL Inference 09_2_fol_inference_KR_21|Completeness of FOL Inference]]
-[[Inference Example 09_2_fol_inference_KR_21|Inference Example]]
 [[Three fundamental questions 09_KR_Intro21|Three fundamental questions]]
 [[Disadvantages of using NL 09_KR_Intro21|Disadvantages of using NL]]
-[[Deductive reasoning 09_KR_Intro21|Deductive reasoning]]
-[[Summary of 09_KR_Intro21|Other Forms of Reasoning]]

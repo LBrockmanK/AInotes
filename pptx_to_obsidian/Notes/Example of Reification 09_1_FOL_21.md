@@ -15,7 +15,10 @@ Another good use is when a predicate depends on a sequence of events.
 Prev: [[What can we do with this 09_1_FOL_21|What can we do with this]]
 Next: [[Representing Quantities 09_1_FOL_21|Representing Quantities]]
 Related Content:
-[[Syntax 09_1_FOL_21|Syntax]]
 [[Non logical symbols 09_1_FOL_21|Non logical symbols]]
-[[Basic Facts 09_1_FOL_21|Basic Facts]]
 [[Using Functions and Equality 09_1_FOL_21|Using Functions and Equality]]
+[[Representing Quantities 09_1_FOL_21|Representing Quantities]]
+[[FOL Semantics 09_1_FOL_21|FOL Semantics]]
+[[An Example 09_1_FOL_21|An Example]]
+[[Models and Satisfaction 09_1_FOL_21|Models and Satisfaction]]
+[[Entailment 09_1_FOL_21|Entailment]]

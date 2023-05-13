@@ -132,7 +132,7 @@ def link_slides(content, similarity_threshold):
     # We're going to want to take each title line, and search the text of other slides for similarities and link those back to the working slide
     # Link every slide to its predecessor and follower
     linked_content = []
-    content = cluster_slides(content, num_clusters=5)  # You can experiment with different values for num_clusters
+    content = cluster_slides(content, num_clusters=int(len(content)/4))  # You can experiment with different values for num_clusters
 
     for index, slide in enumerate(content):
         print(f"Linking slide: {index}")

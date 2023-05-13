@@ -15,9 +15,5 @@ On the next few slides we will consider examples of rules of inference and how t
 Prev: [[First Order Inference 09_2_fol_inference_KR_21|First Order Inference]]
 Next: [[Inference Rules part 09_2_fol_inference_KR_21|Inference Rules part]]
 Related Content:
-[[Syntax The Connectives 09_1_FOL_21|Syntax The Connectives]]
-[[Some Terminology 09_1_FOL_21|Some Terminology]]
-[[Summary of 09_1_FOL_21|Summary]]
-[[Unification 09_2_fol_inference_KR_21|Unification]]
-[[Converting FOL to CNF 09_2_fol_inference_KR_21|Converting FOL to CNF]]
-[[What is Knowledge 09_KR_Intro21|What is Knowledge]]
+[[Truth Tables 09_1_FOL_21|Truth Tables]]
+[[Inference Example 09_2_fol_inference_KR_21|Inference Example]]

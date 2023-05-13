@@ -39,9 +39,7 @@ Whem the mapping is part of the real world, to access the semantics in a machine
 Prev: [[Three fundamental questions 09_KR_Intro21|Three fundamental questions]]
 Next: [[Representation Languages 09_KR_Intro21|Representation Languages]]
 Related Content:
+[[Terms 09_1_FOL_21|Terms]]
 [[Syntax The Connectives 09_1_FOL_21|Syntax The Connectives]]
-[[Some Terminology 09_1_FOL_21|Some Terminology]]
-[[Summary of 09_1_FOL_21|Summary]]
-[[Brief History of Reasoning 09_2_fol_inference_KR_21|Brief History of Reasoning]]
-[[Unification 09_2_fol_inference_KR_21|Unification]]
-[[Converting FOL to CNF 09_2_fol_inference_KR_21|Converting FOL to CNF]]
+[[What can we do with this 09_1_FOL_21|What can we do with this]]
+[[Assigning Truth 09_1_FOL_21|Assigning Truth]]

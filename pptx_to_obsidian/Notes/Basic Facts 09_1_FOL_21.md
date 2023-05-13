@@ -45,7 +45,5 @@ What is typical is that these facts are captured as universally quantified condi
 Prev: [[Non logical symbols 09_1_FOL_21|Non logical symbols]]
 Next: [[Using Functions and Equality 09_1_FOL_21|Using Functions and Equality]]
 Related Content:
-[[Syntax 09_1_FOL_21|Syntax]]
-[[Non logical symbols 09_1_FOL_21|Non logical symbols]]
-[[Using Functions and Equality 09_1_FOL_21|Using Functions and Equality]]
-[[Example of Reification 09_1_FOL_21|Example of Reification]]
+[[First Order Logic 09_1_FOL_21|First Order Logic]]
+[[Introduction to Knowledge Representation and Reasoning 09_KR_Intro21|Introduction to Knowledge Representation and Reasoning]]

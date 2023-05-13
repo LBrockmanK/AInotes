@@ -14,9 +14,7 @@ A well-formed formula (WFF, or “woof”) is a sentence where all the variables
 Prev: [[Universal Quantifiers 09_1_FOL_21|Universal Quantifiers]]
 Next: [[Summary of 09_1_FOL_21|Summary]]
 Related Content:
-[[Syntax The Connectives 09_1_FOL_21|Syntax The Connectives]]
+[[Universal Quantifiers 09_1_FOL_21|Universal Quantifiers]]
 [[Summary of 09_1_FOL_21|Summary]]
-[[Brief History of Reasoning 09_2_fol_inference_KR_21|Brief History of Reasoning]]
 [[Unification 09_2_fol_inference_KR_21|Unification]]
 [[Converting FOL to CNF 09_2_fol_inference_KR_21|Converting FOL to CNF]]
-[[What is Knowledge 09_KR_Intro21|What is Knowledge]]
