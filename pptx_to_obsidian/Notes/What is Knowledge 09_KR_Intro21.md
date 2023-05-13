@@ -1,7 +1,7 @@
-- [ ] TODO:
-﻿	![[09_KR_Intro21_slide_6.jpg]]
-﻿	First, what do we mean by knowledge.
-﻿	Knowledge is a mental state, one of many, that holds of an agent and some statement (called a proposition).
+﻿- [ ] TODO:
+![[09_KR_Intro21_slide_6.jpg]]
+First, what do we mean by knowledge.
+Knowledge is a mental state, one of many, that holds of an agent and some statement (called a proposition).
 
 Knowing, hoping, thinking, remembering: these are all examples of mental states. Our language is rich with them.
 Formally, we call the relationships “propositional attitudes” and they appear as verbs in our language.
@@ -35,10 +35,13 @@ The mapping from representor to represented corresponds to the semantics of the 
 Whem the mapping is part of the real world, to access the semantics in a machine, we would need to represent this mapping, that we willl call the interpretation.
 
 
-[[Generalized Modus Ponens GMP 09_2_fol_inference_KR_21|Generalized Modus Ponens GMP]]
-[[Introduction to Knowledge Representation and Reasoning 09_KR_Intro21|Introduction to Knowledge Representation and Reasoning]]
 
 Prev: [[Three fundamental questions 09_KR_Intro21|Three fundamental questions]]
 Next: [[Representation Languages 09_KR_Intro21|Representation Languages]]
 Related Content:
-[[Disadvantages of using NL 09_KR_Intro21|Disadvantages of using NL]]
+[[Syntax The Connectives 09_1_FOL_21|Syntax The Connectives]]
+[[Some Terminology 09_1_FOL_21|Some Terminology]]
+[[Summary of 09_1_FOL_21|Summary]]
+[[Brief History of Reasoning 09_2_fol_inference_KR_21|Brief History of Reasoning]]
+[[Unification 09_2_fol_inference_KR_21|Unification]]
+[[Converting FOL to CNF 09_2_fol_inference_KR_21|Converting FOL to CNF]]

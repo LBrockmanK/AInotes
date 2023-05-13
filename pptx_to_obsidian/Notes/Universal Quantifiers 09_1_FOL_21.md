@@ -100,3 +100,11 @@ So, an equivalent of “It is not the case that everybody sleeps.” is to say t
 Prev: [[Truth Tables 09_1_FOL_21|Truth Tables]]
 Next: [[Some Terminology 09_1_FOL_21|Some Terminology]]
 Related Content:
+[[Terms 09_1_FOL_21|Terms]]
+[[What can we do with this 09_1_FOL_21|What can we do with this]]
+[[FOL Semantics 09_1_FOL_21|FOL Semantics]]
+[[An Example 09_1_FOL_21|An Example]]
+[[Assigning Truth 09_1_FOL_21|Assigning Truth]]
+[[Models and Satisfaction 09_1_FOL_21|Models and Satisfaction]]
+[[Entailment 09_1_FOL_21|Entailment]]
+[[Truth Tables 09_1_FOL_21|Truth Tables]]

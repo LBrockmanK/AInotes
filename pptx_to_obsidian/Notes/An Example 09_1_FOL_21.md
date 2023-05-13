@@ -1,4 +1,4 @@
-- [ ] TODO:
+﻿- [ ] TODO:
 ![[09_1_FOL_21_slide_20.jpg]]
 21
 
@@ -19,5 +19,11 @@ For example,
 Prev: [[FOL Semantics 09_1_FOL_21|FOL Semantics]]
 Next: [[Assigning Truth 09_1_FOL_21|Assigning Truth]]
 Related Content:
-[[Introduction to Knowledge Representation and Reasoning 09_KR_Intro21|Introduction to Knowledge Representation and Reasoning]]
-[[Disadvantages of using NL 09_KR_Intro21|Disadvantages of using NL]]
+[[Terms 09_1_FOL_21|Terms]]
+[[What can we do with this 09_1_FOL_21|What can we do with this]]
+[[FOL Semantics 09_1_FOL_21|FOL Semantics]]
+[[Assigning Truth 09_1_FOL_21|Assigning Truth]]
+[[Models and Satisfaction 09_1_FOL_21|Models and Satisfaction]]
+[[Entailment 09_1_FOL_21|Entailment]]
+[[Truth Tables 09_1_FOL_21|Truth Tables]]
+[[Universal Quantifiers 09_1_FOL_21|Universal Quantifiers]]

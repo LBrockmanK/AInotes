@@ -25,3 +25,13 @@ And then, as the proof proceeds what is “left over” gets shorter and shorter
 Prev: [[Resolution 09_2_fol_inference_KR_21|Resolution]]
 Next: [[Answer extraction 09_2_fol_inference_KR_21|Answer extraction]]
 Related Content:
+[[Representing Quantities 09_1_FOL_21|Representing Quantities]]
+[[First Order Inference 09_2_fol_inference_KR_21|First Order Inference]]
+[[Inference Rules part 09_2_fol_inference_KR_21|Inference Rules part]]
+[[Ways to apply GMP 09_2_fol_inference_KR_21|Ways to apply GMP]]
+[[Resolution 09_2_fol_inference_KR_21|Resolution]]
+[[Answer extraction 09_2_fol_inference_KR_21|Answer extraction]]
+[[Conjunctive Normal Form 09_2_fol_inference_KR_21|Conjunctive Normal Form]]
+[[Summary of 09_2_fol_inference_KR_21|Summary]]
+[[Introduction to Knowledge Representation and Reasoning 09_KR_Intro21|Introduction to Knowledge Representation and Reasoning]]
+[[Representation Languages 09_KR_Intro21|Representation Languages]]

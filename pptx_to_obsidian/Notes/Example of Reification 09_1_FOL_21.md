@@ -11,13 +11,11 @@ So, we add an abstract purchase event, here “p” and use it to state everythi
 Another good use is when a predicate depends on a sequence of events.
 
 
-[[What can we do with this 09_1_FOL_21|What can we do with this]]
 
 Prev: [[What can we do with this 09_1_FOL_21|What can we do with this]]
 Next: [[Representing Quantities 09_1_FOL_21|Representing Quantities]]
 Related Content:
-[[Models and Satisfaction 09_1_FOL_21|Models and Satisfaction]]
-[[Generalized Modus Ponens GMP 09_2_fol_inference_KR_21|Generalized Modus Ponens GMP]]
-[[Completeness of FOL Inference 09_2_fol_inference_KR_21|Completeness of FOL Inference]]
-[[Introduction to Knowledge Representation and Reasoning 09_KR_Intro21|Introduction to Knowledge Representation and Reasoning]]
-[[Disadvantages of using NL 09_KR_Intro21|Disadvantages of using NL]]
+[[Syntax 09_1_FOL_21|Syntax]]
+[[Non logical symbols 09_1_FOL_21|Non logical symbols]]
+[[Basic Facts 09_1_FOL_21|Basic Facts]]
+[[Using Functions and Equality 09_1_FOL_21|Using Functions and Equality]]

@@ -7,13 +7,17 @@ A CNF clause is a disjunction of literals, where a literal is an atom or its neg
 Any FOL can be converted to CNF.
 
 
-[[What can we do with this 09_1_FOL_21|What can we do with this]]
-[[Models and Satisfaction 09_1_FOL_21|Models and Satisfaction]]
-[[Generalized Modus Ponens GMP 09_2_fol_inference_KR_21|Generalized Modus Ponens GMP]]
-[[Completeness of FOL Inference 09_2_fol_inference_KR_21|Completeness of FOL Inference]]
 
 Prev: [[Answer extraction 09_2_fol_inference_KR_21|Answer extraction]]
 Next: [[Converting FOL to CNF 09_2_fol_inference_KR_21|Converting FOL to CNF]]
 Related Content:
+[[Representing Quantities 09_1_FOL_21|Representing Quantities]]
+[[First Order Inference 09_2_fol_inference_KR_21|First Order Inference]]
+[[Inference Rules part 09_2_fol_inference_KR_21|Inference Rules part]]
+[[Ways to apply GMP 09_2_fol_inference_KR_21|Ways to apply GMP]]
+[[Resolution 09_2_fol_inference_KR_21|Resolution]]
+[[Resolution Refutation 09_2_fol_inference_KR_21|Resolution Refutation]]
+[[Answer extraction 09_2_fol_inference_KR_21|Answer extraction]]
+[[Summary of 09_2_fol_inference_KR_21|Summary]]
 [[Introduction to Knowledge Representation and Reasoning 09_KR_Intro21|Introduction to Knowledge Representation and Reasoning]]
-[[Disadvantages of using NL 09_KR_Intro21|Disadvantages of using NL]]
+[[Representation Languages 09_KR_Intro21|Representation Languages]]

@@ -9,9 +9,17 @@ Answer extraction is a technique that involves adding a new literal to the query
 The algorithm will need to be changed to stop when only the answer predicate is left in the resolvent, and to return the arguments of the answer predicate.
 
 
-[[Generalized Modus Ponens GMP 09_2_fol_inference_KR_21|Generalized Modus Ponens GMP]]
 
 Prev: [[Resolution Refutation 09_2_fol_inference_KR_21|Resolution Refutation]]
 Next: [[Conjunctive Normal Form 09_2_fol_inference_KR_21|Conjunctive Normal Form]]
 Related Content:
-[[Disadvantages of using NL 09_KR_Intro21|Disadvantages of using NL]]
+[[Representing Quantities 09_1_FOL_21|Representing Quantities]]
+[[First Order Inference 09_2_fol_inference_KR_21|First Order Inference]]
+[[Inference Rules part 09_2_fol_inference_KR_21|Inference Rules part]]
+[[Ways to apply GMP 09_2_fol_inference_KR_21|Ways to apply GMP]]
+[[Resolution 09_2_fol_inference_KR_21|Resolution]]
+[[Resolution Refutation 09_2_fol_inference_KR_21|Resolution Refutation]]
+[[Conjunctive Normal Form 09_2_fol_inference_KR_21|Conjunctive Normal Form]]
+[[Summary of 09_2_fol_inference_KR_21|Summary]]
+[[Introduction to Knowledge Representation and Reasoning 09_KR_Intro21|Introduction to Knowledge Representation and Reasoning]]
+[[Representation Languages 09_KR_Intro21|Representation Languages]]

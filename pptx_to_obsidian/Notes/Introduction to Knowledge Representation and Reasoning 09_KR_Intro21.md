@@ -43,9 +43,17 @@ Then we would get to the Web Ontology Language, abbreviated as OWL. OWL supports
 Above OWL would be a proof layer which involves deduction and the representation of proofs.
 
 
-[[Generalized Modus Ponens GMP 09_2_fol_inference_KR_21|Generalized Modus Ponens GMP]]
 
 Prev: [[Summary of 09_2_fol_inference_KR_21|Summary]]
 Next: [[Three fundamental questions 09_KR_Intro21|Three fundamental questions]]
 Related Content:
-[[Disadvantages of using NL 09_KR_Intro21|Disadvantages of using NL]]
+[[Representing Quantities 09_1_FOL_21|Representing Quantities]]
+[[First Order Inference 09_2_fol_inference_KR_21|First Order Inference]]
+[[Inference Rules part 09_2_fol_inference_KR_21|Inference Rules part]]
+[[Ways to apply GMP 09_2_fol_inference_KR_21|Ways to apply GMP]]
+[[Resolution 09_2_fol_inference_KR_21|Resolution]]
+[[Resolution Refutation 09_2_fol_inference_KR_21|Resolution Refutation]]
+[[Answer extraction 09_2_fol_inference_KR_21|Answer extraction]]
+[[Conjunctive Normal Form 09_2_fol_inference_KR_21|Conjunctive Normal Form]]
+[[Summary of 09_2_fol_inference_KR_21|Summary]]
+[[Representation Languages 09_KR_Intro21|Representation Languages]]

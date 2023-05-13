@@ -1,4 +1,4 @@
-﻿- [ ] TODO:
+- [ ] TODO:
 ![[09_2_fol_inference_KR_21_slide_14.jpg]]
 Completeness, when talking about search, was whether it is able to find a solution. For inferences it is similar. An inference procedure is complete if it allows you to derive any sentence that would be true according to the semantics.
 Inference is a search. It can be depth first, breadth first forward chaining or backward chaining. 
@@ -10,15 +10,15 @@ Generalized modus ponens is incomplete for first order logic – because not all
 However, given sentences in the correct format it is complete.
 
 
-[[What can we do with this 09_1_FOL_21|What can we do with this]]
-[[Models and Satisfaction 09_1_FOL_21|Models and Satisfaction]]
-[[Generalized Modus Ponens GMP 09_2_fol_inference_KR_21|Generalized Modus Ponens GMP]]
 
 Prev: [[Unification 09_2_fol_inference_KR_21|Unification]]
 Next: [[Inference Example 09_2_fol_inference_KR_21|Inference Example]]
 Related Content:
-[[Ways to apply GMP 09_2_fol_inference_KR_21|Ways to apply GMP]]
-[[Resolution Refutation 09_2_fol_inference_KR_21|Resolution Refutation]]
-[[Converting FOL to CNF 09_2_fol_inference_KR_21|Converting FOL to CNF]]
-[[Introduction to Knowledge Representation and Reasoning 09_KR_Intro21|Introduction to Knowledge Representation and Reasoning]]
+[[First Order Logic 09_1_FOL_21|First Order Logic]]
+[[Proofs for FOL 09_2_fol_inference_KR_21|Proofs for FOL]]
+[[Generalized Modus Ponens GMP 09_2_fol_inference_KR_21|Generalized Modus Ponens GMP]]
+[[Inference Example 09_2_fol_inference_KR_21|Inference Example]]
+[[Three fundamental questions 09_KR_Intro21|Three fundamental questions]]
 [[Disadvantages of using NL 09_KR_Intro21|Disadvantages of using NL]]
+[[Deductive reasoning 09_KR_Intro21|Deductive reasoning]]
+[[Summary of 09_KR_Intro21|Other Forms of Reasoning]]

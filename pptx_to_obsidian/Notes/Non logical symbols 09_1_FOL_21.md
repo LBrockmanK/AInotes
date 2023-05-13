@@ -11,5 +11,7 @@ We can also define the types of people or relations among them.
 Prev: [[Syntax The Connectives 09_1_FOL_21|Syntax The Connectives]]
 Next: [[Basic Facts 09_1_FOL_21|Basic Facts]]
 Related Content:
-[[Introduction to Knowledge Representation and Reasoning 09_KR_Intro21|Introduction to Knowledge Representation and Reasoning]]
-[[Disadvantages of using NL 09_KR_Intro21|Disadvantages of using NL]]
+[[Syntax 09_1_FOL_21|Syntax]]
+[[Basic Facts 09_1_FOL_21|Basic Facts]]
+[[Using Functions and Equality 09_1_FOL_21|Using Functions and Equality]]
+[[Example of Reification 09_1_FOL_21|Example of Reification]]

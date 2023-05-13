@@ -41,12 +41,15 @@ The precedence of operators is given on the slide.
 For now, we will defer our discussion of quantifiers.
 
 
-[[What can we do with this 09_1_FOL_21|What can we do with this]]
 
 Prev: [[Representing Quantities 09_1_FOL_21|Representing Quantities]]
 Next: [[An Example 09_1_FOL_21|An Example]]
 Related Content:
-[[Generalized Modus Ponens GMP 09_2_fol_inference_KR_21|Generalized Modus Ponens GMP]]
-[[Completeness of FOL Inference 09_2_fol_inference_KR_21|Completeness of FOL Inference]]
-[[Introduction to Knowledge Representation and Reasoning 09_KR_Intro21|Introduction to Knowledge Representation and Reasoning]]
-[[Disadvantages of using NL 09_KR_Intro21|Disadvantages of using NL]]
+[[Terms 09_1_FOL_21|Terms]]
+[[What can we do with this 09_1_FOL_21|What can we do with this]]
+[[An Example 09_1_FOL_21|An Example]]
+[[Assigning Truth 09_1_FOL_21|Assigning Truth]]
+[[Models and Satisfaction 09_1_FOL_21|Models and Satisfaction]]
+[[Entailment 09_1_FOL_21|Entailment]]
+[[Truth Tables 09_1_FOL_21|Truth Tables]]
+[[Universal Quantifiers 09_1_FOL_21|Universal Quantifiers]]

@@ -10,11 +10,15 @@ Each row of the table shows a different possible truth assignment; the number of
 The columns after the first two are determined by the rules for the operators, given the interpretation of the propositional symbols.
 
 
-[[What can we do with this 09_1_FOL_21|What can we do with this]]
 
 Prev: [[Entailment 09_1_FOL_21|Entailment]]
 Next: [[Universal Quantifiers 09_1_FOL_21|Universal Quantifiers]]
 Related Content:
-[[Generalized Modus Ponens GMP 09_2_fol_inference_KR_21|Generalized Modus Ponens GMP]]
-[[Introduction to Knowledge Representation and Reasoning 09_KR_Intro21|Introduction to Knowledge Representation and Reasoning]]
-[[Disadvantages of using NL 09_KR_Intro21|Disadvantages of using NL]]
+[[Terms 09_1_FOL_21|Terms]]
+[[What can we do with this 09_1_FOL_21|What can we do with this]]
+[[FOL Semantics 09_1_FOL_21|FOL Semantics]]
+[[An Example 09_1_FOL_21|An Example]]
+[[Assigning Truth 09_1_FOL_21|Assigning Truth]]
+[[Models and Satisfaction 09_1_FOL_21|Models and Satisfaction]]
+[[Entailment 09_1_FOL_21|Entailment]]
+[[Universal Quantifiers 09_1_FOL_21|Universal Quantifiers]]

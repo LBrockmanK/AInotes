@@ -10,12 +10,13 @@ A so-called free variable is one that is not bound by a quantifier. But if a var
 A well-formed formula (WFF, or “woof”) is a sentence where all the variables are quantified.
 
 
-[[What can we do with this 09_1_FOL_21|What can we do with this]]
-[[Models and Satisfaction 09_1_FOL_21|Models and Satisfaction]]
 
 Prev: [[Universal Quantifiers 09_1_FOL_21|Universal Quantifiers]]
 Next: [[Summary of 09_1_FOL_21|Summary]]
 Related Content:
-[[Generalized Modus Ponens GMP 09_2_fol_inference_KR_21|Generalized Modus Ponens GMP]]
-[[Introduction to Knowledge Representation and Reasoning 09_KR_Intro21|Introduction to Knowledge Representation and Reasoning]]
-[[Disadvantages of using NL 09_KR_Intro21|Disadvantages of using NL]]
+[[Syntax The Connectives 09_1_FOL_21|Syntax The Connectives]]
+[[Summary of 09_1_FOL_21|Summary]]
+[[Brief History of Reasoning 09_2_fol_inference_KR_21|Brief History of Reasoning]]
+[[Unification 09_2_fol_inference_KR_21|Unification]]
+[[Converting FOL to CNF 09_2_fol_inference_KR_21|Converting FOL to CNF]]
+[[What is Knowledge 09_KR_Intro21|What is Knowledge]]

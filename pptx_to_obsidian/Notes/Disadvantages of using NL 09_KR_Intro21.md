@@ -1,4 +1,4 @@
-﻿- [ ] TODO:
+- [ ] TODO:
 ![[09_KR_Intro21_slide_10.jpg]]
 First, NL is notoriously amibiguious.
 The words are ambiguous, so bat can be a baseball thing or a furry flying mammal thing.
@@ -64,9 +64,15 @@ To verify that entailments are preserved, we  can check each rule by looking at 
 However once an inference rule is trusted, such as modus ponens, we don’t need to validate it again.
 
 
-[[Generalized Modus Ponens GMP 09_2_fol_inference_KR_21|Generalized Modus Ponens GMP]]
-[[Introduction to Knowledge Representation and Reasoning 09_KR_Intro21|Introduction to Knowledge Representation and Reasoning]]
 
 Prev: [[Representation Languages 09_KR_Intro21|Representation Languages]]
 Next: [[Deductive reasoning 09_KR_Intro21|Deductive reasoning]]
 Related Content:
+[[First Order Logic 09_1_FOL_21|First Order Logic]]
+[[Proofs for FOL 09_2_fol_inference_KR_21|Proofs for FOL]]
+[[Generalized Modus Ponens GMP 09_2_fol_inference_KR_21|Generalized Modus Ponens GMP]]
+[[Completeness of FOL Inference 09_2_fol_inference_KR_21|Completeness of FOL Inference]]
+[[Inference Example 09_2_fol_inference_KR_21|Inference Example]]
+[[Three fundamental questions 09_KR_Intro21|Three fundamental questions]]
+[[Deductive reasoning 09_KR_Intro21|Deductive reasoning]]
+[[Summary of 09_KR_Intro21|Other Forms of Reasoning]]

@@ -1,4 +1,4 @@
-- [ ] TODO:
+﻿- [ ] TODO:
 ![[09_KR_Intro21_slide_19.jpg]]
 To better model some of the reasoning that people do,  researchers have developed several non-deductive approaches to reasoning.
 For example, abduction is based on a rule, similar to modus ponens that says, if you have a rule “if A then B”
@@ -52,6 +52,3 @@ Content:
 [[Representation Languages 09_KR_Intro21|Representation Languages]]
 [[Disadvantages of using NL 09_KR_Intro21|Disadvantages of using NL]]
 [[Deductive reasoning 09_KR_Intro21|Deductive reasoning]]
-[[Generalized Modus Ponens GMP 09_2_fol_inference_KR_21|Generalized Modus Ponens GMP]]
-[[Introduction to Knowledge Representation and Reasoning 09_KR_Intro21|Introduction to Knowledge Representation and Reasoning]]
-[[Disadvantages of using NL 09_KR_Intro21|Disadvantages of using NL]]

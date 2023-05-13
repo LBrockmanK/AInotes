@@ -9,12 +9,15 @@ So we can ask about the truth value of “holding(J, cash1)”.
 Since <J, cash1> is in the holding relation the sentence is true.
 
 
-[[What can we do with this 09_1_FOL_21|What can we do with this]]
 
 Prev: [[An Example 09_1_FOL_21|An Example]]
 Next: [[Models and Satisfaction 09_1_FOL_21|Models and Satisfaction]]
 Related Content:
-[[Generalized Modus Ponens GMP 09_2_fol_inference_KR_21|Generalized Modus Ponens GMP]]
-[[Completeness of FOL Inference 09_2_fol_inference_KR_21|Completeness of FOL Inference]]
-[[Introduction to Knowledge Representation and Reasoning 09_KR_Intro21|Introduction to Knowledge Representation and Reasoning]]
-[[Disadvantages of using NL 09_KR_Intro21|Disadvantages of using NL]]
+[[Terms 09_1_FOL_21|Terms]]
+[[What can we do with this 09_1_FOL_21|What can we do with this]]
+[[FOL Semantics 09_1_FOL_21|FOL Semantics]]
+[[An Example 09_1_FOL_21|An Example]]
+[[Models and Satisfaction 09_1_FOL_21|Models and Satisfaction]]
+[[Entailment 09_1_FOL_21|Entailment]]
+[[Truth Tables 09_1_FOL_21|Truth Tables]]
+[[Universal Quantifiers 09_1_FOL_21|Universal Quantifiers]]

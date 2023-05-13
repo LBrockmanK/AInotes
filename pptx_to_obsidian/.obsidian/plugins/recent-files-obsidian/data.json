@@ -1,20 +1,20 @@
 {
   "recentFiles": [
     {
-      "basename": "Terms 09_1_FOL_21",
-      "path": "Notes/Terms 09_1_FOL_21.md"
-    },
-    {
-      "basename": "Syntax 09_1_FOL_21",
-      "path": "Notes/Syntax 09_1_FOL_21.md"
-    },
-    {
       "basename": "First Order Logic 09_1_FOL_21",
       "path": "Notes/First Order Logic 09_1_FOL_21.md"
     },
     {
-      "basename": "Summary of 09_1_FOL_21",
-      "path": "Notes/Summary of 09_1_FOL_21.md"
+      "basename": "Disadvantages of using NL 09_KR_Intro21",
+      "path": "Notes/Disadvantages of using NL 09_KR_Intro21.md"
+    },
+    {
+      "basename": "Three fundamental questions 09_KR_Intro21",
+      "path": "Notes/Three fundamental questions 09_KR_Intro21.md"
+    },
+    {
+      "basename": "Completeness of FOL Inference 09_2_fol_inference_KR_21",
+      "path": "Notes/Completeness of FOL Inference 09_2_fol_inference_KR_21.md"
     },
     {
       "basename": "Unread",
@@ -23,6 +23,18 @@
     {
       "basename": "Read",
       "path": "Read.md"
+    },
+    {
+      "basename": "Terms 09_1_FOL_21",
+      "path": "Notes/Terms 09_1_FOL_21.md"
+    },
+    {
+      "basename": "Syntax 09_1_FOL_21",
+      "path": "Notes/Syntax 09_1_FOL_21.md"
+    },
+    {
+      "basename": "Summary of 09_1_FOL_21",
+      "path": "Notes/Summary of 09_1_FOL_21.md"
     },
     {
       "basename": "Summary of 09_KR_Intro21",
@@ -35,10 +47,6 @@
     {
       "basename": "Brief History of Reasoning 09_2_fol_inference_KR_21",
       "path": "Notes/Brief History of Reasoning 09_2_fol_inference_KR_21.md"
-    },
-    {
-      "basename": "Completeness of FOL Inference 09_2_fol_inference_KR_21",
-      "path": "Notes/Completeness of FOL Inference 09_2_fol_inference_KR_21.md"
     },
     {
       "basename": "Basic Facts 09_1_FOL_21",
@@ -81,14 +89,6 @@
       "path": "Notes/Assigning Truth 09_1_FOL_21.md"
     },
     {
-      "basename": "Three fundamental questions 09_KR_Intro21",
-      "path": "Notes/Three fundamental questions 09_KR_Intro21.md"
-    },
-    {
-      "basename": "Disadvantages of using NL 09_KR_Intro21",
-      "path": "Notes/Disadvantages of using NL 09_KR_Intro21.md"
-    },
-    {
       "basename": "Non logical symbols 09_1_FOL_21",
       "path": "Notes/Non logical symbols 09_1_FOL_21.md"
     },
@@ -113,16 +113,8 @@
       "path": "Notes/Summary of 09_2_fol_inference_KR_21.md"
     },
     {
-      "basename": "Semantics of Terms Denotations 09_1_FOL_21",
-      "path": "Notes/Semantics of Terms Denotations 09_1_FOL_21.md"
-    },
-    {
       "basename": "FOL Proof as Search 09_2_fol_inference_KR_21",
       "path": "Notes/FOL Proof as Search 09_2_fol_inference_KR_21.md"
-    },
-    {
-      "basename": "Formulas 09_1_FOL_21",
-      "path": "Notes/Formulas 09_1_FOL_21.md"
     },
     {
       "basename": "Forward Chaining with GMP 09_2_fol_inference_KR_21",

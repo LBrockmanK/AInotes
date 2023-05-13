@@ -10,7 +10,9 @@ In FOL, sentences  can be negated, conjoined and disjoined.  We use the right ar
 Prev: [[Terms 09_1_FOL_21|Terms]]
 Next: [[Non logical symbols 09_1_FOL_21|Non logical symbols]]
 Related Content:
-[[What can we do with this 09_1_FOL_21|What can we do with this]]
-[[Generalized Modus Ponens GMP 09_2_fol_inference_KR_21|Generalized Modus Ponens GMP]]
-[[Introduction to Knowledge Representation and Reasoning 09_KR_Intro21|Introduction to Knowledge Representation and Reasoning]]
-[[Disadvantages of using NL 09_KR_Intro21|Disadvantages of using NL]]
+[[Some Terminology 09_1_FOL_21|Some Terminology]]
+[[Summary of 09_1_FOL_21|Summary]]
+[[Brief History of Reasoning 09_2_fol_inference_KR_21|Brief History of Reasoning]]
+[[Unification 09_2_fol_inference_KR_21|Unification]]
+[[Converting FOL to CNF 09_2_fol_inference_KR_21|Converting FOL to CNF]]
+[[What is Knowledge 09_KR_Intro21|What is Knowledge]]

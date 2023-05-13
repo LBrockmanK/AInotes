@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Unread.md",
+                "file": "Notes/First Order Logic 09_1_FOL_21.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,14 +25,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Terms 09_1_FOL_21.md",
-                "mode": "preview",
+                "file": "Read.md",
+                "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -85,8 +84,17 @@
               "type": "recent-files",
               "state": {}
             }
+          },
+          {
+            "id": "13358e1bb4fdf1f1",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -106,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Terms 09_1_FOL_21.md",
+                "file": "Notes/First Order Logic 09_1_FOL_21.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Terms 09_1_FOL_21.md",
+                "file": "Notes/First Order Logic 09_1_FOL_21.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Terms 09_1_FOL_21.md"
+                "file": "Notes/First Order Logic 09_1_FOL_21.md"
               }
             }
           },
@@ -157,9 +165,17 @@
               "type": "graph-analysis",
               "state": {}
             }
+          },
+          {
+            "id": "d8c7eb0200c967cd",
+            "type": "leaf",
+            "state": {
+              "type": "graph-analysis",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -168,26 +184,28 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "smart-random-note:Open Random Note from Search": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "smart-random-note:Open Random Note from Search": false
     }
   },
-  "active": "e6c049d8aba0f3bc",
+  "active": "67021e5e5dfe2d44",
   "lastOpenFiles": [
+    "Notes/Disadvantages of using NL 09_KR_Intro21.md",
+    "Notes/Three fundamental questions 09_KR_Intro21.md",
+    "Notes/Completeness of FOL Inference 09_2_fol_inference_KR_21.md",
+    "Unread.md",
+    "Read.md",
     "Notes/Syntax 09_1_FOL_21.md",
     "Notes/First Order Logic 09_1_FOL_21.md",
     "Notes/Summary of 09_1_FOL_21.md",
-    "Unread.md",
-    "Read.md",
     "Notes/Summary of 09_KR_Intro21.md",
     "Notes/Converting FOL to CNF 09_2_fol_inference_KR_21.md",
     "Notes/Brief History of Reasoning 09_2_fol_inference_KR_21.md",
-    "Notes/Completeness of FOL Inference 09_2_fol_inference_KR_21.md",
     "Notes/Basic Facts 09_1_FOL_21.md",
     "Notes/An Example 09_1_FOL_21.md",
     "Notes/Generalized Modus Ponens GMP 09_2_fol_inference_KR_21.md",
@@ -198,8 +216,6 @@
     "Notes/Inference Rules part 09_2_fol_inference_KR_21.md",
     "Notes/What can we do with this 09_1_FOL_21.md",
     "Notes/Assigning Truth 09_1_FOL_21.md",
-    "Notes/Three fundamental questions 09_KR_Intro21.md",
-    "Notes/Disadvantages of using NL 09_KR_Intro21.md",
     "Notes/Non logical symbols 09_1_FOL_21.md",
     "Notes/Introduction to Knowledge Representation and Reasoning 09_KR_Intro21.md",
     "Notes/Universal Quantifiers 09_1_FOL_21.md",

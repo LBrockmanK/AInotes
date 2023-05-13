@@ -16,14 +16,56 @@ from io import BytesIO
 import win32com.client
 import string
 import unicodedata
+from nltk.tokenize import word_tokenize
+from nltk.corpus import stopwords
+from nltk.stem import PorterStemmer
+import string
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.cluster import KMeans
+from sklearn.metrics.pairwise import cosine_similarity
+import nltk
 
 # Initialize the tokenizer and model for sentence embeddings
 tokenizer = AutoTokenizer.from_pretrained("t5-small", model_max_length=512)
 model = AutoModel.from_pretrained("sentence-transformers/paraphrase-MiniLM-L6-v2")
 imgslide = 0
+nltk.download('punkt')
+nltk.download('stopwords')
 
 # Initialize the summarization pipeline
 summarizer = pipeline("summarization", model="t5-small")
+
+# Preprocess text for easier processing
+def preprocess_text(text):
+    # Convert the text to lowercase
+    text = text.lower()
+    
+    # Tokenize the text into words
+    words = word_tokenize(text)
+    
+    # Remove punctuation
+    words = [word for word in words if word.isalpha()]
+    
+    # Remove stop words
+    stop_words = set(stopwords.words('english'))
+    words = [word for word in words if word not in stop_words]
+    
+    # Apply stemming
+    stemmer = PorterStemmer()
+    words = [stemmer.stem(word) for word in words]
+    
+    return ' '.join(words)
+
+# Cluster slides via k mean clustering
+def cluster_slides(content, num_clusters):
+    vectorizer = TfidfVectorizer(preprocessor=preprocess_text)
+    tfidf_matrix = vectorizer.fit_transform([slide["text"] for slide in content])
+    kmeans = KMeans(n_clusters=num_clusters, random_state=0).fit(tfidf_matrix)
+
+    for i, slide in enumerate(content):
+        slide["cluster"] = kmeans.labels_[i]
+
+    return content
 
 # Function to compute text similarity using sentence embeddings
 def similarity(text1, text2):
@@ -53,11 +95,44 @@ def similarity(text1, text2):
         np.linalg.norm(embeddings[0]) * np.linalg.norm(embeddings[1]))
     return similarity_score
 
-# Find likely links between subject
+# # Find likely links between subject
+# def link_slides(content, similarity_threshold):
+#     # We're going to want to take each title line, and search the text of other slides for similarities and link those back to the working slide
+#     # Link every slide to its predecessor and follower
+#     linked_content = []
+
+#     for index, slide in enumerate(content):
+#         print(f"Linking slide: {index}")
+#         # Skip processing if the subject starts with "Summary"
+#         if not slide["title"].startswith("Summary of "):
+#             # Link slides
+#             if index > 0:  # There is a previous slide
+#                 prev_slide = content[index - 1]
+#                 slide["links"] += f'\n\nPrev: [[{prev_slide["title"]}|{prev_slide["subject"]}]]'
+
+#             if index < len(content) - 1:  # There is a next slide
+#                 next_slide = content[index + 1]
+#                 slide["links"] += f'\nNext: [[{next_slide["title"]}|{next_slide["subject"]}]]'
+
+#             slide["links"] += f'\nRelated Content:'
+
+#             # Perform similarity scan and link related slides
+#             for other_index, other_slide in enumerate(content):
+#                 if index != other_index:
+#                     similarity_score = similarity(slide["subject"], other_slide["text"])
+#                     if similarity_score > similarity_threshold:
+#                         other_slide["links"] += f'\n[[{slide["title"]}|{slide["subject"]}]]'
+
+#         linked_content.append(slide)
+
+#     return linked_content
+
+# Find likely links between subject (with clsuters)
 def link_slides(content, similarity_threshold):
     # We're going to want to take each title line, and search the text of other slides for similarities and link those back to the working slide
     # Link every slide to its predecessor and follower
     linked_content = []
+    content = cluster_slides(content, num_clusters=5)  # You can experiment with different values for num_clusters
 
     for index, slide in enumerate(content):
         print(f"Linking slide: {index}")
@@ -76,10 +151,8 @@ def link_slides(content, similarity_threshold):
 
             # Perform similarity scan and link related slides
             for other_index, other_slide in enumerate(content):
-                if index != other_index:
-                    similarity_score = similarity(slide["subject"], other_slide["text"])
-                    if similarity_score > similarity_threshold:
-                        other_slide["links"] += f'\n[[{slide["title"]}|{slide["subject"]}]]'
+                if index != other_index and slide["cluster"] == other_slide["cluster"]:
+                    slide["links"] += f'\n[[{other_slide["title"]}|{other_slide["subject"]}]]'
 
         linked_content.append(slide)
 
