@@ -95,38 +95,6 @@ def similarity(text1, text2):
         np.linalg.norm(embeddings[0]) * np.linalg.norm(embeddings[1]))
     return similarity_score
 
-# # Find likely links between subject
-# def link_slides(content, similarity_threshold):
-#     # We're going to want to take each title line, and search the text of other slides for similarities and link those back to the working slide
-#     # Link every slide to its predecessor and follower
-#     linked_content = []
-
-#     for index, slide in enumerate(content):
-#         print(f"Linking slide: {index}")
-#         # Skip processing if the subject starts with "Summary"
-#         if not slide["title"].startswith("Summary of "):
-#             # Link slides
-#             if index > 0:  # There is a previous slide
-#                 prev_slide = content[index - 1]
-#                 slide["links"] += f'\n\nPrev: [[{prev_slide["title"]}|{prev_slide["subject"]}]]'
-
-#             if index < len(content) - 1:  # There is a next slide
-#                 next_slide = content[index + 1]
-#                 slide["links"] += f'\nNext: [[{next_slide["title"]}|{next_slide["subject"]}]]'
-
-#             slide["links"] += f'\nRelated Content:'
-
-#             # Perform similarity scan and link related slides
-#             for other_index, other_slide in enumerate(content):
-#                 if index != other_index:
-#                     similarity_score = similarity(slide["subject"], other_slide["text"])
-#                     if similarity_score > similarity_threshold:
-#                         other_slide["links"] += f'\n[[{slide["title"]}|{slide["subject"]}]]'
-
-#         linked_content.append(slide)
-
-#     return linked_content
-
 # Find likely links between subject (with clsuters)
 def link_slides(content, similarity_threshold):
     # We're going to want to take each title line, and search the text of other slides for similarities and link those back to the working slide
